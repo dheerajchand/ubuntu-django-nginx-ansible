@@ -1,0 +1,6 @@
+[program:gunicorn]
+command=/opt/venv/bin/gunicorn -c /opt/venv/gunicorn_config.py honeybee.wsgi
+user=nobody
+autostart=true
+autorestart=true
+redirect_stderr=true

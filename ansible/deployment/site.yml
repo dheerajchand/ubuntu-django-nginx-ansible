@@ -1,0 +1,15 @@
+---
+- hosts: all
+  sudo : yes
+  vars_files:
+    - vars.yml
+  roles:
+    - common
+
+- hosts: all
+  sudo: yes
+  vars_files:
+    - vars.yml
+  roles:
+    - dbserver
+    - webserver

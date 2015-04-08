@@ -1,0 +1,112 @@
+---
+
+- name: set locale to {{locale}}
+  action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
+  sudo: yes
+
+- name: install required system packages.
+  action: apt pkg={{item}} state=installed update-cache=yes
+  sudo: yes
+  with_items:
+      - build-essential
+      - python-setuptools
+      - python-pip
+      - supervisor
+      - python-apt
+      - python-pycurl
+      - python-software-properties
+      - python-virtualenv
+      - python-dev
+      - vim
+      - libpq-dev
+      - supervisor
+      - nginx
+
+- name: do upgrades to newly installed packages
+  action: apt upgrade=dist
+  sudo: yes
+
+- name: create python virtualenv in opt
+  action: pip virtualenv=/opt/venv virtualenv_command=/usr/bin/virtualenv requirements=/vagrant/python_requirements.txt
+  sudo: yes
+
+- name: if there is a django project, delete it
+  file: path=/vagrant/{{project_name}} state=absent 
+  sudo: yes
+  ignore_errors: yes
+  #when: new_project.changed
+
+- name: create a new django project in the /home/vagrant directory using the new virtualenv
+  shell: "cd /vagrant/; /opt/venv/bin/django-admin.py startproject {{project_name}}"
+  sudo: no
+  register: new_project.created
+
+- name: create symbolic link from /vagrant/honeybee to /opt/venv/honeybee
+  file: src=/vagrant/{{ item.path }} dest=/opt/venv/{{ item.dest }} state=link
+  sudo: yes
+  with_items:
+    - { path: "{{project_name}}", dest: "{{project_name}}" }
+
+- name: create the gunicorn config file in /opt/venv/gunicorn_config.py via template
+  template: src=gunicorn_config.py.j2 dest=/opt/venv/gunicorn_config.py owner=root group=root mode=0644
+  sudo: yes
+
+- name: delete the default settings.py file in the new django project.
+  file: dest=/opt/venv/{{project_name}}/{{project_name}}/settings.py state=absent
+  sudo: yes
+
+- name: create the new settings.py file using the template (fills in database settings and sets static_root)
+  template: src=django_settings.py.j2 dest=/opt/venv/{{project_name}}/{{project_name}}/settings.py owner=vagrant group=vagrant mode=0644
+
+- name: run django's manage.py collectstatic task to pull all known static files into the new static directory
+  action: django_manage app_path=/opt/venv/{{project_name}} command=collectstatic virtualenv=/opt/venv
+  sudo: yes
+
+- name: run django's manage.py syncdb to get everything connected and wired up with initial tables created for project.
+  action: django_manage app_path=/opt/venv/honeybee command=syncdb virtualenv=/opt/venv
+  sudo: yes
+
+- name: create the nginx sites-available file by template
+  template: src=nginx-sites-available.conf.j2 dest=/etc/nginx/sites-available/{{ item.dest }} owner=vagrant group=vagrant mode=0644
+  sudo: yes
+  with_items:
+    - { dest: "{{project_name}}" }
+
+- name: create a symlink between nginx project config in sites-available and sites-enabled
+  file: src=/etc/nginx/sites-available/{{ item.path }} dest=/etc/nginx/sites-enabled/{{ item.dest }} state=link
+  with_items:
+    - { path: "{{project_name}}", dest: "{{project_name}}" }
+  sudo: yes
+
+- name: remove the default from /etc/sites-enabled/
+  file: path=/etc/nginx/sites-enabled/default state=absent
+  sudo: yes
+
+- name: stop nginx and prevent from starting on boot
+  service: name=nginx enabled=no state=stopped
+  sudo: yes
+
+- name: prevent nginx from daemonizing
+  lineinfile: dest=/etc/nginx/nginx.conf line="daemon off;" state=present insertafter="^pid" regexp="^daemon"
+  sudo: yes
+
+- name: create gunicorn.conf file for supervisor
+  template: src=gunicorn_supervisor_conf dest=/etc/supervisor/conf.d/gunicorn.conf owner=root group=root mode=0644
+  sudo: yes
+
+- name: create nginx.conf file for supervisor
+  template: src=nginx_supervisor_conf dest=/etc/supervisor/conf.d/nginx.conf owner=root group=root mode=0644
+  sudo: yes
+
+- name: gunicorn to supervisor and ensure it's running
+  supervisorctl: name=gunicorn state=started
+  sudo: yes
+
+- name: nginx to supervisor and ensure it's running
+  supervisorctl: name=nginx state=started
+  sudo: yes
+
+- name: restart supervisord
+  service: name=supervisor state=restarted
+  sudo: yes
+

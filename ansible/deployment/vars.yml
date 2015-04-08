@@ -1,0 +1,11 @@
+project_name: django_basic
+source_location: "/vagrant/"
+source_location_auto_remove : false
+dbuser: "{{project_name}}"
+dbpassword: d5cda65eaa622604f9af738dad50339f
+dbname: "{{project_name}}"
+locale: en_US.UTF-8
+django_static_root: '/opt/venv/static/'
+
+
+

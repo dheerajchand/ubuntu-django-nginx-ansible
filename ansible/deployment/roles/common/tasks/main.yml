@@ -1,0 +1,32 @@
+---
+
+- name: set locale to {{locale}}
+  action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
+  sudo: yes
+
+- name: install required system packages.
+  action: apt pkg={{item}} state=installed update-cache=yes
+  sudo: yes
+  with_items:
+      - build-essential
+      - python-setuptools
+      - python-pip
+      - supervisor
+      - python-apt
+      - python-pycurl
+      - python-software-properties
+      - python-virtualenv
+      - python-dev
+      - vim
+      - libpq-dev
+      - supervisor
+      - postgresql-9.3
+      - postgresql-9.3-postgis-2.1
+      - python-psycopg2
+
+- name: do upgrades to newly installed packages
+  action: apt upgrade=dist
+  sudo: yes
+
+
+
