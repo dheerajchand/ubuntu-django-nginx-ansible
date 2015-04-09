@@ -11,6 +11,7 @@ Credits to:
 
 1. [George Nassar](https://github.com/gnassar) for his help in understanding nginx's configuration files.
 2. [Jonathan Arehart](https://twitter.com/jonathanarehart) for his general help in understanding server configuration.
+
 ## The purpose of this project.
 
 This project allows you to have a new Django project from scratch via Ansible + Vagrant.
@@ -25,7 +26,7 @@ gunicorn
 ## Repo Contents
 
 1. Vagrantfile + Ansible Playbook for virtual machine config. Ansible inspiration from [this project](http://blog.wercker.com/2013/11/25/django-16-part3.html), and configuration instructions modified from [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-django-with-postgres-nginx-and-gunicorn)
-2. Code for Honeybee Spatial ETL.
+2. Code generic Django 1.7 project at the top level of the domain, which you can configure to your liking.
 
 ##Host Environment
 
