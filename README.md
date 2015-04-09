@@ -26,7 +26,7 @@ gunicorn
 ## Repo Contents
 
 1. Vagrantfile + Ansible Playbook for virtual machine config. Ansible inspiration from [this project](http://blog.wercker.com/2013/11/25/django-16-part3.html), and configuration instructions modified from [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-django-with-postgres-nginx-and-gunicorn)
-2. Code generic Django 1.7 project at the top level of the domain, which you can configure to your liking.
+2. Code for a generic Django 1.7 project at the top level of the domain, which you can configure to your liking.
 
 ##Host Environment
 
@@ -46,7 +46,7 @@ git config --global core.autocrlf input
 ```
 
 ##Startup
-You will need to edit the vars.yaml file. This file contains usernames and passwords. Please set them according to your preferences.
+You will need to edit the vars.yaml file. This file contains the project name, usernames and passwords. Please set them according to your preferences.
 
 Start VM with Vagrant. This will use Puppet to install dependencies and run a script to set up virtual environment and pip requirements.
 ```

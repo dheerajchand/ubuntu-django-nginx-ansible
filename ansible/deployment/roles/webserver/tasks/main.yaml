@@ -34,14 +34,12 @@
   file: path=/vagrant/{{project_name}} state=absent 
   sudo: yes
   ignore_errors: yes
-  #when: new_project.changed
 
 - name: create a new django project in the /home/vagrant directory using the new virtualenv
   shell: "cd /vagrant/; /opt/venv/bin/django-admin.py startproject {{project_name}}"
-  sudo: no
-  register: new_project.created
+  sudo: yes
 
-- name: create symbolic link from /vagrant/honeybee to /opt/venv/honeybee
+- name: create symbolic link from /vagrant/project_name to /opt/venv/project_name
   file: src=/vagrant/{{ item.path }} dest=/opt/venv/{{ item.dest }} state=link
   sudo: yes
   with_items:
@@ -63,7 +61,7 @@
   sudo: yes
 
 - name: run django's manage.py syncdb to get everything connected and wired up with initial tables created for project.
-  action: django_manage app_path=/opt/venv/honeybee command=syncdb virtualenv=/opt/venv
+  action: django_manage app_path=/opt/venv/{{project_name}} command=syncdb virtualenv=/opt/venv
   sudo: yes
 
 - name: create the nginx sites-available file by template
