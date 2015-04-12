@@ -39,6 +39,13 @@
   shell: "cd /vagrant/; /opt/venv/bin/django-admin.py startproject {{project_name}}"
   sudo: yes
 
+- name: delete the default settings.py file in the new django project.
+  file: dest=/vagrant/{{project_name}}/{{project_name}}/settings.py state=absent
+  sudo: yes
+
+- name: create the new settings.py file using the template (fills in database settings and sets static_root)
+  template: src=django_settings.py.j2 dest=/vagrant/{{project_name}}/{{project_name}}/settings.py owner=vagrant group=vagrant mode=0644
+
 - name: create symbolic link from /vagrant/project_name to /opt/venv/project_name
   file: src=/vagrant/{{ item.path }} dest=/opt/venv/{{ item.dest }} state=link
   sudo: yes
@@ -48,13 +55,6 @@
 - name: create the gunicorn config file in /opt/venv/gunicorn_config.py via template
   template: src=gunicorn_config.py.j2 dest=/opt/venv/gunicorn_config.py owner=root group=root mode=0644
   sudo: yes
-
-- name: delete the default settings.py file in the new django project.
-  file: dest=/opt/venv/{{project_name}}/{{project_name}}/settings.py state=absent
-  sudo: yes
-
-- name: create the new settings.py file using the template (fills in database settings and sets static_root)
-  template: src=django_settings.py.j2 dest=/opt/venv/{{project_name}}/{{project_name}}/settings.py owner=vagrant group=vagrant mode=0644
 
 - name: run django's manage.py collectstatic task to pull all known static files into the new static directory
   action: django_manage app_path=/opt/venv/{{project_name}} command=collectstatic virtualenv=/opt/venv
