@@ -1,5 +1,5 @@
 [program:gunicorn]
-command=/opt/venv/bin/gunicorn -c /opt/venv/gunicorn_config.py honeybee.wsgi
+command=/opt/venv/bin/gunicorn -c /opt/venv/gunicorn_config.py {{project_name}}.wsgi
 user=nobody
 autostart=true
 autorestart=true

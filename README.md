@@ -60,6 +60,7 @@ You will also need to create your own Django superuser for the project. You can 
 vagrant ssh
 sudo su
 cd /opt/venv/$projectname
+source /opt/venv/bin/activate
 python manage.py createsuperuser
 ```
 
