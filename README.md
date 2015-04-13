@@ -48,7 +48,7 @@ git config --global core.autocrlf input
 ##Startup
 You will need to edit the vars.yaml file. This file contains the project name, usernames and passwords. Please set them according to your preferences.
 
-Start VM with Vagrant. This will use Puppet to install dependencies and run a script to set up virtual environment and pip requirements.
+Start VM with Vagrant. This will use Ansible to install dependencies and run a script to set up virtual environment and pip requirements.
 ```
 vagrant up --provision
 ```
