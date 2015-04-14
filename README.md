@@ -30,8 +30,7 @@ Nothing happens in a vacuum. I got a lot of help. Here are some of the reference
 
 
 1. [Installing JRE 7 in Vagrant](https://gist.github.com/arturaz/5243940)
-2. [Setting the Java Home variable correctly](https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get_
-)
+2. [Setting the Java Home variable correctly](https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get)
 
 
 ## Repo Contents

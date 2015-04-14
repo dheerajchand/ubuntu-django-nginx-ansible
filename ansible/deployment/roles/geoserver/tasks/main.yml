@@ -49,26 +49,26 @@
          apt-get -y install oracle-java7-installer
 
 - name: modify /etc/environment to have a newline setting the $JAVA_HOME variable
-  lineinfile: dest=/etc/environment line="JAVA_HOME=\"/usr/lib/jvm/java-7-oracle/jre/bin/java\""
+  lineinfile: dest=/etc/environment line="JAVA_HOME=\"/usr/lib/jvm/java-7-oracle\""
 
 - name: modify ~/.bashrc to have a newline setting the $JAVA_HOME variable
-  lineinfile: dest=/home/vagrant/.bashrc line="JAVA_HOME=\"/usr/lib/jvm/java-7-oracle/jre/bin/java\""
+  lineinfile: dest=/home/vagrant/.bashrc line="JAVA_HOME=\"/usr/lib/jvm/java-7-oracle\""
 
 - name: manually set JAVA_HOME
-  shell: export JAVA_HOME=/usr/lib/jvm/java-7-oracle/jre/bin/java
+  shell: export JAVA_HOME=/usr/lib/jvm/java-7-oracle
 
 # Install GeoServer
 # http://docs.geoserver.org/stable/en/user/installation/linux.html
 
-- name: download the geoserver platform independent binary
-  get_url: url=http://sourceforge.net/projects/geoserver/files/GeoServer/2.7.0/geoserver-2.7.0-bin.zip dest=/home/vagrant/geoserver.zip
+#- name: download the geoserver platform independent binary
+#  get_url: url=http://sourceforge.net/projects/geoserver/files/GeoServer/2.7.0/geoserver-2.7.0-bin.zip dest=/home/vagrant/geoserver.zip
 
-- name: unzip the downloaded geoserver binary and put it in /usr/share/geoserver
-  unarchive: src=/home/vagrant/geoserver.zip dest=/home/vagrant/ copy=no
-  sudo: yes
+#- name: unzip the downloaded geoserver binary and put it in /usr/share/geoserver
+#  unarchive: src=/home/vagrant/geoserver.zip dest=/home/vagrant/ copy=no
+#  sudo: yes
 
 - name: move the geoserver directory to /usr/local/geoserver/
-  shell: mv /home/vagrant/geoserver-2.7.0 /usr/local/geoserver
+  shell: mv /vagrant/geoserver /usr/local/geoserver
   sudo: yes
 
 

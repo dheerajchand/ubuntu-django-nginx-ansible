@@ -1,0 +1,11 @@
+GeoServer 2.7.0
+-------------------
+
+This release was built on Mar 20, 2015. The changelog for this release can be found:
+
+  http://jira.codehaus.org/browse/GEOS/fixforversion/20999
+
+This release is based on:
+
+  GeoTools 13.0
+  GeoWebCache 1.7.0
