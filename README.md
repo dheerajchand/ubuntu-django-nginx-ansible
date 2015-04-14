@@ -20,13 +20,23 @@ This project allows you to have a new Django project from scratch via Ansible + 
 - [Python 2.7](http://www.python.org)
 - [PostgreSQL 9.3](http://www.postgresql.org)
 - [PostGIS 2](http://www.postgis.net)
-- [GeoServer](http:///www.geoserver.org)
+- [GeoServer 2.7](http:///www.geoserver.org)
 - [nginx](http://www.nginx.org)
 - [gunicorn](http://gunicorn-docs.readthedocs.org/en/19.3/)
 
+### Sources
+
+Nothing happens in a vacuum. I got a lot of help. Here are some of the references I used that warrant special mention. The general inspiration came from [Wercker](http://blog.wercker.com/2013/11/25/django-16-part3.html) and the set of instructions that I modified slightly came from [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-django-with-postgres-nginx-and-gunicorn). Specific problems I found either by googling for Ansible techniques, asking Jonathan for help or by using the following links:
+
+
+1. [Installing JRE 7 in Vagrant](https://gist.github.com/arturaz/5243940)
+2. [Setting the Java Home variable correctly](https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get_
+)
+
+
 ## Repo Contents
 
-1. Vagrantfile + Ansible Playbook for virtual machine config. Ansible inspiration from [this project](http://blog.wercker.com/2013/11/25/django-16-part3.html), and configuration instructions modified from [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-django-with-postgres-nginx-and-gunicorn)
+1. Vagrantfile + Ansible Playbook for virtual machine config. Ansible inspiration from [this project], and configuration instructions modified from 
 2. Code for a generic Django 1.7 project at the top level of the repo, which you can configure to your liking.
 
 ##Host Environment

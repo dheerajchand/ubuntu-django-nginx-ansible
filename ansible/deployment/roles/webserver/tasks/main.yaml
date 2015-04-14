@@ -104,7 +104,12 @@
   supervisorctl: name=nginx state=started
   sudo: yes
 
-- name: restart supervisord
-  service: name=supervisor state=restarted
+- name: stop supervisord
+  service: name=supervisor state=stopped
+  sudo: yes
+  ignore_errors: true
+
+- name: start supervisord
+  service: name=supervisor state=started
   sudo: yes
 
