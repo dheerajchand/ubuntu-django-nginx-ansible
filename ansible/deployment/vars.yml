@@ -6,6 +6,8 @@ dbpassword: d5cda65eaa622604f9af738dad50339f
 dbname: "{{project_name}}"
 locale: en_US.UTF-8
 django_static_root: '/opt/venv/static/'
+tomcat_admin_user: mohanthecat
+tomcat_admin_password: tunasteak
 
 
 

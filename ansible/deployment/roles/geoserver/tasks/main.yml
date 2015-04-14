@@ -1,93 +1,28 @@
 ---
 
+# basic system tasks
+
 - name: set locale to {{locale}}
   action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
   sudo: yes
 
-- name: install required system packages.
-  action: apt pkg={{item}} state=installed update-cache=yes
+- name: get tomcat packages for geoserver
+  apt: name={{item}} state=latest install_recommends=yes update_cache=yes
   sudo: yes
   with_items:
-      - build-essential
-      - python-setuptools
-      - python-pip
-      - supervisor
-      - python-apt
-      - python-pycurl
-      - python-software-properties
-      - python-virtualenv
-      - python-dev
-      - vim
-      - libpq-dev
-      - unzip
-      - postgresql-9.3
-      - postgresql-9.3-postgis-2.1
-      - python-psycopg2
+    - build-essential
+    - unzip
+    - tomcat7
+    - tomcat7-admin
+    - tomcat7-docs 
+    - tomcat7-admin 
+    - tomcat7-examples
+    - git
+    - ant
+    - default-jdk
 
-- name: do upgrades to newly installed packages
-  action: apt upgrade=dist
-  sudo: yes
+# just tomcat things
 
-# Install JRE 7
-    
-- name: ensuring add-apt-repository is installed
-  apt: pkg=python-software-properties state=latest
- 
-- name: adding webupd8 ppa for java7 installer
-  apt_repository: repo=ppa:webupd8team/java
- 
-- name: updating apt cache
-  apt: update_cache=yes
- 
-- name: installing java7
-  # Installer is interactive so force all answers to yes.
-  # http://askubuntu.com/a/190674/67778
-  shell: echo debconf shared/accepted-oracle-license-v1-1 select true |
-         debconf-set-selections && 
-         echo debconf shared/accepted-oracle-license-v1-1 seen true | 
-         debconf-set-selections &&
-         apt-get -y install oracle-java7-installer
-
-- name: modify /etc/environment to have a newline setting the $JAVA_HOME variable
-  lineinfile: dest=/etc/environment line="JAVA_HOME=\"/usr/lib/jvm/java-7-oracle\""
-
-- name: modify ~/.bashrc to have a newline setting the $JAVA_HOME variable
-  lineinfile: dest=/home/vagrant/.bashrc line="JAVA_HOME=\"/usr/lib/jvm/java-7-oracle\""
-
-- name: manually set JAVA_HOME
-  shell: export JAVA_HOME=/usr/lib/jvm/java-7-oracle
-
-# Install GeoServer
-# http://docs.geoserver.org/stable/en/user/installation/linux.html
-
-#- name: download the geoserver platform independent binary
-#  get_url: url=http://sourceforge.net/projects/geoserver/files/GeoServer/2.7.0/geoserver-2.7.0-bin.zip dest=/home/vagrant/geoserver.zip
-
-#- name: unzip the downloaded geoserver binary and put it in /usr/share/geoserver
-#  unarchive: src=/home/vagrant/geoserver.zip dest=/home/vagrant/ copy=no
-#  sudo: yes
-
-- name: move the geoserver directory to /usr/local/geoserver/
-  shell: mv /vagrant/geoserver /usr/local/geoserver
-  sudo: yes
-
-
-# geoserver supervisor tasks
-- name: create geoserver.conf file for supervisor
-  template: src=geoserver_supervisor.conf.j2 dest=/etc/supervisor/conf.d/geoserver.conf owner=root group=root mode=0644
-  sudo: yes
-
-- name: geoserver to supervisor and ensure it's running
-  supervisorctl: name=geoserver state=started
-  sudo: yes
-
-# modify supervisord and restart it
-  
-- name: stop supervisord
-  service: name=supervisor state=stopped
-  sudo: yes
-  ignore_errors: true
-
-- name: start supervisord
-  service: name=supervisor state=started
+- name: create tomcat_users.xml from template
+  template: src=tomcat_users.xml.j2 dest=/etc/tomcat7/tomcat_users.xml owner=root group=root mode=0644
   sudo: yes
