@@ -77,6 +77,8 @@ python manage.py createsuperuser
 
 or by using the manage.py tool in your IDE. [PyCharm](https://www.jetbrains.com/pycharm/) has that built in!
 
+To configure your GeoServer, you will need to go to [http://localhost:8081/geoserver](http://localhost:8081/geoserver) and log in. The default credentials are *admin* , *geoserver*.  From there, you can do whatever you need. 
+
 ##Management
 If you make any changes to Vagrantfile, requirements.txt, or default.pp:
 ```
