@@ -1,0 +1,47 @@
+---
+
+- name: set locale to {{locale}}
+  action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
+  sudo: yes
+
+- name: install required system packages.
+  action: apt pkg={{item}} state=installed update-cache=yes
+  sudo: yes
+  with_items:
+      - build-essential
+      - python-setuptools
+      - python-pip
+      - supervisor
+      - python-apt
+      - python-pycurl
+      - python-software-properties
+      - python-virtualenv
+      - python-dev
+      - vim
+      - libpq-dev
+      - supervisor
+      - postgresql-9.3
+      - postgresql-9.3-postgis-2.1
+      - python-psycopg2
+
+- name: do upgrades to newly installed packages
+  action: apt upgrade=dist
+  sudo: yes
+  
+- name: ensuring add-apt-repository is installed
+  apt: pkg=python-software-properties state=latest
+ 
+- name: adding webupd8 ppa for java7 installer
+  apt_repository: repo=ppa:webupd8team/java
+ 
+- name: updating apt cache
+  apt: update_cache=yes
+ 
+- name: installing java7
+  # Installer is interactive so force all answers to yes.
+  # http://askubuntu.com/a/190674/67778
+  shell: echo debconf shared/accepted-oracle-license-v1-1 select true |
+         debconf-set-selections && 
+         echo debconf shared/accepted-oracle-license-v1-1 seen true | 
+         debconf-set-selections &&
+         apt-get -y install oracle-java7-installer

@@ -14,14 +14,15 @@ Credits to:
 
 ## The purpose of this project.
 
-This project allows you to have a new Django project from scratch via Ansible + Vagrant.
+This project allows you to have a new Django project from scratch via Ansible + Vagrant. The main components are:
 
-Ubuntu 14.04
-Python 2.7
-PostgreSQL 9.3
-PostGIS 2
-nginx
-gunicorn
+- [Ubuntu 14.04](http://www.ubuntu.com)
+- [Python 2.7](http://www.python.org)
+- [PostgreSQL 9.3](http://www.postgresql.org)
+- [PostGIS 2](http://www.postgis.net)
+- [GeoServer](http:///www.geoserver.org)
+- [nginx](http://www.nginx.org)
+- [gunicorn](http://gunicorn-docs.readthedocs.org/en/19.3/)
 
 ## Repo Contents
 
