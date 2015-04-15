@@ -1,0 +1,16 @@
+---
+
+# basic system tasks
+
+- name: set locale to {{locale}}
+  action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
+  sudo: yes
+
+- name: get tomcat packages for geoserver
+  apt: name={{item}} state=latest install_recommends=yes update_cache=yes
+  sudo: yes
+  with_items:
+    - build-essential
+    - unzip
+    - r-base
+    - r-base-dev
