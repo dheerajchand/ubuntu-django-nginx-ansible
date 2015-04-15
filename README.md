@@ -11,6 +11,7 @@ Credits to:
 
 1. [George Nassar](https://github.com/gnassar) for his help in understanding nginx's configuration files.
 2. [Jonathan Arehart](https://twitter.com/jonathanarehart) for his general help in understanding server configuration.
+3. [WildIntellect](https://github.com/wildintellect/) for his support in developing R-GIS tasks.
 
 ## The purpose of this project.
 
@@ -23,6 +24,7 @@ This project allows you to have a new Django project from scratch via Ansible + 
 - [GeoServer 2.7](http:///www.geoserver.org)
 - [nginx](http://www.nginx.org)
 - [gunicorn](http://gunicorn-docs.readthedocs.org/en/19.3/)
+- [R](http://www.r-project.org)
 
 ### Sources
 
