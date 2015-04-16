@@ -6,7 +6,7 @@
   action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
   sudo: yes
 
-- name: get r-packages
+- name: get r-server packages
   apt: name={{item}} state=latest install_recommends=yes update_cache=yes
   sudo: yes
   with_items:
@@ -14,3 +14,7 @@
     - unzip
     - r-base
     - r-base-dev
+
+- name: execute the R script to install packages
+  shell: /usr/bin/Rscript --slave --no-save --no-restore-history /vagrant/r-requirements.R
+  sudo: yes
