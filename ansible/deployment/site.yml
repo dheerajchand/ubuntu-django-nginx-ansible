@@ -12,7 +12,6 @@
     - vars.yml
   roles:
     - dbserver
-    - webserver
 
 - hosts: all
   sudo: yes
@@ -27,3 +26,10 @@
     - vars.yml
   roles:
     - rserver
+
+- hosts: all
+  sudo: yes
+  vars_files:
+    - vars.yml
+  roles:
+    - webserver
