@@ -1,7 +1,7 @@
 ---
 
 - name: ensure postgres is installed
-  action: apt pkg={{item}} state=installed install_recommmends=yes update-cache=yes
+  action: apt pkg={{item}} state=installed install_recommends=yes update-cache=yes
   sudo: yes
   with_items:
    - postgresql-9.3
