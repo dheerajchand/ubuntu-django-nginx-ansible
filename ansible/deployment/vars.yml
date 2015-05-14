@@ -8,6 +8,4 @@ locale: en_US.UTF-8
 django_static_root: '/opt/venv/static/'
 tomcat_admin_user: mohanthecat
 tomcat_admin_password: tunasteak
-
-
-
+spf13_output_file_name: spf13-script.sh

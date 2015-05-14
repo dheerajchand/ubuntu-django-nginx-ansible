@@ -29,9 +29,12 @@
   action: apt upgrade=dist
   sudo: yes
 
-- name: install spf13 vimrc
-  shell: curl http://j.mp/spf13-vim3 -L -o - | sh
-  sudo: no
+- name: Download spf13 vim install script
+  command: curl http://j.mp/spf13-vim3 -L -o /vagrant/{{ spf13_output_file_name }}
+
+- name: launch spf13 install script
+  command: sh /vagrant/{{ spf13_output_file_name }}
+  sudo: yes
 
 
 
