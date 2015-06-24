@@ -25,11 +25,12 @@
   vars_files:
     - vars.yml
   roles:
-    - rserver
+    - webserver
 
 - hosts: all
   sudo: yes
   vars_files:
     - vars.yml
   roles:
-    - webserver
+    - rserver
+

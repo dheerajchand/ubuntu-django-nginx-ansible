@@ -37,6 +37,8 @@
   get_url: url=http://sourceforge.net/projects/geoserver/files/GeoServer/2.7.0/geoserver-2.7.0-war.zip dest=/vagrant/geoserver.war.zip force=no
   sudo: yes
   ignore_errors: yes
+  register: geoserverwarexists
+  when: geoserverwarexists is not defined
 
 - name: unzip the geoserver .war file into its destination directory
   unarchive: src=/vagrant/geoserver.war.zip dest=/var/lib/tomcat7/webapps copy=no
@@ -44,4 +46,4 @@
 
 - name: restart tomcat
   service: name=tomcat7 state=restarted
-  sudo: yes  
+  sudo: yes

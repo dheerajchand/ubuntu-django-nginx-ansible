@@ -1,4 +1,4 @@
-project_name: django_basic
+project_name: geodjango_template
 source_location: "/vagrant/"
 source_location_auto_remove : false
 dbuser: "{{project_name}}"
@@ -9,3 +9,7 @@ django_static_root: '/opt/venv/static/'
 tomcat_admin_user: mohanthecat
 tomcat_admin_password: tunasteak
 spf13_output_file_name: spf13-script.sh
+
+
+
+

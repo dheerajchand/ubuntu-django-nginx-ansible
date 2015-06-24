@@ -8,7 +8,7 @@
    - postgresql-9.3-postgis-2.1
 
 - name: do upgrades to newly installed postgresql and postgis packages
-  action: apt upgrade=safe
+  action: apt upgrade=dist
   sudo: yes
 
 - name: create postgresql user
