@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest:8080, host:8081
   config.ssh.forward_x11 = true
 
-  config.vm.hostname = "vagrant-rgisclass"
+  config.vm.hostname = "vagrant-gisvm"
 
   config.vm.provision "ansible" do |ansible|
     ansible.playbook = "ansible/deployment/site.yml"

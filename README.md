@@ -1,12 +1,12 @@
 #Welcome To The Generic Django Development Environment
 
-This is a Django project template written by Dheeraj Chand of [Clarity and Rigour](http://www.clarityandrigour.com) (email: first_initial+last_name AT clarity and rigour DOT COM, strip the spaces and do the subs).
-This software:
+This is a GIS project template written by Dheeraj Chand of [Clarity and Rigour](http://www.clarityandrigour.com) (email: first_initial+last_name AT clarity and rigour DOT COM, strip the spaces and do the subs).
+This template:
 
 1. Is written in [Python](http://www.python.org),
 2. Uses [PostgreSQL](http://www.postgresql.org) as the database, with PostGIS extensions,
 3. Uses [GeoDjango](http://www.geodjango.org) as the application framework and
-4. Uses [R](http://www.r-project.org) for the computations.
+4. Uses [R](http://www.r-project.org) for computations.
 
 Credits to: 
 
@@ -60,6 +60,22 @@ git config --global core.autocrlf input
 ```
 
 ##Startup
+ALL OF THE INSTRUCTIONS EXCEPT FOR THIS ONE ARE DISCRETIONARY:
+
+The data for the R tutorial are installed in ```dheerajgrassdata.zip```.
+
+The PDF of the tutorial is in ```tutorial_pdf.zip```.  Decompress it by whatever method you choose and keep it handy.
+
+To access it, here is what you must do:
+
+```
+vagrant ssh
+unzip /vagrant/dheerajgrassdata.zip
+unzip /vagrant/tutorial_pdf.zip
+```
+
+From that point on, any file in it is accessible via the R on the virtual machine.
+
 You will need to edit the vars.yaml file. This file contains the project name, usernames and passwords. Please set them according to your preferences. ***THIS IS NON-DISCRETIONARY. Tomcat will not run correctly without this.***
 
 Start VM with Vagrant. This will use Ansible to install dependencies and run a script to set up virtual environment and pip requirements.
