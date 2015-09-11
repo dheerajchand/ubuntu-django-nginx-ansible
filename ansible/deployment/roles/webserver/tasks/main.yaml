@@ -27,7 +27,7 @@
   sudo: yes
 
 - name: create python virtualenv in opt
-  action: pip virtualenv=/opt/venv virtualenv_command=/usr/bin/virtualenv virtualenv_site_packages=yes requirements=/vagrant/python_requirements.txt
+  action: pip virtualenv=/opt/venv virtualenv_command=/usr/bin/virtualenv virtualenv_site_packages=yes requirements=/vagrant/python_requirements.txt state=latest
   sudo: yes
 
 - name: if there is a django project, delete it

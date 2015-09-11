@@ -1,5 +1,5 @@
 """
-Django settings for geodjango_template project.
+Django settings for default project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -49,9 +49,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'geodjango_template.urls'
+ROOT_URLCONF = 'default.urls'
 
-WSGI_APPLICATION = 'geodjango_template.wsgi.application'
+WSGI_APPLICATION = 'default.wsgi.application'
 
 
 # Database
@@ -60,8 +60,8 @@ WSGI_APPLICATION = 'geodjango_template.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'geodjango_template',                      # Or path to database file if using sqlite3.
-        'USER': 'geodjango_template',                      # Not used with sqlite3.
+        'NAME': 'default',                      # Or path to database file if using sqlite3.
+        'USER': 'default',                      # Not used with sqlite3.
         'PASSWORD': 'd5cda65eaa622604f9af738dad50339f',                  # Not used with sqlite3.
         'HOST': 'localhost',                     # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
