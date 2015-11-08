@@ -21,6 +21,8 @@
       - libpq-dev
       - supervisor
       - nginx
+      - npm
+      - nodejs-legacy
 
 - name: do upgrades to newly installed packages
   action: apt upgrade=dist
@@ -34,17 +36,21 @@
   file: path=/vagrant/{{project_name}} state=absent 
   sudo: yes
   ignore_errors: yes
+  when: create_new_project == True
 
 - name: create a new django project in the /home/vagrant directory using the new virtualenv
   shell: "cd /vagrant/; /opt/venv/bin/django-admin.py startproject {{project_name}}"
   sudo: yes
+  when: create_new_project == True
 
 - name: delete the default settings.py file in the new django project.
   file: dest=/vagrant/{{project_name}}/{{project_name}}/settings.py state=absent
   sudo: yes
+  when: create_new_project == True
 
 - name: create the new settings.py file using the template (fills in database settings and sets static_root)
   template: src=django_settings.py.j2 dest=/vagrant/{{project_name}}/{{project_name}}/settings.py owner=vagrant group=vagrant mode=0644
+  when: create_new_project == True
 
 - name: create symbolic link from /vagrant/project_name to /opt/venv/project_name
   file: src=/vagrant/{{ item.path }} dest=/opt/venv/{{ item.dest }} state=link
@@ -113,3 +119,16 @@
   service: name=supervisor state=started
   sudo: yes
 
+- name: install bower from npm
+  sudo: yes
+  npm: name=bower global=yes
+
+- name: create the bower config file to the opt directory
+  template: src=bower.json dest=/opt/venv/static/bower.json owner=root group=root mode=0644
+  sudo: yes
+
+- name: install bower components
+  sudo : yes
+  shell: bower install --allow-root
+  args:
+    chdir: /opt/venv/static/

@@ -1,0 +1,32 @@
+{
+  "name": "geoviewer",
+  "description": "a way to view spatial data",
+  "main": "hello",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "maps",
+    "graph databases",
+    "GIS",
+    "geography"
+  ],
+  "authors": [
+    "dheeraj chand"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.clarityandrigour.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies" : {
+    "openlayers": "latest",
+    "d3": "latest",
+    "jquery" : "latest"
+  }
+}
