@@ -53,21 +53,31 @@
   when: create_new_project == True
 
 - name: create symbolic link from /vagrant/project_name to /opt/venv/project_name
-  file: src=/vagrant/{{ item.path }} dest=/opt/venv/{{ item.dest }} state=link
+  file: src=/vagrant/{{ item.src }} dest=/opt/venv/{{ item.dest }} state=link
   sudo: yes
   with_items:
-    - { path: "{{project_name}}", dest: "{{project_name}}" }
+    - { src: "{{project_name}}", dest: "{{project_name}}" }
+
+- name: delete existing /vagrant/static
+  file: path=/vagrant/static state=absent
+  sudo: yes
+  when: create_new_static == True
+
+- name: create /vagrant/static for use in nginx
+  file: path=/vagrant/static state=directory
+  sudo: yes
+  when: create_new_static == True
 
 - name: create the gunicorn config file in /opt/venv/gunicorn_config.py via template
   template: src=gunicorn_config.py.j2 dest=/opt/venv/gunicorn_config.py owner=root group=root mode=0644
   sudo: yes
 
-- name: run django's manage.py collectstatic task to pull all known static files into the new static directory
-  action: django_manage app_path=/opt/venv/{{project_name}} command=collectstatic virtualenv=/opt/venv
+- name: run django's manage.py migrate to get everything connected and wired up with initial tables created for project.
+  action: django_manage app_path=/opt/venv/{{project_name}} command=migrate virtualenv=/opt/venv
   sudo: yes
 
-- name: run django's manage.py syncdb to get everything connected and wired up with initial tables created for project.
-  action: django_manage app_path=/opt/venv/{{project_name}} command=syncdb virtualenv=/opt/venv
+- name: run django's manage.py collectstatic task to pull all known static files into the new static directory
+  action: django_manage app_path=/opt/venv/{{project_name}} command=collectstatic virtualenv=/opt/venv
   sudo: yes
 
 - name: create the nginx sites-available file by template
@@ -102,14 +112,6 @@
   template: src=nginx_supervisor_conf dest=/etc/supervisor/conf.d/nginx.conf owner=root group=root mode=0644
   sudo: yes
 
-- name: gunicorn to supervisor and ensure it's running
-  supervisorctl: name=gunicorn state=started
-  sudo: yes
-
-- name: nginx to supervisor and ensure it's running
-  supervisorctl: name=nginx state=started
-  sudo: yes
-
 - name: stop supervisord
   service: name=supervisor state=stopped
   sudo: yes
@@ -119,16 +121,19 @@
   service: name=supervisor state=started
   sudo: yes
 
-- name: install bower from npm
+- name: gunicorn to supervisor and ensure it's running
+  supervisorctl: name=gunicorn state=started
   sudo: yes
-  npm: name=bower global=yes
 
-- name: create the bower config file to the opt directory
-  template: src=bower.json dest=/opt/venv/static/bower.json owner=root group=root mode=0644
+- name: nginx to supervisor and ensure it's running
+  supervisorctl: name=nginx state=started
+  sudo: yes
+
+- name: create the npm package.json file to the static directory
+  template: src=package.json dest=/vagrant/static/package.json owner=root group=root mode=0644
   sudo: yes
 
 - name: install bower components
   sudo : yes
-  shell: bower install --allow-root
-  args:
-    chdir: /opt/venv/static/
+  npm: path=/vagrant/static/ state=latest
+  when: create_new_static == True

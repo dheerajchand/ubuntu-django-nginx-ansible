@@ -167,7 +167,7 @@
     - RSQLite
     - RODBC
 
-- name: second round of R packages installation check
-  command: Rscript --slave --no-save --no-restore-history /vagrant/r-requirements.R
-  sudo: yes
+#- name: second round of R packages installation check
+#  command: Rscript --slave --no-save --no-restore-history /vagrant/r-requirements.R
+#  sudo: yes
 
