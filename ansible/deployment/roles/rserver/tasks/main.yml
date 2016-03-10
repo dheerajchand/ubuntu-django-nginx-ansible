@@ -34,6 +34,7 @@
     - tmux
     - unzip
     - xauth
+    - grass
 
 # a different way to install R packages http://adamj.eu/tech/2014/07/19/installing-and-removing-r-packages-with-ansible/
 

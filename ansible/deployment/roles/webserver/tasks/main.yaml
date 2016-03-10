@@ -68,6 +68,14 @@
   sudo: yes
   when: create_new_static == True
 
+- name: create /vagrant/static/geojsons
+  file: path=/vagrant/static/geojsons/ state=directory
+  sudo: yes
+
+- name: create /vagrant/static/topojsons
+  file: path=/vagrant/static/topojsons state=directory
+  sudo: yes
+
 - name: create the gunicorn config file in /opt/venv/gunicorn_config.py via template
   template: src=gunicorn_config.py.j2 dest=/opt/venv/gunicorn_config.py owner=root group=root mode=0644
   sudo: yes
@@ -133,7 +141,7 @@
   template: src=package.json dest=/vagrant/static/package.json owner=root group=root mode=0644
   sudo: yes
 
-- name: install bower components
+- name: install npm components
   sudo : yes
   npm: path=/vagrant/static/ state=latest
   when: create_new_static == True

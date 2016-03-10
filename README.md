@@ -26,6 +26,7 @@ This project allows you to have a new Django project from scratch via Ansible + 
 - [nginx](http://www.nginx.org)
 - [gunicorn](http://gunicorn-docs.readthedocs.org/en/19.3/)
 - [R](http://www.r-project.org)
+- [npm](http://www.npmjs.com)
 
 ### Sources
 
@@ -40,7 +41,7 @@ Nothing happens in a vacuum. I got a lot of help. Here are some of the reference
 ## Repo Contents
 
 1. Vagrantfile + Ansible Playbook for virtual machine config. Ansible inspiration from [this project], and configuration instructions modified from 
-2. Code for a generic Django 1.7 project at the top level of the repo, which you can configure to your liking.
+2. Code for a generic Django 1.9 project at the top level of the repo, which you can configure to your liking.
 
 ##Host Environment
 
