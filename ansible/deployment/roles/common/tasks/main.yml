@@ -12,6 +12,7 @@
       - build-essential
       - python-setuptools
       - python-pip
+      - virtualenvwrapper
       - supervisor
       - python-apt
       - python-pycurl

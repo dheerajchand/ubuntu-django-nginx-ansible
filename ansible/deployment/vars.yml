@@ -1,4 +1,4 @@
-project_name: chicago_crimes
+project_name: pollinglocations
 source_location: "/vagrant/"
 source_location_auto_remove : false
 dbuser: "{{project_name}}"
@@ -9,7 +9,7 @@ django_static_root: '/opt/venv/static/'
 tomcat_admin_user: mohanthecat
 tomcat_admin_password: tunasteak
 spf13_output_file_name: spf13-script.sh
-create_new_project: false
+create_new_project: true
 create_new_static: true
 
 
