@@ -1,12 +1,20 @@
 ---
 
 - name: set locale to {{locale}}
-  action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
-  sudo: yes
+  command: /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
+  become: true
+
+- name: add postgresql repos
+  apt_repository: repo='deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main' state=present
+  become: true
+
+- name: add postgresql repo key
+  apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc state=present
+  become: true
 
 - name: install required system packages.
-  action: apt pkg={{item}} state=installed install_recommends=yes update-cache=yes
-  sudo: yes
+  apt: pkg={{item}} state=installed install_recommends=yes update-cache=yes
+  become: true
   with_items:
       - apt-file
       - build-essential
@@ -22,15 +30,17 @@
       - vim
       - libpq-dev
       - supervisor
-      - postgresql-9.3
-      - postgresql-9.3-postgis-2.1
       - python-psycopg2
       - git
       - gdal-bin
+      - postgresql
+      - postgresql-contrib
+      - postgis
+      - postgis-doc
 
 - name: do upgrades to newly installed packages
   action: apt upgrade=yes
-  sudo: yes
+  become: true
 
 # - name: Download spf13 vim install script
 #   command: curl http://j.mp/spf13-vim3 -L -o /vagrant/{{ spf13_output_file_name }}
@@ -39,7 +49,7 @@
 #
 # - name: launch spf13 install script
 #   command: sh /vagrant/{{ spf13_output_file_name }}
-#   sudo: yes
+#   become: true
 #   register: spf13installed
 #   when: spf13installed is not defined
 
