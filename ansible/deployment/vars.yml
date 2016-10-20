@@ -1,4 +1,4 @@
-project_name: pollinglocations
+project_name: default
 source_location: "/vagrant/"
 source_location_auto_remove : false
 dbuser: "{{project_name}}"

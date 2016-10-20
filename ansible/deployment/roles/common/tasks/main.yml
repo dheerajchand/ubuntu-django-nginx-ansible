@@ -39,9 +39,12 @@
       - postgis-doc
 
 - name: do upgrades to newly installed packages
-  action: apt upgrade=yes
+  apt: upgrade=yes
   become: true
 
+- name: create bash_profile that has python venv activated
+  template: src=bash_profile.js dest=/home/vagrant/ owner=vagrant group=vagrant mode=0644
+  when: create_new_project == True
 # - name: Download spf13 vim install script
 #   command: curl http://j.mp/spf13-vim3 -L -o /vagrant/{{ spf13_output_file_name }}
 #   when: spf13fileexists is not defined
