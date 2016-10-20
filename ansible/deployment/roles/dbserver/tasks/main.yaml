@@ -1,35 +1,41 @@
 ---
 
+- name: add postgresql repos
+  apt_repository: repo='deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main' state=present
+  become: true
+
+- name: add postgresql repo key
+  apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc state=present
+  become: true
+
 - name: ensure postgres is installed
-  action: apt pkg={{item}} state=installed install_recommends=yes update-cache=yes
-  sudo: yes
+  apt: pkg={{item}} state=installed install_recommends=yes update-cache=yes
+  become: true
   with_items:
-   - postgresql-9.3
-   - postgresql-9.3-postgis-2.1
+      - postgresql
+      - postgresql-contrib
+      - postgis
+      - postgis-doc
 
 - name: do upgrades to newly installed postgresql and postgis packages
-  action: apt upgrade=dist
-  sudo: yes
+  apt: upgrade=dist
+  become: true
 
 - name: create postgresql user
-  action: postgresql_user user={{dbuser}} password={{dbpassword}} role_attr_flags=LOGIN,CREATEDB,SUPERUSER
+  postgresql_user: user={{dbuser}} password={{dbpassword}} role_attr_flags=LOGIN,CREATEDB,SUPERUSER
   sudo_user: postgres
-  sudo: yes
 
 - name: ensure database is created
   action: postgresql_db db={{dbname}} login_password={{dbpassword}} encoding='UTF-8' lc_ctype='en_US.UTF-8' lc_collate='en_US.UTF-8'
   sudo_user: postgres
-  sudo: yes
   register: db_created
 
 - name: create postgis extension in db
   action: command psql -c "CREATE EXTENSION postgis; CREATE EXTENSION postgis_topology; CREATE EXTENSION fuzzystrmatch;  CREATE EXTENSION postgis_tiger_geocoder;" --dbname={{dbname}}
-  sudo: yes
   sudo_user: postgres
   when: db_created.changed
 
 - name: ensure user has access to database
-  sudo: yes
   sudo_user: postgres
   action: postgresql_user db={{dbname}} user={{dbuser}} password={{dbpassword}} priv=ALL
 
