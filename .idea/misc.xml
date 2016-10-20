@@ -10,5 +10,5 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 2.7.6 Vagrant VM at ~/Documents/Personal/Projects/ubuntu-django-nginx-ansible (/opt/venv/bin/python)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7.12 (/usr/local/bin/python)" project-jdk-type="Python SDK" />
 </project>
