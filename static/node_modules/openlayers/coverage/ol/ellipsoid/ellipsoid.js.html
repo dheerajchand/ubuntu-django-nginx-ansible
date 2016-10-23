@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ol/ellipsoid/ellipsoid.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">ol/ellipsoid/ellipsoid.js</span></h1>
+    <h2>
+        Statements: <span class="metric">97.14% <small>(68 / 70)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">66.67% <small>(8 / 12)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(5 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">97.14% <small>(68 / 70)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">ol/ellipsoid/</a> &#187; ellipsoid.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">160</span>
+<span class="cline-any cline-yes">280</span>
+<span class="cline-any cline-yes">280</span>
+<span class="cline-any cline-yes">280</span>
+<span class="cline-any cline-yes">280</span>
+<span class="cline-any cline-yes">280</span>
+<span class="cline-any cline-yes">280</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">240</span>
+<span class="cline-any cline-yes">240</span>
+<span class="cline-any cline-yes">240</span>
+<span class="cline-any cline-yes">240</span>
+<span class="cline-any cline-yes">240</span>
+<span class="cline-any cline-yes">240</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">240</span>
+<span class="cline-any cline-yes">240</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">240</span>
+<span class="cline-any cline-yes">240</span>
+<span class="cline-any cline-yes">240</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">120</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">goog.provide('ol.Ellipsoid');
+&nbsp;
+goog.require('goog.math');
+goog.require('ol.Coordinate');
+&nbsp;
+&nbsp;
+&nbsp;
+/**
+ * @constructor
+ * @param {number} a Major radius.
+ * @param {number} flattening Flattening.
+ */
+ol.Ellipsoid = function(a, flattening) {
+&nbsp;
+  /**
+   * @const
+   * @type {number}
+   */
+  this.a = a;
+&nbsp;
+  /**
+   * @const
+   * @type {number}
+   */
+  this.flattening = flattening;
+&nbsp;
+  /**
+   * @const
+   * @type {number}
+   */
+  this.b = this.a * (1 - this.flattening);
+&nbsp;
+  /**
+   * @const
+   * @type {number}
+   */
+  this.eSquared = 2 * flattening - flattening * flattening;
+&nbsp;
+  /**
+   * @const
+   * @type {number}
+   */
+  this.e = Math.sqrt(this.eSquared);
+&nbsp;
+};
+&nbsp;
+&nbsp;
+/**
+ * @param {ol.Coordinate} c1 Coordinate 1.
+ * @param {ol.Coordinate} c2 Coordinate 1.
+ * @param {number=} opt_minDeltaLambda Minimum delta lambda for convergence.
+ * @param {number=} opt_maxIterations Maximum iterations.
+ * @return {{distance: number, initialBearing: number, finalBearing: number}}
+ *     Vincenty.
+ */
+ol.Ellipsoid.prototype.vincenty =
+    function(c1, c2, opt_minDeltaLambda, opt_maxIterations) {
+  var minDeltaLambda = goog.isDef(opt_minDeltaLambda) ?
+      opt_minDeltaLambda : <span class="branch-1 cbranch-no" title="branch not covered" >1e-12;</span>
+  var maxIterations = goog.isDef(opt_maxIterations) ?
+      opt_maxIterations : <span class="branch-1 cbranch-no" title="branch not covered" >100;</span>
+  var f = this.flattening;
+  var lat1 = goog.math.toRadians(c1[1]);
+  var lat2 = goog.math.toRadians(c2[1]);
+  var deltaLon = goog.math.toRadians(c2[0] - c1[0]);
+  var U1 = Math.atan((1 - f) * Math.tan(lat1));
+  var cosU1 = Math.cos(U1);
+  var sinU1 = Math.sin(U1);
+  var U2 = Math.atan((1 - f) * Math.tan(lat2));
+  var cosU2 = Math.cos(U2);
+  var sinU2 = Math.sin(U2);
+  var lambda = deltaLon;
+  var cosSquaredAlpha, sinAlpha;
+  var cosLambda, deltaLambda = Infinity, sinLambda;
+  var cos2SigmaM, cosSigma, sigma, sinSigma;
+  var i;
+  for (i = maxIterations; i &gt; 0; --i) {
+    cosLambda = Math.cos(lambda);
+    sinLambda = Math.sin(lambda);
+    var x = cosU2 * sinLambda;
+    var y = cosU1 * sinU2 - sinU1 * cosU2 * cosLambda;
+    sinSigma = Math.sqrt(x * x + y * y);
+    if (sinSigma === 0) {
+      return {
+        distance: 0,
+        initialBearing: 0,
+        finalBearing: 0
+      };
+    }
+    cosSigma = sinU1 * sinU2 + cosU1 * cosU2 * cosLambda;
+    sigma = Math.atan2(sinSigma, cosSigma);
+    sinAlpha = cosU1 * cosU2 * sinLambda / sinSigma;
+    cosSquaredAlpha = 1 - sinAlpha * sinAlpha;
+    cos2SigmaM = cosSigma - 2 * sinU1 * sinU2 / cosSquaredAlpha;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (isNaN(cos2SigmaM)) {
+<span class="cstat-no" title="statement not covered" >      cos2SigmaM = 0;</span>
+    }
+    var C = f / 16 * cosSquaredAlpha * (4 + f * (4 - 3 * cosSquaredAlpha));
+    var lambdaPrime = deltaLon + (1 - C) * f * sinAlpha * (sigma +
+        C * sinSigma * (cos2SigmaM +
+        C * cosSigma * (2 * cos2SigmaM * cos2SigmaM - 1)));
+    deltaLambda = Math.abs(lambdaPrime - lambda);
+    lambda = lambdaPrime;
+    if (deltaLambda &lt; minDeltaLambda) {
+      break;
+    }
+  }
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (i === 0) {
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      distance: NaN,
+      finalBearing: NaN,
+      initialBearing: NaN
+    };
+  }
+  var aSquared = this.a * this.a;
+  var bSquared = this.b * this.b;
+  var uSquared = cosSquaredAlpha * (aSquared - bSquared) / bSquared;
+  var A = 1 + uSquared / 16384 *
+      (4096 + uSquared * (uSquared * (320 - 175 * uSquared) - 768));
+  var B = uSquared / 1024 *
+      (256 + uSquared * (uSquared * (74 - 47 * uSquared) - 128));
+  var deltaSigma = B * sinSigma * (cos2SigmaM + B / 4 *
+      (cosSigma * (2 * cos2SigmaM * cos2SigmaM - 1) -
+       B / 6 * cos2SigmaM * (4 * sinSigma * sinSigma - 3) *
+       (4 * cos2SigmaM * cos2SigmaM - 3)));
+  cosLambda = Math.cos(lambda);
+  sinLambda = Math.sin(lambda);
+  var alpha1 = Math.atan2(cosU2 * sinLambda,
+                          cosU1 * sinU2 - sinU1 * cosU2 * cosLambda);
+  var alpha2 = Math.atan2(cosU1 * sinLambda,
+                          cosU1 * sinU2 * cosLambda - sinU1 * cosU2);
+  return {
+    distance: this.b * A * (sigma - deltaSigma),
+    initialBearing: goog.math.toDegrees(alpha1),
+    finalBearing: goog.math.toDegrees(alpha2)
+  };
+};
+&nbsp;
+&nbsp;
+/**
+ * Returns the distance from c1 to c2 using Vincenty.
+ *
+ * @param {ol.Coordinate} c1 Coordinate 1.
+ * @param {ol.Coordinate} c2 Coordinate 1.
+ * @param {number=} opt_minDeltaLambda Minimum delta lambda for convergence.
+ * @param {number=} opt_maxIterations Maximum iterations.
+ * @return {number} Vincenty distance.
+ */
+ol.Ellipsoid.prototype.vincentyDistance =
+    function(c1, c2, opt_minDeltaLambda, opt_maxIterations) {
+  var vincenty = this.vincenty(c1, c2, opt_minDeltaLambda, opt_maxIterations);
+  return vincenty.distance;
+};
+&nbsp;
+&nbsp;
+/**
+ * Returns the final bearing from c1 to c2 using Vincenty.
+ *
+ * @param {ol.Coordinate} c1 Coordinate 1.
+ * @param {ol.Coordinate} c2 Coordinate 1.
+ * @param {number=} opt_minDeltaLambda Minimum delta lambda for convergence.
+ * @param {number=} opt_maxIterations Maximum iterations.
+ * @return {number} Initial bearing.
+ */
+ol.Ellipsoid.prototype.vincentyFinalBearing =
+    function(c1, c2, opt_minDeltaLambda, opt_maxIterations) {
+  var vincenty = this.vincenty(c1, c2, opt_minDeltaLambda, opt_maxIterations);
+  return vincenty.finalBearing;
+};
+&nbsp;
+&nbsp;
+/**
+ * Returns the initial bearing from c1 to c2 using Vincenty.
+ *
+ * @param {ol.Coordinate} c1 Coordinate 1.
+ * @param {ol.Coordinate} c2 Coordinate 1.
+ * @param {number=} opt_minDeltaLambda Minimum delta lambda for convergence.
+ * @param {number=} opt_maxIterations Maximum iterations.
+ * @return {number} Initial bearing.
+ */
+ol.Ellipsoid.prototype.vincentyInitialBearing =
+    function(c1, c2, opt_minDeltaLambda, opt_maxIterations) {
+  var vincenty = this.vincenty(c1, c2, opt_minDeltaLambda, opt_maxIterations);
+  return vincenty.initialBearing;
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 07 2015 13:38:50 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

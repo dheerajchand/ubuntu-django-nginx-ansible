@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ol/tilegrid/xyztilegrid.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">ol/tilegrid/xyztilegrid.js</span></h1>
+    <h2>
+        Statements: <span class="metric">82.14% <small>(46 / 56)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">62.5% <small>(15 / 24)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(5 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">82.14% <small>(46 / 56)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">ol/tilegrid/</a> &#187; xyztilegrid.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">125</span>
+<span class="cline-any cline-yes">125</span>
+<span class="cline-any cline-yes">125</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">goog.provide('ol.tilegrid.XYZ');
+&nbsp;
+goog.require('goog.math');
+goog.require('ol');
+goog.require('ol.TileCoord');
+goog.require('ol.TileRange');
+goog.require('ol.extent');
+goog.require('ol.extent.Corner');
+goog.require('ol.proj');
+goog.require('ol.proj.EPSG3857');
+goog.require('ol.tilecoord');
+goog.require('ol.tilegrid.TileGrid');
+&nbsp;
+&nbsp;
+&nbsp;
+/**
+ * @classdesc
+ * Set the grid pattern for sources accessing XYZ tiled-image servers.
+ *
+ * @constructor
+ * @extends {ol.tilegrid.TileGrid}
+ * @param {olx.tilegrid.XYZOptions} options XYZ options.
+ * @struct
+ * @api
+ */
+ol.tilegrid.XYZ = function(options) {
+  var extent = goog.isDef(options.extent) ?
+      options.extent : ol.proj.EPSG3857.EXTENT;
+  var resolutions = ol.tilegrid.resolutionsFromExtent(
+      extent, options.maxZoom, options.tileSize);
+&nbsp;
+  goog.base(this, {
+    minZoom: options.minZoom,
+    origin: ol.extent.getCorner(extent, ol.extent.Corner.TOP_LEFT),
+    resolutions: resolutions,
+    tileSize: options.tileSize
+  });
+&nbsp;
+};
+goog.inherits(ol.tilegrid.XYZ, ol.tilegrid.TileGrid);
+&nbsp;
+&nbsp;
+/**
+ * @inheritDoc
+ */
+ol.tilegrid.XYZ.prototype.createTileCoordTransform = function(opt_options) {
+  var options = goog.isDef(opt_options) ? <span class="branch-0 cbranch-no" title="branch not covered" >opt_options </span>: {};
+  var minZ = this.minZoom;
+  var maxZ = this.maxZoom;
+  /** @type {Array.&lt;ol.TileRange&gt;} */
+  var tileRangeByZ = null;
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (goog.isDef(options.extent)) {
+<span class="cstat-no" title="statement not covered" >    tileRangeByZ = new Array(maxZ + 1);</span>
+<span class="cstat-no" title="statement not covered" >    var z;</span>
+<span class="cstat-no" title="statement not covered" >    for (z = 0; z &lt;= maxZ; ++z) {</span>
+<span class="cstat-no" title="statement not covered" >      if (z &lt; minZ) {</span>
+<span class="cstat-no" title="statement not covered" >        tileRangeByZ[z] = null;</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        tileRangeByZ[z] = this.getTileRangeForExtentAndZ(options.extent, z);</span>
+      }
+    }
+  }
+  return (
+      /**
+       * @param {ol.TileCoord} tileCoord Tile coordinate.
+       * @param {ol.proj.Projection} projection Projection.
+       * @param {ol.TileCoord=} opt_tileCoord Destination tile coordinate.
+       * @return {ol.TileCoord} Tile coordinate.
+       */
+      function(tileCoord, projection, opt_tileCoord) {
+        var z = tileCoord[0];
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (z &lt; minZ || maxZ &lt; z) {
+<span class="cstat-no" title="statement not covered" >          return null;</span>
+        }
+        var n = Math.pow(2, z);
+        var x = tileCoord[1];
+        var y = tileCoord[2];
+        if (y &lt; -n || -1 &lt; y) {
+          return null;
+        }
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (!goog.isNull(tileRangeByZ)) {
+<span class="cstat-no" title="statement not covered" >          if (!tileRangeByZ[z].containsXY(x, y)) {</span>
+<span class="cstat-no" title="statement not covered" >            return null;</span>
+          }
+        }
+        return ol.tilecoord.createOrUpdate(z, x, -y - 1, opt_tileCoord);
+      });
+};
+&nbsp;
+&nbsp;
+/**
+ * @inheritDoc
+ */
+ol.tilegrid.XYZ.prototype.getTileCoordChildTileRange =
+    function(tileCoord, opt_tileRange) {
+  if (tileCoord[0] &lt; this.maxZoom) {
+    var doubleX = 2 * tileCoord[1];
+    var doubleY = 2 * tileCoord[2];
+    return ol.TileRange.createOrUpdate(
+        doubleX, doubleX + 1,
+        doubleY, doubleY + 1,
+        opt_tileRange);
+  } else {
+    return null;
+  }
+};
+&nbsp;
+&nbsp;
+/**
+ * @inheritDoc
+ */
+ol.tilegrid.XYZ.prototype.forEachTileCoordParentTileRange =
+    function(tileCoord, callback, opt_this, opt_tileRange) {
+  var tileRange = ol.TileRange.createOrUpdate(
+      0, tileCoord[1], 0, tileCoord[2], opt_tileRange);
+  var z;
+  for (z = tileCoord[0] - 1; z &gt;= this.minZoom; --z) {
+    tileRange.minX = tileRange.maxX &gt;&gt;= 1;
+    tileRange.minY = tileRange.maxY &gt;&gt;= 1;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (callback.call(opt_this, z, tileRange)) {
+<span class="cstat-no" title="statement not covered" >      return true;</span>
+    }
+  }
+  return false;
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 07 2015 13:38:50 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

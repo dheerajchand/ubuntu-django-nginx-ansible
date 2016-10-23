@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ol/color/colormatrix.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">ol/color/colormatrix.js</span></h1>
+    <h2>
+        Statements: <span class="metric">18.89% <small>(17 / 90)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 26)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">16.67% <small>(1 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">18.89% <small>(17 / 90)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">ol/color/</a> &#187; colormatrix.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">goog.provide('ol.color.Matrix');
+&nbsp;
+goog.require('goog.vec.Mat4');
+&nbsp;
+&nbsp;
+&nbsp;
+/**
+ * @constructor
+ */
+ol.color.Matrix = function() {
+&nbsp;
+  /**
+   * @private
+   * @type {!goog.vec.Mat4.Number}
+   */
+  this.colorMatrix_ = goog.vec.Mat4.createNumber();
+&nbsp;
+  /**
+   * @private
+   * @type {number|undefined}
+   */
+  this.brightness_ = undefined;
+&nbsp;
+  /**
+   * @private
+   * @type {!goog.vec.Mat4.Number}
+   */
+  this.brightnessMatrix_ = goog.vec.Mat4.createNumber();
+&nbsp;
+  /**
+   * @private
+   * @type {number|undefined}
+   */
+  this.contrast_ = undefined;
+&nbsp;
+  /**
+   * @private
+   * @type {!goog.vec.Mat4.Number}
+   */
+  this.contrastMatrix_ = goog.vec.Mat4.createNumber();
+&nbsp;
+  /**
+   * @private
+   * @type {number|undefined}
+   */
+  this.hue_ = undefined;
+&nbsp;
+  /**
+   * @private
+   * @type {!goog.vec.Mat4.Number}
+   */
+  this.hueMatrix_ = goog.vec.Mat4.createNumber();
+&nbsp;
+  /**
+   * @private
+   * @type {number|undefined}
+   */
+  this.saturation_ = undefined;
+&nbsp;
+  /**
+   * @private
+   * @type {!goog.vec.Mat4.Number}
+   */
+  this.saturationMatrix_ = goog.vec.Mat4.createNumber();
+&nbsp;
+};
+&nbsp;
+&nbsp;
+/**
+ * @param {!goog.vec.Mat4.Number} matrix Matrix.
+ * @param {number} value Brightness value.
+ * @return {!goog.vec.Mat4.Number} Matrix.
+ */
+ol.color.Matrix.makeBrightness = <span class="fstat-no" title="function not covered" >function(matrix, value) {</span>
+<span class="cstat-no" title="statement not covered" >  goog.vec.Mat4.makeTranslate(matrix, value, value, value);</span>
+<span class="cstat-no" title="statement not covered" >  return matrix;</span>
+};
+&nbsp;
+&nbsp;
+/**
+ * @param {!goog.vec.Mat4.Number} matrix Matrix.
+ * @param {number} value Contrast value.
+ * @return {!goog.vec.Mat4.Number} Matrix.
+ */
+ol.color.Matrix.makeContrast = <span class="fstat-no" title="function not covered" >function(matrix, value) {</span>
+<span class="cstat-no" title="statement not covered" >  goog.vec.Mat4.makeScale(matrix, value, value, value);</span>
+<span class="cstat-no" title="statement not covered" >  var translateValue = (-0.5 * value + 0.5);</span>
+<span class="cstat-no" title="statement not covered" >  goog.vec.Mat4.setColumnValues(matrix, 3,</span>
+      translateValue, translateValue, translateValue, 1);
+<span class="cstat-no" title="statement not covered" >  return matrix;</span>
+};
+&nbsp;
+&nbsp;
+/**
+ * @param {!goog.vec.Mat4.Number} matrix Matrix.
+ * @param {number} value Hue value.
+ * @return {!goog.vec.Mat4.Number} Matrix.
+ */
+ol.color.Matrix.makeHue = <span class="fstat-no" title="function not covered" >function(matrix, value) {</span>
+<span class="cstat-no" title="statement not covered" >  var cosHue = Math.cos(value);</span>
+<span class="cstat-no" title="statement not covered" >  var sinHue = Math.sin(value);</span>
+<span class="cstat-no" title="statement not covered" >  var v00 = 0.213 + cosHue * 0.787 - sinHue * 0.213;</span>
+<span class="cstat-no" title="statement not covered" >  var v01 = 0.715 - cosHue * 0.715 - sinHue * 0.715;</span>
+<span class="cstat-no" title="statement not covered" >  var v02 = 0.072 - cosHue * 0.072 + sinHue * 0.928;</span>
+<span class="cstat-no" title="statement not covered" >  var v03 = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var v10 = 0.213 - cosHue * 0.213 + sinHue * 0.143;</span>
+<span class="cstat-no" title="statement not covered" >  var v11 = 0.715 + cosHue * 0.285 + sinHue * 0.140;</span>
+<span class="cstat-no" title="statement not covered" >  var v12 = 0.072 - cosHue * 0.072 - sinHue * 0.283;</span>
+<span class="cstat-no" title="statement not covered" >  var v13 = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var v20 = 0.213 - cosHue * 0.213 - sinHue * 0.787;</span>
+<span class="cstat-no" title="statement not covered" >  var v21 = 0.715 - cosHue * 0.715 + sinHue * 0.715;</span>
+<span class="cstat-no" title="statement not covered" >  var v22 = 0.072 + cosHue * 0.928 + sinHue * 0.072;</span>
+<span class="cstat-no" title="statement not covered" >  var v23 = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var v30 = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var v31 = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var v32 = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var v33 = 1;</span>
+<span class="cstat-no" title="statement not covered" >  goog.vec.Mat4.setFromValues(matrix,</span>
+      v00, v10, v20, v30,
+      v01, v11, v21, v31,
+      v02, v12, v22, v32,
+      v03, v13, v23, v33);
+<span class="cstat-no" title="statement not covered" >  return matrix;</span>
+};
+&nbsp;
+&nbsp;
+/**
+ * @param {!goog.vec.Mat4.Number} matrix Matrix.
+ * @param {number} value Saturation value.
+ * @return {!goog.vec.Mat4.Number} Matrix.
+ */
+ol.color.Matrix.makeSaturation = <span class="fstat-no" title="function not covered" >function(matrix, value) {</span>
+<span class="cstat-no" title="statement not covered" >  var v00 = 0.213 + 0.787 * value;</span>
+<span class="cstat-no" title="statement not covered" >  var v01 = 0.715 - 0.715 * value;</span>
+<span class="cstat-no" title="statement not covered" >  var v02 = 0.072 - 0.072 * value;</span>
+<span class="cstat-no" title="statement not covered" >  var v03 = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var v10 = 0.213 - 0.213 * value;</span>
+<span class="cstat-no" title="statement not covered" >  var v11 = 0.715 + 0.285 * value;</span>
+<span class="cstat-no" title="statement not covered" >  var v12 = 0.072 - 0.072 * value;</span>
+<span class="cstat-no" title="statement not covered" >  var v13 = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var v20 = 0.213 - 0.213 * value;</span>
+<span class="cstat-no" title="statement not covered" >  var v21 = 0.715 - 0.715 * value;</span>
+<span class="cstat-no" title="statement not covered" >  var v22 = 0.072 + 0.928 * value;</span>
+<span class="cstat-no" title="statement not covered" >  var v23 = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var v30 = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var v31 = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var v32 = 0;</span>
+<span class="cstat-no" title="statement not covered" >  var v33 = 1;</span>
+<span class="cstat-no" title="statement not covered" >  goog.vec.Mat4.setFromValues(matrix,</span>
+      v00, v10, v20, v30,
+      v01, v11, v21, v31,
+      v02, v12, v22, v32,
+      v03, v13, v23, v33);
+<span class="cstat-no" title="statement not covered" >  return matrix;</span>
+};
+&nbsp;
+&nbsp;
+/**
+ * @param {number|undefined} brightness Brightness.
+ * @param {number|undefined} contrast Contrast.
+ * @param {number|undefined} hue Hue.
+ * @param {number|undefined} saturation Saturation.
+ * @return {!goog.vec.Mat4.Number} Matrix.
+ */
+ol.color.Matrix.prototype.getMatrix = <span class="fstat-no" title="function not covered" >function(</span>
+    brightness, contrast, hue, saturation) {
+<span class="cstat-no" title="statement not covered" >  var colorMatrixDirty = false;</span>
+<span class="cstat-no" title="statement not covered" >  if (goog.isDef(brightness) &amp;&amp; brightness !== this.brightness_) {</span>
+<span class="cstat-no" title="statement not covered" >    ol.color.Matrix.makeBrightness(this.brightnessMatrix_, brightness);</span>
+<span class="cstat-no" title="statement not covered" >    this.brightness_ = brightness;</span>
+<span class="cstat-no" title="statement not covered" >    colorMatrixDirty = true;</span>
+  }
+<span class="cstat-no" title="statement not covered" >  if (goog.isDef(contrast) &amp;&amp; contrast !== this.contrast_) {</span>
+<span class="cstat-no" title="statement not covered" >    ol.color.Matrix.makeContrast(this.contrastMatrix_, contrast);</span>
+<span class="cstat-no" title="statement not covered" >    this.contrast_ = contrast;</span>
+<span class="cstat-no" title="statement not covered" >    colorMatrixDirty = true;</span>
+  }
+<span class="cstat-no" title="statement not covered" >  if (goog.isDef(hue) &amp;&amp; hue !== this.hue_) {</span>
+<span class="cstat-no" title="statement not covered" >    ol.color.Matrix.makeHue(this.hueMatrix_, hue);</span>
+<span class="cstat-no" title="statement not covered" >    this.hue_ = hue;</span>
+<span class="cstat-no" title="statement not covered" >    colorMatrixDirty = true;</span>
+  }
+<span class="cstat-no" title="statement not covered" >  if (goog.isDef(saturation) &amp;&amp; saturation !== this.saturation_) {</span>
+<span class="cstat-no" title="statement not covered" >    ol.color.Matrix.makeSaturation(this.saturationMatrix_, saturation);</span>
+<span class="cstat-no" title="statement not covered" >    this.saturation_ = saturation;</span>
+<span class="cstat-no" title="statement not covered" >    colorMatrixDirty = true;</span>
+  }
+<span class="cstat-no" title="statement not covered" >  if (colorMatrixDirty) {</span>
+<span class="cstat-no" title="statement not covered" >    var colorMatrix = this.colorMatrix_;</span>
+<span class="cstat-no" title="statement not covered" >    goog.vec.Mat4.makeIdentity(colorMatrix);</span>
+<span class="cstat-no" title="statement not covered" >    if (goog.isDef(contrast)) {</span>
+<span class="cstat-no" title="statement not covered" >      goog.vec.Mat4.multMat(colorMatrix, this.contrastMatrix_, colorMatrix);</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (goog.isDef(brightness)) {</span>
+<span class="cstat-no" title="statement not covered" >      goog.vec.Mat4.multMat(colorMatrix, this.brightnessMatrix_, colorMatrix);</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (goog.isDef(saturation)) {</span>
+<span class="cstat-no" title="statement not covered" >      goog.vec.Mat4.multMat(colorMatrix, this.saturationMatrix_, colorMatrix);</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (goog.isDef(hue)) {</span>
+<span class="cstat-no" title="statement not covered" >      goog.vec.Mat4.multMat(colorMatrix, this.hueMatrix_, colorMatrix);</span>
+    }
+  }
+<span class="cstat-no" title="statement not covered" >  return this.colorMatrix_;</span>
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Aug 26 2015 11:33:22 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

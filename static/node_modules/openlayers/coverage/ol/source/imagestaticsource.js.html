@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ol/source/imagestaticsource.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">ol/source/</a> imagestaticsource.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.67% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>42/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>12/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.67% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>42/43</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">goog.provide('ol.source.ImageStatic');
+&nbsp;
+goog.require('goog.events');
+goog.require('goog.events.EventType');
+goog.require('ol.Image');
+goog.require('ol.ImageLoadFunctionType');
+goog.require('ol.ImageState');
+goog.require('ol.extent');
+goog.require('ol.proj');
+goog.require('ol.source.Image');
+&nbsp;
+&nbsp;
+&nbsp;
+/**
+ * @classdesc
+ * A layer source for displaying a single, static image.
+ *
+ * @constructor
+ * @extends {ol.source.Image}
+ * @param {olx.source.ImageStaticOptions} options Options.
+ * @api stable
+ */
+ol.source.ImageStatic = function(options) {
+&nbsp;
+  var attributions = options.attributions !== undefined ?
+<span class="branch-0 cbranch-no" title="branch not covered" >      options.attributions </span>: null;
+&nbsp;
+  var imageExtent = options.imageExtent;
+&nbsp;
+  var crossOrigin = options.crossOrigin !== undefined ?
+<span class="branch-0 cbranch-no" title="branch not covered" >      options.crossOrigin </span>: null;
+&nbsp;
+  var /** @type {ol.ImageLoadFunctionType} */ imageLoadFunction =
+      options.imageLoadFunction !== undefined ?
+<span class="branch-0 cbranch-no" title="branch not covered" >      options.imageLoadFunction </span>: ol.source.Image.defaultImageLoadFunction;
+&nbsp;
+  goog.base(this, {
+    attributions: attributions,
+    logo: options.logo,
+    projection: ol.proj.get(options.projection)
+  });
+&nbsp;
+  /**
+   * @private
+   * @type {ol.Image}
+   */
+  this.image_ = new ol.Image(imageExtent, undefined, 1, attributions,
+      options.url, crossOrigin, imageLoadFunction);
+&nbsp;
+  /**
+   * @private
+   * @type {ol.Size}
+   */
+  this.imageSize_ = options.imageSize ? options.imageSize : null;
+&nbsp;
+  goog.events.listen(this.image_, goog.events.EventType.CHANGE,
+      this.handleImageChange, false, this);
+&nbsp;
+};
+goog.inherits(ol.source.ImageStatic, ol.source.Image);
+&nbsp;
+&nbsp;
+/**
+ * @inheritDoc
+ */
+ol.source.ImageStatic.prototype.getImageInternal =
+    function(extent, resolution, pixelRatio, projection) {
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (ol.extent.intersects(extent, this.image_.getExtent())) {
+    return this.image_;
+  }
+<span class="cstat-no" title="statement not covered" >  return null;</span>
+};
+&nbsp;
+&nbsp;
+/**
+ * @inheritDoc
+ */
+ol.source.ImageStatic.prototype.handleImageChange = function(evt) {
+  if (this.image_.getState() == ol.ImageState.LOADED) {
+    var imageExtent = this.image_.getExtent();
+    var image = this.image_.getImage();
+    var imageWidth, imageHeight;
+    if (this.imageSize_) {
+      imageWidth = this.imageSize_[0];
+      imageHeight = this.imageSize_[1];
+    } else {
+      imageWidth = image.width;
+      imageHeight = image.height;
+    }
+    var resolution = ol.extent.getHeight(imageExtent) / imageHeight;
+    var targetWidth = Math.ceil(ol.extent.getWidth(imageExtent) / resolution);
+    if (targetWidth != imageWidth) {
+      var canvas = /** @type {HTMLCanvasElement} */
+          (document.createElement('canvas'));
+      canvas.width = targetWidth;
+      canvas.height = /** @type {number} */ (imageHeight);
+      var context = canvas.getContext('2d');
+      context.drawImage(image, 0, 0, imageWidth, imageHeight,
+          0, 0, canvas.width, canvas.height);
+      this.image_.setImage(canvas);
+    }
+  }
+  goog.base(this, 'handleImageChange', evt);
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jan 06 2016 12:34:30 GMT+0100 (CET)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

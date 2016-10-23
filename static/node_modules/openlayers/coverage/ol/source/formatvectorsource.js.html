@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ol/source/formatvectorsource.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">ol/source/formatvectorsource.js</span></h1>
+    <h2>
+        Statements: <span class="metric">34.55% <small>(19 / 55)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 22)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">25% <small>(1 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">34.55% <small>(19 / 55)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">ol/source/</a> &#187; formatvectorsource.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// FIXME consider delaying feature reading so projection can be provided by
+// consumer (e.g. the view)
+&nbsp;
+goog.provide('ol.source.FormatVector');
+&nbsp;
+goog.require('goog.asserts');
+goog.require('goog.dispose');
+goog.require('goog.events');
+goog.require('goog.net.EventType');
+goog.require('goog.net.XhrIo');
+goog.require('goog.net.XhrIo.ResponseType');
+goog.require('goog.userAgent');
+goog.require('ol.format.FormatType');
+goog.require('ol.has');
+goog.require('ol.source.State');
+goog.require('ol.source.Vector');
+goog.require('ol.xml');
+&nbsp;
+&nbsp;
+&nbsp;
+/**
+ * @classdesc
+ * Abstract base class; normally only used for creating subclasses and not
+ * instantiated in apps.
+ * Base class for vector sources in one of the supported formats.
+ *
+ * @constructor
+ * @extends {ol.source.Vector}
+ * @param {olx.source.FormatVectorOptions} options Options.
+ */
+ol.source.FormatVector = function(options) {
+&nbsp;
+  goog.base(this, {
+    attributions: options.attributions,
+    logo: options.logo,
+    projection: options.projection
+  });
+&nbsp;
+  /**
+   * @protected
+   * @type {ol.format.Feature}
+   */
+  this.format = options.format;
+&nbsp;
+};
+goog.inherits(ol.source.FormatVector, ol.source.Vector);
+&nbsp;
+&nbsp;
+/**
+ * @param {goog.Uri|string} url URL.
+ * @param {function(this: T, Array.&lt;ol.Feature&gt;)} success Success Callback.
+ * @param {function(this: T)} error Error callback.
+ * @param {T} thisArg Value to use as `this` when executing `success` or
+ *     `error`.
+ * @template T
+ */
+ol.source.FormatVector.prototype.loadFeaturesFromURL =
+<span class="fstat-no" title="function not covered" >    function(url, success, error, thisArg) {</span>
+<span class="cstat-no" title="statement not covered" >  var xhrIo = new goog.net.XhrIo();</span>
+<span class="cstat-no" title="statement not covered" >  var type = this.format.getType();</span>
+<span class="cstat-no" title="statement not covered" >  var responseType;</span>
+  // FIXME maybe use ResponseType.DOCUMENT?
+<span class="cstat-no" title="statement not covered" >  if (type == ol.format.FormatType.BINARY &amp;&amp;</span>
+      ol.has.ARRAY_BUFFER) {
+<span class="cstat-no" title="statement not covered" >    responseType = goog.net.XhrIo.ResponseType.ARRAY_BUFFER;</span>
+  } else {
+<span class="cstat-no" title="statement not covered" >    responseType = goog.net.XhrIo.ResponseType.TEXT;</span>
+  }
+<span class="cstat-no" title="statement not covered" >  xhrIo.setResponseType(responseType);</span>
+<span class="cstat-no" title="statement not covered" >  goog.events.listen(xhrIo, goog.net.EventType.COMPLETE,</span>
+      /**
+       * @param {Event} event Event.
+       * @private
+       * @this {ol.source.FormatVector}
+       */
+<span class="fstat-no" title="function not covered" >      function(event) {</span>
+<span class="cstat-no" title="statement not covered" >        var xhrIo = event.target;</span>
+<span class="cstat-no" title="statement not covered" >        goog.asserts.assertInstanceof(xhrIo, goog.net.XhrIo,</span>
+            'event.target/xhrIo is an instance of goog.net.XhrIo');
+<span class="cstat-no" title="statement not covered" >        if (xhrIo.isSuccess()) {</span>
+<span class="cstat-no" title="statement not covered" >          var type = this.format.getType();</span>
+          /** @type {ArrayBuffer|Document|Node|Object|string|undefined} */
+<span class="cstat-no" title="statement not covered" >          var source;</span>
+<span class="cstat-no" title="statement not covered" >          if (type == ol.format.FormatType.BINARY &amp;&amp;</span>
+              ol.has.ARRAY_BUFFER) {
+<span class="cstat-no" title="statement not covered" >            source = xhrIo.getResponse();</span>
+<span class="cstat-no" title="statement not covered" >            goog.asserts.assertInstanceof(source, ArrayBuffer,</span>
+                'source is an instance of ArrayBuffer');
+          } else <span class="cstat-no" title="statement not covered" >if (type == ol.format.FormatType.JSON) {</span>
+<span class="cstat-no" title="statement not covered" >            source = xhrIo.getResponseText();</span>
+          } else <span class="cstat-no" title="statement not covered" >if (type == ol.format.FormatType.TEXT) {</span>
+<span class="cstat-no" title="statement not covered" >            source = xhrIo.getResponseText();</span>
+          } else <span class="cstat-no" title="statement not covered" >if (type == ol.format.FormatType.XML) {</span>
+<span class="cstat-no" title="statement not covered" >            if (!goog.userAgent.IE) {</span>
+<span class="cstat-no" title="statement not covered" >              source = xhrIo.getResponseXml();</span>
+            }
+<span class="cstat-no" title="statement not covered" >            if (!goog.isDefAndNotNull(source)) {</span>
+<span class="cstat-no" title="statement not covered" >              source = ol.xml.parse(xhrIo.getResponseText());</span>
+            }
+          } else {
+<span class="cstat-no" title="statement not covered" >            goog.asserts.fail('unexpected format type');</span>
+          }
+<span class="cstat-no" title="statement not covered" >          if (goog.isDefAndNotNull(source)) {</span>
+<span class="cstat-no" title="statement not covered" >            success.call(thisArg, this.readFeatures(source));</span>
+          } else {
+<span class="cstat-no" title="statement not covered" >            this.setState(ol.source.State.ERROR);</span>
+<span class="cstat-no" title="statement not covered" >            goog.asserts.fail('undefined or null source');</span>
+          }
+        } else {
+<span class="cstat-no" title="statement not covered" >          error.call(thisArg);</span>
+        }
+<span class="cstat-no" title="statement not covered" >        goog.dispose(xhrIo);</span>
+      }, false, this);
+<span class="cstat-no" title="statement not covered" >  xhrIo.send(url);</span>
+};
+&nbsp;
+&nbsp;
+/**
+ * @param {ArrayBuffer|Document|Node|Object|string} source Source.
+ * @return {Array.&lt;ol.Feature&gt;} Features.
+ * @api
+ */
+ol.source.FormatVector.prototype.readFeatures = <span class="fstat-no" title="function not covered" >function(source) {</span>
+<span class="cstat-no" title="statement not covered" >  var format = this.format;</span>
+<span class="cstat-no" title="statement not covered" >  var projection = this.getProjection();</span>
+<span class="cstat-no" title="statement not covered" >  return format.readFeatures(source, {featureProjection: projection});</span>
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 07 2015 13:38:50 GMT+0200 (CEST)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

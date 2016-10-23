@@ -1,15 +1,22 @@
 ---
+- name: install python 2
+  raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+  become: true
 
 - name: set locale to {{locale}}
   command: /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
   become: true
 
-- name: add postgresql repos
-  apt_repository: repo='deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main' state=present
+- name: ensure aptitude is present
+  apt: pkg=aptitude state=installed install_recommends=yes update-cache=yes
   become: true
 
-- name: add postgresql repo key
-  apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc state=present
+- name: update pre-installed packages after installing aptitude
+  become: true
+  apt: upgrade=full update_cache=yes
+
+- name: install apt-file
+  apt: pkg=apt-file state=installed install_recommends=yes
   become: true
 
 - name: install required system packages.
