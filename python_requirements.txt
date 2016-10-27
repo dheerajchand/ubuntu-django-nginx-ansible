@@ -4,3 +4,4 @@ gunicorn
 django-extensions
 ipython
 django-model-utils
+geopandas

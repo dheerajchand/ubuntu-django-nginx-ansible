@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = '{{project_name}}.urls'
+ROOT_URLCONF = 'myproject.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = '{{project_name}}.wsgi.application'
+WSGI_APPLICATION = 'myproject.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
@@ -76,9 +76,9 @@ WSGI_APPLICATION = '{{project_name}}.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '{{dbname}}',                      # Or path to database file if using sqlite3.
-        'USER': '{{dbuser}}',                      # Not used with sqlite3.
-        'PASSWORD': '{{dbpassword}}',              # Not used with sqlite3.
+        'NAME': 'myproject',                      # Or path to database file if using sqlite3.
+        'USER': 'myproject',                      # Not used with sqlite3.
+        'PASSWORD': 'd5cda65eaa622604f9af738dad50339f',              # Not used with sqlite3.
         'HOST': 'localhost',                       # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '5432',                            # Set to empty string for default. Not used with sqlite3.
     }
