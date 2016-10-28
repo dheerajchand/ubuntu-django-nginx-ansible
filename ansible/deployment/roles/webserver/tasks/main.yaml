@@ -34,13 +34,12 @@
   apt: upgrade=full
   become: true
 
-- name: delete a project directory if it exists
-  shell: rm -rf /home/vagrant/{{ project_name}}/
-  ignore_errors: yes
+- name: enable ufw incoming and outgoing
+  ufw: state=enabled policy=allow
   become: true
 
-- name: make project directory in /home/vagrant
-  file: path=/home/vagrant/{{project_name}} state=directory
+- name: delete a virtualenv if it exists
+  shell: rm -rf {{ venv_path }}
   ignore_errors: yes
   become: true
 
@@ -55,7 +54,7 @@
   when: create_new_project == True
 
 - name: create a new django project in the /home/vagrant directory using the new virtualenv
-  shell: "cd /vagrant/; {{ venv_path }}/bin/django-admin.py startproject {{ project_name }} ."
+  shell: "cd /vagrant/; {{ venv_path }}/bin/django-admin.py startproject {{ project_name }}"
   when: create_new_project == True
 
 - name: remove the settings.py from the new django project
@@ -64,18 +63,42 @@
   when: create_new_project == True
 
 - name: create the new settings.py file using the template (fills in database settings and sets static_root)
-  template: src=draft_django_settings.py.j2 dest=/vagrant/{{ project_name }}/{{ project_name }}/settings.py owner=vagrant group=vagrant mode=0644
+  template: src=draft_django_settings.py.j2 dest={{ django_dir }}/{{ project_name }}/settings.py owner=vagrant group=vagrant mode=0644
   when: create_new_project == True
 
-- name: create django superuser
-  django_manage: command="createsuperuser --noinput --username=admin --email=dheeraj@dheerajchand.com app_path={{ django_dir }} virtualenv={{ venv_path }}"
+
+- name: Run Django database makemigrations
+  django_manage: >
+    command="makemigrations"
+    app_path=/vagrant/{{ project_name }}
+    virtualenv={{ venv_path }}
+
+- name: Run Django database migrate
+  django_manage: >
+    command=migrate
+    app_path=/vagrant/{{ project_name }}
+    virtualenv={{ venv_path }}
+
+- name: Run Django afdawango
+  django_manage: >
+    command=collectstatic
+    app_path=/vagrant/{{ project_name }}
+    virtualenv={{ venv_path }}
+
+- name: create ~/.bash_profile to make life easier
+  template: src=bash_profile.j2 dest=/home/vagrant/.bash_profile owner=vagrant group=vagrant
+
+- name: fix django directory permissions
+  file: >
+    state=directory
+    owner=vagrant
+    group=www-data
+    recurse=yes
+    path={{ django_dir }}
 
 
-#- name: create symbolic link from /vagrant/project_name to /opt/venv/project_name
-#  file: src=/vagrant/{{ item.dest }} dest=/home/vagrant/{{ item.src }}/{{ item.src }} state=link
-#  become: true
-#  with_items:
-#    - { src: "{{project_name}}", dest: "{{project_name}}" }
+
+
 
 
 
