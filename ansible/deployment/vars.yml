@@ -1,5 +1,5 @@
 project_name: myproject
-django_dir: "/vagrant/{{ project_name }}"
+django_dir: "/vagrant/{{ project_name }}/"
 venv_path: "/vagrant/projectenv"
 dbuser: "{{ project_name }}"
 dbpassword: d5cda65eaa622604f9af738dad50339f
