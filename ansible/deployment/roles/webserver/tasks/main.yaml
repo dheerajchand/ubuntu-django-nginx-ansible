@@ -45,7 +45,7 @@
   become: true
 
 - name: create python virtualenv in /home/vagrant/project_directory with requirements
-  action: pip virtualenv=/home/vagrant/{{project_name}}/projectenv virtualenv_command=/usr/bin/virtualenv virtualenv_site_packages=yes requirements=/vagrant/python_requirements.txt state=latest
+  action: pip virtualenv={{ venv_path }} virtualenv_command=/usr/bin/virtualenv virtualenv_site_packages=yes requirements=/vagrant/resources/python_requirements.txt state=latest
   become: true
 
 - name: if there is a django project in /vagrant, delete it
@@ -55,7 +55,7 @@
   when: create_new_project == True
 
 - name: create a new django project in the /home/vagrant directory using the new virtualenv
-  shell: "cd /vagrant/; /home/vagrant/{{ project_name }}/projectenv/bin/django-admin.py startproject {{ project_name }}"
+  shell: "cd /vagrant/; {{ venv_path }}/bin/django-admin.py startproject {{ project_name }} ."
   when: create_new_project == True
 
 - name: remove the settings.py from the new django project
@@ -67,11 +67,16 @@
   template: src=draft_django_settings.py.j2 dest=/vagrant/{{ project_name }}/{{ project_name }}/settings.py owner=vagrant group=vagrant mode=0644
   when: create_new_project == True
 
-- name: create symbolic link from /vagrant/project_name to /opt/venv/project_name
-  file: src=/vagrant/{{ item.dest }} dest=/home/vagrant/{{ item.src }}/{{ item.src }} state=link
-  become: true
-  with_items:
-    - { src: "{{project_name}}", dest: "{{project_name}}" }
+- name: create django superuser
+  django_manage: command="createsuperuser --noinput --username=admin --email=dheeraj@dheerajchand.com app_path={{ django_dir }} virtualenv={{ venv_path }}"
+
+
+#- name: create symbolic link from /vagrant/project_name to /opt/venv/project_name
+#  file: src=/vagrant/{{ item.dest }} dest=/home/vagrant/{{ item.src }}/{{ item.src }} state=link
+#  become: true
+#  with_items:
+#    - { src: "{{project_name}}", dest: "{{project_name}}" }
+
 
 
 #- name: create the npm package.json file to the static directory
