@@ -36,8 +36,7 @@
 
 - name: enable ufw incoming and outgoing
   ufw: >
-    state=enabled
-    policy=allow
+    state=disabled
   become: true
 
 - name: delete a virtualenv if it exists
@@ -153,37 +152,16 @@
 - name: link the sites-available to sites-enabled
   file: >
     src=/etc/nginx/sites-available/{{ project_name }}
-    dest=/etc/nginx/sites-enabled
+    dest=/etc/nginx/sites-enabled/{{ project_name }}
+    owner=root
+    group=root
+    state=link
   become: true
   when: create_new_project == True
 
-- name: enable gunicorn by systemctl and start it
-  systemd: >
-    name=gunicorn
-    daemon-reload=yes
-    state=started
-  become: true
+- name: start gunicorn in systemctl
+  shell: "sudo systemctl start gunicorn"
 
-- name: enable nginx by systemctl and start it
-  systemd: >
-    name=nginx
-    daemon-reload=yes
-    state=started
-  become: true
+- name: start nginx is systemctl
+  shell: "sudo systemctl start nginx"
 
-- name: allow all nginx ufw policies
-  ufw: >
-    rule=allow
-    name=Nginx Full
-  become: true
-
-
-
-#- name: create the npm package.json file to the static directory
-#  template: src=package.json dest=/vagrant/static/package.json owner=root group=root mode=0644
-#  become: true
-#
-#- name: install npm components
-#  become: true
-#  npm: path=/vagrant/static/ state=latest
-#  when: create_new_static == True
