@@ -161,8 +161,6 @@
   systemd: >
     name=gunicorn
     daemon-reload=yes
-    enabled:yes
-    masked:no
     state=started
   become: true
 
@@ -170,8 +168,6 @@
   systemd: >
     name=nginx
     daemon-reload=yes
-    enabled:yes
-    masked:no
     state=started
   become: true
 
