@@ -1,7 +1,7 @@
 ---
 
 - name: set locale to {{locale}}
-  action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
+  command: /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
   become: true
 
 - name: install required system packages.
@@ -35,7 +35,9 @@
   become: true
 
 - name: enable ufw incoming and outgoing
-  ufw: state=enabled policy=allow
+  ufw: >
+    state=enabled
+    policy=allow
   become: true
 
 - name: delete a virtualenv if it exists
@@ -44,11 +46,18 @@
   become: true
 
 - name: create python virtualenv in /home/vagrant/project_directory with requirements
-  action: pip virtualenv={{ venv_path }} virtualenv_command=/usr/bin/virtualenv virtualenv_site_packages=yes requirements=/vagrant/resources/python_requirements.txt state=latest
+  pip: >
+    virtualenv={{ venv_path }}
+    virtualenv_command=/usr/bin/virtualenv
+    virtualenv_site_packages=yes
+    requirements=/vagrant/resources/python_requirements.txt
+    state=latest
   become: true
 
 - name: if there is a django project in /vagrant, delete it
-  file: path=/vagrant/{{project_name}} state=absent
+  file: >
+    path=/vagrant/{{project_name}}
+    state=absent
   become: true
   ignore_errors: yes
   when: create_new_project == True
@@ -58,47 +67,119 @@
   when: create_new_project == True
 
 - name: remove the settings.py from the new django project
-  file: dest=/vagrant/{{ project_name }}/{{ project_name }}/settings.py state=absent
+  file: >
+    dest=/vagrant/{{ project_name }}/{{ project_name }}/settings.py
+    state=absent
   become: true
   when: create_new_project == True
 
 - name: create the new settings.py file using the template (fills in database settings and sets static_root)
-  template: src=draft_django_settings.py.j2 dest={{ django_dir }}/{{ project_name }}/settings.py owner=vagrant group=vagrant mode=0644
+  template: >
+    src=draft_django_settings.py.j2
+    dest={{ django_dir }}/{{ project_name }}/settings.py
+    owner=vagrant
+    group=vagrant
+    mode=0644
   when: create_new_project == True
-
 
 - name: Run Django database makemigrations
   django_manage: >
     command="makemigrations"
     app_path=/vagrant/{{ project_name }}
     virtualenv={{ venv_path }}
+  when: create_new_project == True
 
 - name: Run Django database migrate
   django_manage: >
     command=migrate
     app_path=/vagrant/{{ project_name }}
     virtualenv={{ venv_path }}
+  when: create_new_project == True
 
-- name: Run Django afdawango
+- name: Run Django collectstatic
   django_manage: >
     command=collectstatic
     app_path=/vagrant/{{ project_name }}
     virtualenv={{ venv_path }}
+  when: create_new_project == True
 
 - name: create ~/.bash_profile to make life easier
-  template: src=bash_profile.j2 dest=/home/vagrant/.bash_profile owner=vagrant group=vagrant
+  template: >
+    src=bash_profile.j2
+    dest=/home/vagrant/.bash_profile
+    owner=vagrant
+    group=vagrant
 
-- name: fix django directory permissions
+- name: add vagrant user to www-data group
+  user: >
+    name=vagrant
+    groups=sudo,www-data
+    append=yes
+
+- name: fix Django directory permissions
   file: >
     state=directory
     owner=vagrant
     group=www-data
     recurse=yes
     path={{ django_dir }}
+  become: true
 
+- name: create a directory for the socket files
+  file: >
+    state=directory
+    owner=vagrant
+    group=www-data
+    path={{ socket_dir }}
+  become: true
+  when: create_new_project == True
 
+- name: create a gunicorn system file
+  template: >
+    src=gunicorn.service.j2
+    dest=/etc/systemd/system/gunicorn.service
+    owner=root
+    group=root
+  become: true
+  when: create_new_project == True
 
+- name: create an nginx service file
+  template: >
+    src=nginx.j2
+    dest=/etc/nginx/sites-available/{{ project_name }}
+  become: true
+  when: create_new_project == True
 
+- name: link the sites-available to sites-enabled
+  file: >
+    src=/etc/nginx/sites-available/{{ project_name }}
+    dest=/etc/nginx/sites-enabled
+  become: true
+  when: create_new_project == True
+
+- name: enable gunicorn by systemctl and start it
+  systemd: >
+    name=gunicorn
+    daemon-reload=yes
+    enabled:yes
+    masked:no
+    state=started
+  become: true
+
+- name: enable nginx by systemctl and start it
+  systemd: >
+    name=nginx
+    daemon-reload=yes
+    enabled:yes
+    masked:no
+    state=started
+  become: true
+
+- name: allow all nginx ufw policies
+  ufw: >
+    rule=allow
+    name=Nginx Full
+  become: true
 
 
 
