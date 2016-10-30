@@ -2,20 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b07dd0e2-a84d-4945-b89d-d327f617c281" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/gunicorn.service.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/nginx.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/DESCRIPTION.rst" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/INSTALLER" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/METADATA" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/RECORD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/WHEEL" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/dependency_links.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/entry_points.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/metadata.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/top_level.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/zip-safe" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_crs.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_crs.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_drivers.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_drivers.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_err.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_err.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_geometry.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_geometry.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_transform.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_transform.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/ogrext.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/ogrext.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2/_psycopg.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2/_psycopg.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/_proj.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/_proj.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/FL" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/FL" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/MD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/MD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/TN" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/TN" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/WI" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/WI" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/WO" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/WO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/alaska" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/alaska" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/conus" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/conus" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/hawaii" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/hawaii" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/null" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/null" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/prvi" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/prvi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stgeorge" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stgeorge" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stlrnc" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stlrnc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stpaul" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stpaul" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/shapely/speedups/_speedups.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/shapely/speedups/_speedups.so" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml" afterPath="$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml" afterPath="$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Fiona-1.7.0.post2.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Fiona-1.7.0.post2.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Shapely-1.5.17.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Shapely-1.5.17.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2-2.6.2.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2-2.6.2.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj-1.9.5.1.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj-1.9.5.1.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/pip-selfcheck.json" afterPath="$PROJECT_DIR$/projectenv/pip-selfcheck.json" />
     </list>
     <ignored path="ubuntu-django-nginx-ansible.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,31 +59,11 @@
       <file leaf-file-name="main.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="154" column="53" selection-start-line="0" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
               <folding>
                 <element signature="e#266#657#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nginx.j2" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/nginx.j2">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="vars.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ansible/deployment/vars.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -96,11 +93,9 @@
         <option value="$PROJECT_DIR$/uploadertest/uploadertest/settings.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/ubuntu-xenial-16.04-cloudimg-console.log" />
-        <option value="$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml" />
         <option value="$PROJECT_DIR$/ansible/deployment/site.yml" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/common/templates/bash_profile.j2" />
         <option value="$PROJECT_DIR$/python_requirements.txt" />
-        <option value="$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/draft_django_settings.py.j2" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/bash_profile.j2" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -108,6 +103,8 @@
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/gunicorn.service.j2" />
         <option value="$PROJECT_DIR$/ansible/deployment/vars.yml" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/nginx.j2" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml" />
       </list>
     </option>
@@ -182,6 +179,106 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ubuntu-django-nginx-ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ubuntu-django-nginx-ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deployment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ubuntu-django-nginx-ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ubuntu-django-nginx-ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deployment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ubuntu-django-nginx-ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ubuntu-django-nginx-ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deployment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ubuntu-django-nginx-ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ubuntu-django-nginx-ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ansible" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="deployment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -190,7 +287,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="/usr/local/bin/R" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.ther.interpreter.TheRInterpreterConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
@@ -546,7 +643,14 @@
       <option name="project" value="LOCAL" />
       <updated>1477854149085</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary=" PARTIAL COMMIT; DOES NOT WORK: 1. pushing to allow collaborative debug&#10;">
+      <created>1477855326562</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1477855326562</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -559,7 +663,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3271523" sideWeight="0.49664992" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2672035" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2672035" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="The R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -606,7 +710,8 @@
     <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. reorganised top level directory with subdirectories to make more legible." />
     <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. webserver role now has Django management commands working. About to start on gunicorn." />
     <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. adding gunicorn and nginx to webserver role" />
-    <option name="LAST_COMMIT_MESSAGE" value=" PARTIAL COMMIT; DOES NOT WORK: 1. adding gunicorn and nginx to webserver role" />
+    <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. pushing to allow collaborative debug&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value=" PARTIAL COMMIT; DOES NOT WORK: 1. pushing to allow collaborative debug&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -788,27 +893,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/draft_django_settings.py.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/my_new_project/my_new_project/settings.py" />
     <entry file="file://$PROJECT_DIR$/resources/spf13-script.sh">
       <provider selected="true" editor-type-id="text-editor">
@@ -895,10 +979,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/vars.yml">
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+        <state relative-caret-position="568">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -911,10 +995,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/vars.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/draft_django_settings.py.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="154" column="53" selection-start-line="0" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
           <folding>
             <element signature="e#266#657#0" expanded="false" />
           </folding>

@@ -8,7 +8,11 @@
   become: true
 
 - name: ensure aptitude is present
-  apt: pkg=aptitude state=installed install_recommends=yes update-cache=yes
+  apt: >
+    pkg=aptitude
+    state=installed
+    install_recommends=yes
+    update-cache=yes
   become: true
 
 - name: update pre-installed packages after installing aptitude
@@ -16,11 +20,18 @@
   apt: upgrade=full update_cache=yes
 
 - name: install apt-file
-  apt: pkg=apt-file state=installed install_recommends=yes
+  apt: >
+    pkg=apt-file
+    state=installed
+    install_recommends=yes
   become: true
 
 - name: install required system packages.
-  apt: pkg={{item}} state=installed install_recommends=yes update-cache=yes
+  apt: >
+    pkg={{item}}
+    state=installed
+    install_recommends=yes
+    update-cache=yes
   become: true
   with_items:
       - apt-file
@@ -49,15 +60,5 @@
   apt: upgrade=yes
   become: true
 
-# - name: Download spf13 vim install script
-#   command: curl http://j.mp/spf13-vim3 -L -o /vagrant/{{ spf13_output_file_name }}
-#   when: spf13fileexists is not defined
-#   register: spf13fileexists
-#
-# - name: launch spf13 install script
-#   command: sh /vagrant/{{ spf13_output_file_name }}
-#   become: true
-#   register: spf13installed
-#   when: spf13installed is not defined
 
 
