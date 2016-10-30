@@ -2,49 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b07dd0e2-a84d-4945-b89d-d327f617c281" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.0.dist-info/DESCRIPTION.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.0.dist-info/INSTALLER" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.0.dist-info/METADATA" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.0.dist-info/RECORD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.0.dist-info/WHEEL" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.0.dist-info/dependency_links.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.0.dist-info/entry_points.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.0.dist-info/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.0.dist-info/top_level.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.0.dist-info/zip-safe" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_crs.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_crs.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_drivers.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_drivers.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_err.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_err.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_geometry.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_geometry.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_transform.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_transform.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/ogrext.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/ogrext.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2/_psycopg.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2/_psycopg.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/_proj.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/_proj.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/FL" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/FL" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/MD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/MD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/TN" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/TN" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/WI" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/WI" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/WO" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/WO" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/alaska" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/alaska" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/conus" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/conus" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/hawaii" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/hawaii" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/null" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/null" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/prvi" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/prvi" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stgeorge" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stgeorge" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stlrnc" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stlrnc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stpaul" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stpaul" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/shapely/speedups/_speedups.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/shapely/speedups/_speedups.so" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/gunicorn.service.j2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/nginx.j2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/DESCRIPTION.rst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/INSTALLER" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/METADATA" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/RECORD" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/WHEEL" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/dependency_links.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/entry_points.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/metadata.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/top_level.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools-28.7.1.dist-info/zip-safe" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vagrantfile" afterPath="$PROJECT_DIR$/Vagrantfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/vars.yml" afterPath="$PROJECT_DIR$/ansible/deployment/vars.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Fiona-1.7.0.post2.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Fiona-1.7.0.post2.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Shapely-1.5.17.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Shapely-1.5.17.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2-2.6.2.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2-2.6.2.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj-1.9.5.1.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj-1.9.5.1.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools/command/sdist.py" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/setuptools/command/sdist.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/pip-selfcheck.json" afterPath="$PROJECT_DIR$/projectenv/pip-selfcheck.json" />
     </list>
     <ignored path="ubuntu-django-nginx-ansible.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,8 +42,8 @@
       <file leaf-file-name="main.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="175" selection-end-column="14" />
+            <state relative-caret-position="193">
+              <caret line="154" column="53" selection-start-line="0" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
               <folding>
                 <element signature="e#266#657#0" expanded="false" />
               </folding>
@@ -568,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1477689466098</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary=" PARTIAL COMMIT; DOES NOT WORK: 1. adding gunicorn and nginx to webserver role">
+      <created>1477854149085</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1477854149085</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -627,7 +605,8 @@
     <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. webserver in progress" />
     <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. reorganised top level directory with subdirectories to make more legible." />
     <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. webserver role now has Django management commands working. About to start on gunicorn." />
-    <option name="LAST_COMMIT_MESSAGE" value=" PARTIAL COMMIT; DOES NOT WORK: 1. webserver role now has Django management commands working. About to start on gunicorn." />
+    <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. adding gunicorn and nginx to webserver role" />
+    <option name="LAST_COMMIT_MESSAGE" value=" PARTIAL COMMIT; DOES NOT WORK: 1. adding gunicorn and nginx to webserver role" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -934,8 +913,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="175" selection-end-column="14" />
+        <state relative-caret-position="193">
+          <caret line="154" column="53" selection-start-line="0" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
           <folding>
             <element signature="e#266#657#0" expanded="false" />
           </folding>

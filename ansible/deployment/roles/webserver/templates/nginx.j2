@@ -1,0 +1,14 @@
+server {
+    listen 80;
+    server_name localhost;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root {{ django_dir }};
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:{{ socket_dir}}/{{ project_name }}.sock;
+    }
+}
