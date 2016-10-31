@@ -130,6 +130,7 @@
     owner=vagrant
     group=www-data
     path={{ socket_dir }}
+    mode=777
   become: true
   when: create_new_project == True
 

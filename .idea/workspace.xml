@@ -25,8 +25,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stpaul" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stpaul" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/shapely/speedups/_speedups.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/shapely/speedups/_speedups.so" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml" afterPath="$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml" afterPath="$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vagrantfile" afterPath="$PROJECT_DIR$/Vagrantfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Fiona-1.7.0.post2.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Fiona-1.7.0.post2.dist-info/RECORD" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Shapely-1.5.17.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Shapely-1.5.17.dist-info/RECORD" />
@@ -56,14 +55,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.yaml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Vagrantfile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vagrantfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+            <state relative-caret-position="433">
+              <caret line="132" column="12" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
               <folding>
                 <element signature="e#266#657#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gunicorn.service.j2" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/gunicorn.service.j2">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,13 +118,13 @@
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/draft_django_settings.py.j2" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/bash_profile.j2" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/Vagrantfile" />
-        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/gunicorn.service.j2" />
         <option value="$PROJECT_DIR$/ansible/deployment/vars.yml" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/nginx.j2" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml" />
+        <option value="$PROJECT_DIR$/Vagrantfile" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/gunicorn.service.j2" />
       </list>
     </option>
   </component>
@@ -650,7 +669,14 @@
       <option name="project" value="LOCAL" />
       <updated>1477855326562</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary=" PARTIAL COMMIT; DOES NOT WORK: 1. gunicorn and nginx config files do not cause obvious errors, but I cannot access things via host machine.">
+      <created>1477870555781</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1477870555781</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -711,7 +737,8 @@
     <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. webserver role now has Django management commands working. About to start on gunicorn." />
     <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. adding gunicorn and nginx to webserver role" />
     <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. pushing to allow collaborative debug&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value=" PARTIAL COMMIT; DOES NOT WORK: 1. pushing to allow collaborative debug&#10;" />
+    <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. gunicorn and nginx config files do not cause obvious errors, but I cannot access things via host machine." />
+    <option name="LAST_COMMIT_MESSAGE" value=" PARTIAL COMMIT; DOES NOT WORK: 1. gunicorn and nginx config files do not cause obvious errors, but I cannot access things via host machine." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -963,22 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vagrantfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/gunicorn.service.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="120" selection-start-line="8" selection-start-column="120" selection-end-line="8" selection-end-column="120" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
@@ -991,14 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/vars.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1019,13 +1022,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/vars.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vagrantfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="38" column="18" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+        <state relative-caret-position="433">
+          <caret line="132" column="12" selection-start-line="132" selection-start-column="12" selection-end-line="132" selection-end-column="12" />
           <folding>
             <element signature="e#266#657#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/gunicorn.service.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="50" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
