@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b07dd0e2-a84d-4945-b89d-d327f617c281" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/basic_server_config.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/collect_django_static_and_fix_permissions.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_directory_and_config_files_for_webservers.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_django_project.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_venv.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/link_nginx_file_and_start_webservers.yaml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/migrate_new_django_project.yaml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/old.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_crs.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_crs.so" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_drivers.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_drivers.so" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_err.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_err.so" />
@@ -34,7 +25,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stpaul" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stpaul" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/shapely/speedups/_speedups.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/shapely/speedups/_speedups.so" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/site.yml" afterPath="$PROJECT_DIR$/ansible/deployment/site.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/link_nginx_file_and_start_webservers.yaml" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/link_nginx_file_and_start_webservers.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/bash_profile.j2" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/bash_profile.j2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/vars.yml" afterPath="$PROJECT_DIR$/ansible/deployment/vars.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Fiona-1.7.0.post2.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Fiona-1.7.0.post2.dist-info/RECORD" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Shapely-1.5.17.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Shapely-1.5.17.dist-info/RECORD" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2-2.6.2.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2-2.6.2.dist-info/RECORD" />
@@ -90,9 +83,7 @@
         <option value="$PROJECT_DIR$/ansible/deployment/roles/common/templates/bash_profile.j2" />
         <option value="$PROJECT_DIR$/python_requirements.txt" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/draft_django_settings.py.j2" />
-        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/bash_profile.j2" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/ansible/deployment/vars.yml" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/nginx.j2" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml" />
@@ -108,8 +99,10 @@
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/migrate_new_django_project.yaml" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/collect_django_static_and_fix_permissions.yaml" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_directory_and_config_files_for_webservers.yaml" />
-        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/link_nginx_file_and_start_webservers.yaml" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/vars.yml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/link_nginx_file_and_start_webservers.yaml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/bash_profile.j2" />
       </list>
     </option>
   </component>
@@ -120,8 +113,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="119" />
-    <option name="y" value="26" />
+    <option name="x" value="59" />
+    <option name="y" value="23" />
     <option name="width" value="1408" />
     <option name="height" value="873" />
   </component>
@@ -179,20 +172,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ubuntu-django-nginx-ansible" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ubuntu-django-nginx-ansible" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="ansible" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -226,6 +205,10 @@
               <option name="myItemId" value="webserver" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -250,10 +233,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -664,11 +643,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477890659510</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary=" PARTIAL COMMIT; DOES NOT WORK: 1. Restructuring webserver plays into smaller playbooks with intention of moving to separate roles">
+      <created>1478026122076</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1478026122076</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="119" y="26" width="1408" height="873" extended-state="0" />
+    <frame x="59" y="23" width="1408" height="873" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27086383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -727,7 +713,8 @@
     <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. pushing to allow collaborative debug&#10;" />
     <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. gunicorn and nginx config files do not cause obvious errors, but I cannot access things via host machine." />
     <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. gunicorn and nginx config files do not cause obvious errors, but I cannot access things via host machine. 2. nginx catches everything, though." />
-    <option name="LAST_COMMIT_MESSAGE" value=" PARTIAL COMMIT; DOES NOT WORK: 1. gunicorn and nginx config files do not cause obvious errors, but I cannot access things via host machine. 2. nginx catches everything, though." />
+    <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. Restructuring webserver plays into smaller playbooks with intention of moving to separate roles" />
+    <option name="LAST_COMMIT_MESSAGE" value=" PARTIAL COMMIT; DOES NOT WORK: 1. Restructuring webserver plays into smaller playbooks with intention of moving to separate roles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -885,13 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/bash_profile.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
@@ -903,20 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/vars.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="46" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/nginx.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -938,33 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-107">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
-        </state>
-      </provider>
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="465">
-            <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vagrantfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -994,34 +933,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_django_project.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/collect_django_static_and_fix_permissions.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/migrate_new_django_project.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_directory_and_config_files_for_webservers.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1034,14 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/link_nginx_file_and_start_webservers.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/old.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
@@ -1049,6 +956,89 @@
           <folding>
             <element signature="e#266#657#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vagrantfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/collect_django_static_and_fix_permissions.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_directory_and_config_files_for_webservers.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_django_project.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/vars.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/nginx.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        </state>
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="465">
+            <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/bash_profile.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/link_nginx_file_and_start_webservers.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>

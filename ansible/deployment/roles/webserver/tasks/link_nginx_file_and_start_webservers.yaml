@@ -9,6 +9,9 @@
   become: true
   when: create_new_project == True
 
+- name: reload systemctl files
+  shell: "sudo systemctl daemon-reload"
+
 - name: start gunicorn in systemctl
   shell: "sudo systemctl start gunicorn"
 
