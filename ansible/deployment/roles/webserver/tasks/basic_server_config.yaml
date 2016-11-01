@@ -1,0 +1,52 @@
+---
+- name: set locale to {{locale}}
+  command: /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
+  become: true
+
+- name: install required system packages.
+  action: apt pkg={{item}} state=installed update-cache=yes install_recommends=yes
+  become: true
+  with_items:
+    - build-essential
+    - cython
+    - gdal-bin
+    - gfortran
+    - libgdal-dev
+    - libgeos-dev
+    - libpq-dev
+    - nginx
+    - nodejs-legacy
+    - npm
+    - postgresql
+    - postgresql-contrib
+    - python-apt
+    - python-dev
+    - python-pip
+    - python-pycurl
+    - python-setuptools
+    - python-software-properties
+    - python-virtualenv
+    - supervisor
+    - vim
+
+- name: do upgrades to newly installed packages
+  apt: upgrade=full
+  become: true
+
+- name: enable ufw incoming and outgoing
+  ufw: >
+    state=disabled
+  become: true
+
+- name: add vagrant user to www-data group
+  user: >
+    name=vagrant
+    groups=sudo,www-data
+    append=yes
+
+- name: create ~/.bash_profile to make life easier
+  template: >
+    src=bash_profile.j2
+    dest=/home/vagrant/.bash_profile
+    owner=vagrant
+    group=vagrant

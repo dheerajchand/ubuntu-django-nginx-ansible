@@ -1,0 +1,15 @@
+---
+
+- name: delete a virtualenv if it exists
+  shell: rm -rf {{ venv_path }}
+  ignore_errors: yes
+  become: true
+
+- name: create python virtualenv in /home/vagrant/project_directory with requirements
+  pip: >
+    virtualenv={{ venv_path }}
+    virtualenv_command=/usr/bin/virtualenv
+    virtualenv_site_packages=yes
+    requirements=/vagrant/resources/python_requirements.txt
+    state=latest
+  become: true

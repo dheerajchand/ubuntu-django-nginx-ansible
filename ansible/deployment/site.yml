@@ -5,32 +5,7 @@
     - vars.yml
   roles:
     - common
-
-- hosts: all
-  sudo: yes
-  vars_files:
-    - vars.yml
-  roles:
     - dbserver
-
-- hosts: all
-  sudo: yes
-  vars_files:
-    - vars.yml
-  roles:
-    - geoserver
-
-- hosts: all
-  sudo: yes
-  vars_files:
-    - vars.yml
-  roles:
     - webserver
 
-#- hosts: all
-#  sudo: yes
-#  vars_files:
-#    - vars.yml
-#  roles:
-#    - rserver
 

@@ -1,0 +1,4 @@
+cd {{ django_dir }}
+source {{ venv_path }}/bin/activate
+sudo systemctl daemon-reload
+sudo systemctl restart gunicorn nginx

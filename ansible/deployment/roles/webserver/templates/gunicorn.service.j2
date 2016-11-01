@@ -1,0 +1,9 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+
+[Service]
+User=vagrant
+Group=www-data
+WorkingDirectory={{ django_dir }}
+ExecStart={{ venv_path }}/bin/gunicorn --workers 3 --bind unix:{{ socket_dir }}/{{ project_name }}.sock {{ project_name }}.wsgi:application

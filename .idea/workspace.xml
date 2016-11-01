@@ -2,10 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b07dd0e2-a84d-4945-b89d-d327f617c281" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_crs.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_crs.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_drivers.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_drivers.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_err.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_err.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_geometry.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_geometry.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_transform.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/_transform.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/ogrext.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/fiona/ogrext.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2/_psycopg.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2/_psycopg.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/_proj.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/_proj.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/FL" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/FL" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/MD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/MD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/TN" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/TN" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/WI" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/WI" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/WO" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/WO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/alaska" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/alaska" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/conus" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/conus" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/hawaii" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/hawaii" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/null" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/null" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/prvi" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/prvi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stgeorge" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stgeorge" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stlrnc" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stlrnc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stpaul" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj/data/stpaul" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/shapely/speedups/_speedups.so" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/shapely/speedups/_speedups.so" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/site.yml" afterPath="$PROJECT_DIR$/ansible/deployment/site.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/default/default/settings.py" afterPath="$PROJECT_DIR$/default/default/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/link_nginx_file_and_start_webservers.yaml" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/link_nginx_file_and_start_webservers.yaml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/bash_profile.j2" afterPath="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/bash_profile.j2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ansible/deployment/vars.yml" afterPath="$PROJECT_DIR$/ansible/deployment/vars.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Fiona-1.7.0.post2.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Fiona-1.7.0.post2.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Shapely-1.5.17.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/Shapely-1.5.17.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2-2.6.2.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/psycopg2-2.6.2.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj-1.9.5.1.dist-info/RECORD" afterPath="$PROJECT_DIR$/projectenv/lib/python2.7/site-packages/pyproj-1.9.5.1.dist-info/RECORD" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projectenv/pip-selfcheck.json" afterPath="$PROJECT_DIR$/projectenv/pip-selfcheck.json" />
     </list>
     <ignored path="ubuntu-django-nginx-ansible.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,28 +55,7 @@
     <favorites_list name="ubuntu-django-nginx-ansible" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.yaml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2175">
-              <caret line="145" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="site.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ansible/deployment/site.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,6 +66,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -67,17 +78,31 @@
         <option value="$PROJECT_DIR$/tester.py" />
         <option value="$PROJECT_DIR$/geodjango_template/geodjango_template/settings.py" />
         <option value="$PROJECT_DIR$/uploadertest/uploadertest/settings.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml" />
-        <option value="$PROJECT_DIR$/ansible/deployment/vars.yml" />
+        <option value="$PROJECT_DIR$/ubuntu-xenial-16.04-cloudimg-console.log" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/common/templates/bash_profile.j2" />
         <option value="$PROJECT_DIR$/python_requirements.txt" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/draft_django_settings.py.j2" />
-        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/bash_profile.j2" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/nginx.j2" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml" />
         <option value="$PROJECT_DIR$/Vagrantfile" />
-        <option value="$PROJECT_DIR$/ansible/deployment/site.yml" />
         <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/gunicorn.service.j2" />
+        <option value="$PROJECT_DIR$/ansible/deployment/site.yml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/new_main.yml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_venv.yaml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_django_project.yaml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/basic_server_config.yaml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/old.yaml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/migrate_new_django_project.yaml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/collect_django_static_and_fix_permissions.yaml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_directory_and_config_files_for_webservers.yaml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/vars.yml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/link_nginx_file_and_start_webservers.yaml" />
+        <option value="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/bash_profile.j2" />
       </list>
     </option>
   </component>
@@ -87,12 +112,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/static/node_modules" />
-  </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="59" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="width" value="1408" />
     <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -182,6 +205,10 @@
               <option name="myItemId" value="webserver" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -206,10 +233,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tasks" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -241,16 +264,20 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="/usr/local/bin/python" />
+    <property name="last_opened_file_path" value="/usr/local/bin/R" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scripts" />
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$/downloads" />
+      <recent name="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates" />
       <recent name="$PROJECT_DIR$/ansible/deployment/roles/common" />
-      <recent name="$PROJECT_DIR$/ansible/deployment/roles/common/tasks/templates" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/ansible/deployment/roles/webserver/templates" />
@@ -539,37 +566,121 @@
       <option name="project" value="LOCAL" />
       <updated>1476987169771</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="PARTIAL COMMIT, NOT WORKING: 1. gunicorn is not behaving correctly, log file is opaque, but supervisor can still run it.">
+      <created>1477063101174</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1477063101174</updated>
+    </task>
+    <task id="LOCAL-00009" summary="PARTIAL COMMIT, NOT WORKING: 1. gunicorn is not behaving correctly, log file is opaque, but supervisor can still run it.">
+      <created>1477249260634</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1477249260634</updated>
+    </task>
+    <task id="LOCAL-00010" summary=" 1. Common Role works in 16.04 LTS">
+      <created>1477252912274</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1477252912274</updated>
+    </task>
+    <task id="LOCAL-00011" summary=" 1. DB Role works in 16.04 LTS&#10;">
+      <created>1477254420433</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1477254420433</updated>
+    </task>
+    <task id="LOCAL-00012" summary=" PARTIAL COMMIT; DOES NOT WORK: 1. webserver in progress">
+      <created>1477604131505</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1477604131505</updated>
+    </task>
+    <task id="LOCAL-00013" summary=" PARTIAL COMMIT; DOES NOT WORK: 1. reorganised top level directory with subdirectories to make more legible.">
+      <created>1477635174740</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1477635174740</updated>
+    </task>
+    <task id="LOCAL-00014" summary=" PARTIAL COMMIT; DOES NOT WORK: 1. webserver role now has Django management commands working. About to start on gunicorn.">
+      <created>1477689466098</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1477689466098</updated>
+    </task>
+    <task id="LOCAL-00015" summary=" PARTIAL COMMIT; DOES NOT WORK: 1. adding gunicorn and nginx to webserver role">
+      <created>1477854149085</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1477854149085</updated>
+    </task>
+    <task id="LOCAL-00016" summary=" PARTIAL COMMIT; DOES NOT WORK: 1. pushing to allow collaborative debug&#10;">
+      <created>1477855326562</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1477855326562</updated>
+    </task>
+    <task id="LOCAL-00017" summary=" PARTIAL COMMIT; DOES NOT WORK: 1. gunicorn and nginx config files do not cause obvious errors, but I cannot access things via host machine.">
+      <created>1477870555781</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1477870555781</updated>
+    </task>
+    <task id="LOCAL-00018" summary=" PARTIAL COMMIT; DOES NOT WORK: 1. gunicorn and nginx config files do not cause obvious errors, but I cannot access things via host machine. 2. nginx catches everything, though.">
+      <created>1477890659509</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1477890659510</updated>
+    </task>
+    <task id="LOCAL-00019" summary=" PARTIAL COMMIT; DOES NOT WORK: 1. Restructuring webserver plays into smaller playbooks with intention of moving to separate roles">
+      <created>1478026122076</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1478026122076</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
+    <frame x="59" y="23" width="1408" height="873" extended-state="0" />
     <editor active="false" />
     <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27086383" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886437" sideWeight="0.5033501" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3271523" sideWeight="0.49664992" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3383405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="The R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886437" sideWeight="0.5033501" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3271523" sideWeight="0.49664992" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@ubuntu-django-nginx-ansible" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -592,66 +703,24 @@
     <MESSAGE value="1. Upgraded common.main.yml to use become instead of sudo, . 2 add psql repository, psql 6, latest postgis" />
     <MESSAGE value="1. Altered dbserver.main.yml to remove redundant sudo/become, . 2 add psql repository, psql 6, latest postgis&#10;" />
     <MESSAGE value="1. Added venv activate to bash_profile, 2. trying get webserver working: nginx and gunicorn do not seem to be responding.&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Added venv activate to bash_profile, 2. trying get webserver working: nginx and gunicorn do not seem to be responding.&#10;" />
+    <MESSAGE value="PARTIAL COMMIT, NOT WORKING: 1. gunicorn is not behaving correctly, log file is opaque, but supervisor can still run it." />
+    <MESSAGE value=" 1. Common Role works in 16.04 LTS" />
+    <MESSAGE value=" 1. DB Role works in 16.04 LTS&#10;" />
+    <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. webserver in progress" />
+    <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. reorganised top level directory with subdirectories to make more legible." />
+    <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. webserver role now has Django management commands working. About to start on gunicorn." />
+    <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. adding gunicorn and nginx to webserver role" />
+    <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. pushing to allow collaborative debug&#10;" />
+    <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. gunicorn and nginx config files do not cause obvious errors, but I cannot access things via host machine." />
+    <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. gunicorn and nginx config files do not cause obvious errors, but I cannot access things via host machine. 2. nginx catches everything, though." />
+    <MESSAGE value=" PARTIAL COMMIT; DOES NOT WORK: 1. Restructuring webserver plays into smaller playbooks with intention of moving to separate roles" />
+    <option name="LAST_COMMIT_MESSAGE" value=" PARTIAL COMMIT; DOES NOT WORK: 1. Restructuring webserver plays into smaller playbooks with intention of moving to separate roles" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2175">
-          <caret line="145" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/site.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2175">
-          <caret line="145" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/site.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="27" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -660,22 +729,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python_requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_requirements.txt">
+    <entry file="file://$PROJECT_DIR$/resources/python_requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -753,13 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -770,10 +817,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/morganTest.r">
+    <entry file="file://$PROJECT_DIR$/pollinglocations/pollinglocations/settings.py" />
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/django_settings.py.j2" />
+    <entry file="file://$PROJECT_DIR$/default/default/settings.py" />
+    <entry file="file://$PROJECT_DIR$/default/default/urls.py" />
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/site.retry">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ubuntu-xenial-16.04-cloudimg-console.log" />
+    <entry file="file://$PROJECT_DIR$/my_new_project/my_new_project/settings.py" />
+    <entry file="file://$PROJECT_DIR$/resources/spf13-script.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/r-requirements.R">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/python_requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/morganTest.r">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/r_repository_adder.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/r_installer_to_convert.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/draft_django_settings.py.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1027">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/gunicorn.service.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -784,96 +907,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pollinglocations/pollinglocations/settings.py" />
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/vars.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/dbserver/tasks/main.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/django_settings.py.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="51" column="27" selection-start-line="51" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/draft_django_settings.py.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/default/default/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/default/default/urls.py">
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/site.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/common/templates/bash_profile.j2">
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_venv.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/common/tasks/main.yml">
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/basic_server_config.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="45" column="64" selection-start-line="45" selection-start-column="64" selection-end-line="45" selection-end-column="64" />
+        <state relative-caret-position="450">
+          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
+          <folding>
+            <element signature="e#264#655#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/site.retry">
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/migrate_new_django_project.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/old.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="153" selection-end-column="37" />
+          <folding>
+            <element signature="e#266#657#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Vagrantfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/python_requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/site.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="180">
+          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/main.yaml">
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/collect_django_static_and_fix_permissions.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2175">
-          <caret line="145" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_directory_and_config_files_for_webservers.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/create_django_project.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/vars.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/nginx.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        </state>
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="465">
+            <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/templates/bash_profile.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ansible/deployment/roles/webserver/tasks/link_nginx_file_and_start_webservers.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
           <folding />
         </state>
       </provider>

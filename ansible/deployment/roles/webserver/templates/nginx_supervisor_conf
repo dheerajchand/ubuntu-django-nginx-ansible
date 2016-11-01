@@ -1,5 +1,0 @@
-[program:nginx]
-command = /usr/sbin/nginx
-user = root
-autostart = true
-autorestart=true

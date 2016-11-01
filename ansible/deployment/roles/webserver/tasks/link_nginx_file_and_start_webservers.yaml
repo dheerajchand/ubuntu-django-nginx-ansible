@@ -1,0 +1,19 @@
+---
+- name: link the sites-available to sites-enabled
+  file: >
+    src=/etc/nginx/sites-available/{{ project_name }}
+    dest=/etc/nginx/sites-enabled/{{ project_name }}
+    owner=root
+    group=root
+    state=link
+  become: true
+  when: create_new_project == True
+
+- name: reload systemctl files
+  shell: "sudo systemctl daemon-reload"
+
+- name: start gunicorn in systemctl
+  shell: "sudo systemctl start gunicorn"
+
+- name: start nginx is systemctl
+  shell: "sudo systemctl start nginx"
