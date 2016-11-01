@@ -1,0 +1,29 @@
+---
+- name: if there is a django project in /vagrant, delete it
+  file: >
+    path=/vagrant/{{project_name}}
+    state=absent
+  become: true
+  ignore_errors: yes
+  when: create_new_project == True
+
+- name: create a new django project in the /home/vagrant directory using the new virtualenv
+  shell: "cd /vagrant/; {{ venv_path }}/bin/django-admin.py startproject {{ project_name }}"
+  when: create_new_project == True
+
+- name: remove the settings.py from the new django project
+  file: >
+    dest=/vagrant/{{ project_name }}/{{ project_name }}/settings.py
+    state=absent
+  become: true
+  when: create_new_project == True
+
+- name: create the new settings.py file using the template (fills in database settings and sets static_root)
+  template: >
+    src=draft_django_settings.py.j2
+    dest={{ django_dir }}/{{ project_name }}/settings.py
+    owner=vagrant
+    group=vagrant
+    mode=0644
+  when: create_new_project == True
+

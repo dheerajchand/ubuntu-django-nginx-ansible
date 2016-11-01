@@ -1,19 +1,37 @@
 ---
+- name: install python 2
+  raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+  become: true
 
 - name: set locale to {{locale}}
   command: /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
   become: true
 
-- name: add postgresql repos
-  apt_repository: repo='deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main' state=present
+- name: ensure aptitude is present
+  apt: >
+    pkg=aptitude
+    state=installed
+    install_recommends=yes
+    update-cache=yes
   become: true
 
-- name: add postgresql repo key
-  apt_key: url=https://www.postgresql.org/media/keys/ACCC4CF8.asc state=present
+- name: update pre-installed packages after installing aptitude
+  become: true
+  apt: upgrade=full update_cache=yes
+
+- name: install apt-file
+  apt: >
+    pkg=apt-file
+    state=installed
+    install_recommends=yes
   become: true
 
 - name: install required system packages.
-  apt: pkg={{item}} state=installed install_recommends=yes update-cache=yes
+  apt: >
+    pkg={{item}}
+    state=installed
+    install_recommends=yes
+    update-cache=yes
   become: true
   with_items:
       - apt-file
@@ -42,18 +60,5 @@
   apt: upgrade=yes
   become: true
 
-- name: create bash_profile that has python venv activated
-  template: src=bash_profile.j2 dest=/home/vagrant/.bash_profile owner=vagrant group=vagrant mode=0644
-  when: create_new_project == True
-# - name: Download spf13 vim install script
-#   command: curl http://j.mp/spf13-vim3 -L -o /vagrant/{{ spf13_output_file_name }}
-#   when: spf13fileexists is not defined
-#   register: spf13fileexists
-#
-# - name: launch spf13 install script
-#   command: sh /vagrant/{{ spf13_output_file_name }}
-#   become: true
-#   register: spf13installed
-#   when: spf13installed is not defined
 
 

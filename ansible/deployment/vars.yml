@@ -1,11 +1,11 @@
-project_name: default
-source_location: "/vagrant/"
-source_location_auto_remove : false
-dbuser: "{{project_name}}"
+project_name: myproject
+django_dir: "/vagrant/{{ project_name }}"
+venv_path: "/vagrant/projectenv"
+socket_dir: "/var/local/run/{{ project_name }}"
+dbuser: "{{ project_name }}"
 dbpassword: d5cda65eaa622604f9af738dad50339f
-dbname: "{{project_name}}"
+dbname: "{{ project_name }}"
 locale: en_US.UTF-8
-django_static_root: '/opt/venv/static/'
 tomcat_admin_user: mohanthecat
 tomcat_admin_password: tunasteak
 spf13_output_file_name: spf13-script.sh

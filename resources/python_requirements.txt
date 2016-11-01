@@ -1,0 +1,7 @@
+Django == 1.10.2
+psycopg2
+gunicorn
+django-extensions
+ipython
+django-model-utils
+geopandas
