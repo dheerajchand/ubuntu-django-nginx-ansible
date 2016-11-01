@@ -1,0 +1,26 @@
+---
+- name: create a directory for the socket files
+  file: >
+    state=directory
+    owner=vagrant
+    group=www-data
+    path={{ socket_dir }}
+    mode=777
+  become: true
+  when: create_new_project == True
+
+- name: create a gunicorn system file
+  template: >
+    src=gunicorn.service.j2
+    dest=/etc/systemd/system/gunicorn.service
+    owner=root
+    group=root
+  become: true
+  when: create_new_project == True
+
+- name: create an nginx service file
+  template: >
+    src=nginx.j2
+    dest=/etc/nginx/sites-available/{{ project_name }}
+  become: true
+  when: create_new_project == True
