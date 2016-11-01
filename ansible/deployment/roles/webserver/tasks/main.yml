@@ -1,0 +1,15 @@
+---
+
+- include: ./roles/webserver/tasks/basic_server_config.yaml
+
+- include: ./roles/webserver/tasks/create_venv.yaml
+
+- include: ./roles/webserver/tasks/create_django_project.yaml
+
+- include: ./roles/webserver/tasks/migrate_new_django_project.yaml
+
+- include: ./roles/webserver/tasks/collect_django_static_and_fix_permissions.yaml
+
+- include: ./roles/webserver/tasks/create_directory_and_config_files_for_webservers.yaml
+
+- include: ./roles/webserver/tasks/link_nginx_file_and_start_webservers.yaml

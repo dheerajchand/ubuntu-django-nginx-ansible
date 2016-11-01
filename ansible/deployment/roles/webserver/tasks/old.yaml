@@ -102,19 +102,6 @@
     virtualenv={{ venv_path }}
   when: create_new_project == True
 
-- name: create ~/.bash_profile to make life easier
-  template: >
-    src=bash_profile.j2
-    dest=/home/vagrant/.bash_profile
-    owner=vagrant
-    group=vagrant
-
-- name: add vagrant user to www-data group
-  user: >
-    name=vagrant
-    groups=sudo,www-data
-    append=yes
-
 - name: fix Django directory permissions
   file: >
     state=directory

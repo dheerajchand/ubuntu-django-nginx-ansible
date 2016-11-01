@@ -1,0 +1,16 @@
+---
+
+- name: Run Django database makemigrations
+  django_manage: >
+    command="makemigrations"
+    app_path=/vagrant/{{ project_name }}
+    virtualenv={{ venv_path }}
+  when: create_new_project == True
+
+- name: Run Django database migrate
+  django_manage: >
+    command=migrate
+    app_path=/vagrant/{{ project_name }}
+    virtualenv={{ venv_path }}
+  when: create_new_project == True
+
