@@ -149,7 +149,9 @@
 
 - name: start gunicorn in systemctl
   shell: "sudo systemctl start gunicorn"
+  become: true
 
 - name: start nginx is systemctl
   shell: "sudo systemctl start nginx"
+  become: true
 

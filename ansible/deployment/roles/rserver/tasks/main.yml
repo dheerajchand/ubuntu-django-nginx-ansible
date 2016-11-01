@@ -4,17 +4,17 @@
 
 - name: set locale to {{locale}}
   action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
-  sudo: yes
+  become: true
 
 # manual workaround to add CRAN repository this is ugly fix later
 
 - name: manually add CRAN repository to apt
-  shell: echo "deb http://stat.ethz.ch/CRAN/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list
-  sudo: yes
-  
-- name: manually add CRAN key from keyserver
-  shell: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
-  sudo: yes
+  shell: echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" | sudo tee -a /etc/apt/sources.list
+  become: true
+
+- name: add CRAN repository key
+  apt_key: keyserver=keyserver.ubuntu.com id=E084DAB9 state=present
+  become: true
 
 - name: get r-server packages
   apt: name={{item}} state=latest install_recommends=yes update_cache=yes
@@ -66,7 +66,6 @@
     - spdep
     - spgrass6
     - splancs
-
 
 - name: r - packages <-- optional
   command: >
