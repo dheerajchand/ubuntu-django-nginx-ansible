@@ -14,20 +14,21 @@ Vagrant.configure("2") do |config|
 		mem = `wmic computersystem Get TotalPhysicalMemory`.split[1].to_i / 1024
 	end
 
-  mem = mem / 1024 / 4
-  v.customize ["modifyvm", :id, "--memory", mem] 
+    mem = mem / 1024 / 4
+    v.customize ["modifyvm", :id, "--memory", mem] 
 
-  config.vm.network :private_network, ip: "192.168.33.10"
-  config.vm.network "forwarded_port", guest: 80, host: 8080
-  config.vm.network "forwarded_port", guest: 8080, host:8081
-  config.ssh.forward_x11 = true
+    config.vm.network :private_network, ip: "192.168.33.10"
+    config.vm.network "forwarded_port", guest: 80, host: 8080
+    config.vm.network "forwarded_port", guest: 8080, host:8081
+    config.ssh.forward_x11 = true
 
-  config.vm.hostname = "vagrant-gisvm"
-  config.vm.synced_folder ".", "/vagrant",
-    owner: "vagrant", group: "www-data"
+    config.vm.hostname = "vagrant-gisvm"
+    config.vm.synced_folder ".", "/vagrant",
+      owner: "vagrant", group: "www-data"
 
-  config.vm.provision "ansible" do |ansible|
-    ansible.playbook = "ansible/deployment/site.yml"
-    ansible.verbose = "vv"
+    config.vm.provision "ansible" do |ansible|
+      ansible.playbook = "ansible/deployment/site.yml"
+      ansible.verbose = "vv"
+    end
   end
 end
