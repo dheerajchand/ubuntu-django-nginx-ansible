@@ -43,24 +43,24 @@ Nothing happens in a vacuum. I got a lot of help. Here are some of the reference
 1. Vagrantfile + Ansible Playbook for virtual machine config. Ansible inspiration from [this project], and configuration instructions modified from 
 2. Code for a generic Django 1.10 project at the top level of the repo, which you can configure to your liking.
 
-##Host Environment
+## Host Environment
 
-###Install VirtualBox
+### Install VirtualBox
 https://www.virtualbox.org/wiki/Downloads
 
-###Install Vagrant
+### Install Vagrant
 https://www.vagrantup.com/downloads.html
 
-###Install Ansible
+### Install Ansible
 http://docs.ansible.com/intro_installation.html
 
-##Development Environment
+## Development Environment
 Make sure git doesn't change line endings:
 ```
 git config --global core.autocrlf input
 ```
 
-##Startup
+## Startup
 You will need to edit the vars.yaml file. This file contains the project name, user names and passwords. Please set them according to your preferences. ***THIS IS NON-DISCRETIONARY. Tomcat will not run correctly without this.***
 
 Start VM with Vagrant. This will use Ansible to install dependencies and run a script to set up virtual environment and pip requirements.
@@ -83,7 +83,7 @@ or by using the manage.py tool in your IDE. [PyCharm](https://www.jetbrains.com/
 
 To configure your GeoServer, you will need to go to [http://localhost:8081/geoserver](http://localhost:8081/geoserver) and log in. The default credentials are *admin* , *geoserver*.  From there, you can do whatever you need. 
 
-##Management
+## Management
 If you make any changes to Vagrantfile, requirements.txt, or default.pp:
 ```
 vagrant reload --provision
