@@ -142,17 +142,8 @@ def _shutil_which(cmd, mode=os.F_OK | os.X_OK, path=None):
                     return name
     return None
 
-if sys.version_info[0] >= 3:
-    PY3 = True
-    
-    # keep reference to builtin_mod because the kernel overrides that value
-    # to forward requests to a frontend.
-    def input(prompt=''):
-        return builtin_mod.input(prompt)
-    
-    builtin_mod_name = "builtins"
-    import builtins as builtin_mod
-    
+import platform
+if sys.version_info[0] >= 3 or platform.python_implementation() == 'IronPython':
     str_to_unicode = no_code
     unicode_to_str = no_code
     str_to_bytes = encode
@@ -163,7 +154,29 @@ if sys.version_info[0] >= 3:
     
     string_types = (str,)
     unicode_type = str
+else:
+    str_to_unicode = decode
+    unicode_to_str = encode
+    str_to_bytes = no_code
+    bytes_to_str = no_code
+    cast_bytes_py2 = cast_bytes
+    cast_unicode_py2 = cast_unicode
+    buffer_to_bytes_py2 = buffer_to_bytes
     
+    string_types = (str, unicode)
+    unicode_type = unicode
+
+if sys.version_info[0] >= 3:
+    PY3 = True
+    
+    # keep reference to builtin_mod because the kernel overrides that value
+    # to forward requests to a frontend.
+    def input(prompt=''):
+        return builtin_mod.input(prompt)
+    
+    builtin_mod_name = "builtins"
+    import builtins as builtin_mod
+        
     which = shutil.which
     
     def isidentifier(s, dotted=False):
@@ -220,17 +233,6 @@ else:
     
     builtin_mod_name = "__builtin__"
     import __builtin__ as builtin_mod
-    
-    str_to_unicode = decode
-    unicode_to_str = encode
-    str_to_bytes = no_code
-    bytes_to_str = no_code
-    cast_bytes_py2 = cast_bytes
-    cast_unicode_py2 = cast_unicode
-    buffer_to_bytes_py2 = buffer_to_bytes
-    
-    string_types = (str, unicode)
-    unicode_type = unicode
     
     import re
     _name_re = re.compile(r"[a-zA-Z_][a-zA-Z0-9_]*$")

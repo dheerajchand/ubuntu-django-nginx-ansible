@@ -10,7 +10,7 @@
 - name: ensure aptitude is present
   apt: >
     pkg=aptitude
-    state=installed
+    state=present
     install_recommends=yes
     update-cache=yes
   become: true
@@ -22,14 +22,14 @@
 - name: install apt-file
   apt: >
     pkg=apt-file
-    state=installed
+    state=present
     install_recommends=yes
   become: true
 
 - name: install required system packages.
   apt: >
     pkg={{item}}
-    state=installed
+    state=present
     install_recommends=yes
     update-cache=yes
   become: true

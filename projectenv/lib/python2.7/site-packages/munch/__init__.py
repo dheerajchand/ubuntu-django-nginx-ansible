@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """ Munch is a subclass of dict with attribute-style access.
 
     >>> b = Munch()
@@ -23,12 +21,17 @@
     converted via Munch.to/fromDict().
 """
 
-__version__ = '2.0.4'
+__version__ = '2.3.2'
 VERSION = tuple(map(int, __version__.split('.')))
 
-__all__ = ('Munch', 'munchify','unmunchify',)
+__all__ = ('Munch', 'munchify', 'DefaultMunch', 'DefaultFactoryMunch', 'unmunchify')
 
-from .python3_compat import *
+
+from collections import defaultdict
+
+
+from .python3_compat import *   # pylint: disable=wildcard-import
+
 
 class Munch(dict):
     """ A dictionary that provides attribute-style access.
@@ -69,30 +72,6 @@ class Munch(dict):
 
         See unmunchify/Munch.toDict, munchify/Munch.fromDict for notes about conversion.
     """
-
-    def __contains__(self, k):
-        """ >>> b = Munch(ponies='are pretty!')
-            >>> 'ponies' in b
-            True
-            >>> 'foo' in b
-            False
-            >>> b['foo'] = 42
-            >>> 'foo' in b
-            True
-            >>> b.hello = 'hai'
-            >>> 'hello' in b
-            True
-            >>> b[None] = 123
-            >>> None in b
-            True
-            >>> b[False] = 456
-            >>> False in b
-            True
-        """
-        try:
-            return dict.__contains__(self, k) or hasattr(self, k)
-        except:
-            return False
 
     # only called if k not found in normal places
     def __getattr__(self, k):
@@ -188,6 +167,10 @@ class Munch(dict):
         """
         return unmunchify(self)
 
+    @property
+    def __dict__(self):
+        return self.toDict()
+
     def __repr__(self):
         """ Invertible* string-form of a Munch.
 
@@ -205,17 +188,30 @@ class Munch(dict):
 
             (*) Invertible so long as collection contents are each repr-invertible.
         """
-        return '%s(%s)' % (self.__class__.__name__, dict.__repr__(self))
-
-
+        return '{0}({1})'.format(self.__class__.__name__, dict.__repr__(self))
 
     def __dir__(self):
         return list(iterkeys(self))
 
-    __members__ = __dir__ # for python2.x compatibility
+    def __getstate__(self):
+        """ Implement a serializable interface used for pickling.
 
-    @staticmethod
-    def fromDict(d):
+        See https://docs.python.org/3.6/library/pickle.html.
+        """
+        return {k: v for k, v in self.items()}
+
+    def __setstate__(self, state):
+        """ Implement a serializable interface used for pickling.
+
+        See https://docs.python.org/3.6/library/pickle.html.
+        """
+        self.clear()
+        self.update(state)
+
+    __members__ = __dir__  # for python2.x compatibility
+
+    @classmethod
+    def fromDict(cls, d):
         """ Recursively transforms a dictionary into a Munch via copy.
 
             >>> b = Munch.fromDict({'urmom': {'sez': {'what': 'what'}}})
@@ -224,8 +220,121 @@ class Munch(dict):
 
             See munchify for more info.
         """
-        return munchify(d)
+        return munchify(d, cls)
 
+    def copy(self):
+        return type(self).fromDict(self)
+
+
+class AutoMunch(Munch):
+    def __setattr__(self, k, v):
+        """ Works the same as Munch.__setattr__ but if you supply
+            a dictionary as value it will convert it to another Munch.
+        """
+        if isinstance(v, dict) and not isinstance(v, (AutoMunch, Munch)):
+            v = munchify(v, AutoMunch)
+        super(AutoMunch, self).__setattr__(k, v)
+
+
+class DefaultMunch(Munch):
+    """
+    A Munch that returns a user-specified value for missing keys.
+    """
+
+    def __init__(self, *args, **kwargs):
+        """ Construct a new DefaultMunch. Like collections.defaultdict, the
+            first argument is the default value; subsequent arguments are the
+            same as those for dict.
+        """
+        # Mimic collections.defaultdict constructor
+        if args:
+            default = args[0]
+            args = args[1:]
+        else:
+            default = None
+        super(DefaultMunch, self).__init__(*args, **kwargs)
+        self.__default__ = default
+
+    def __getattr__(self, k):
+        """ Gets key if it exists, otherwise returns the default value."""
+        try:
+            return super(DefaultMunch, self).__getattr__(k)
+        except AttributeError:
+            return self.__default__
+
+    def __setattr__(self, k, v):
+        if k == '__default__':
+            object.__setattr__(self, k, v)
+        else:
+            return super(DefaultMunch, self).__setattr__(k, v)
+
+    def __getitem__(self, k):
+        """ Gets key if it exists, otherwise returns the default value."""
+        try:
+            return super(DefaultMunch, self).__getitem__(k)
+        except KeyError:
+            return self.__default__
+
+    def __getstate__(self):
+        """ Implement a serializable interface used for pickling.
+
+        See https://docs.python.org/3.6/library/pickle.html.
+        """
+        return (self.__default__, {k: v for k, v in self.items()})
+
+    def __setstate__(self, state):
+        """ Implement a serializable interface used for pickling.
+
+        See https://docs.python.org/3.6/library/pickle.html.
+        """
+        self.clear()
+        default, state_dict = state
+        self.update(state_dict)
+        self.__default__ = default
+
+    @classmethod
+    def fromDict(cls, d, default=None):
+        # pylint: disable=arguments-differ
+        return munchify(d, factory=lambda d_: cls(default, d_))
+
+    def copy(self):
+        return type(self).fromDict(self, default=self.__default__)
+
+    def __repr__(self):
+        return '{0}({1!r}, {2})'.format(
+            type(self).__name__, self.__undefined__, dict.__repr__(self))
+
+
+class DefaultFactoryMunch(defaultdict, Munch):
+    """ A Munch that calls a user-specified function to generate values for
+        missing keys like collections.defaultdict.
+
+        >>> b = DefaultFactoryMunch(list, {'hello': 'world!'})
+        >>> b.hello
+        'world!'
+        >>> b.foo
+        []
+        >>> b.bar.append('hello')
+        >>> b.bar
+        ['hello']
+    """
+
+    def __init__(self, default_factory, *args, **kwargs):
+        # pylint: disable=useless-super-delegation
+        super(DefaultFactoryMunch, self).__init__(default_factory, *args, **kwargs)
+
+    @classmethod
+    def fromDict(cls, d, default_factory):
+        # pylint: disable=arguments-differ
+        return munchify(d, factory=lambda d_: cls(default_factory, d_))
+
+    def copy(self):
+        return type(self).fromDict(self, default_factory=self.default_factory)
+
+    def __repr__(self):
+        factory = self.default_factory.__name__
+        return '{0}({1}, {2})'.format(
+            type(self).__name__, factory, dict.__repr__(self))
 
 
 # While we could convert abstract types like Mapping or Iterable, I think
@@ -235,7 +344,7 @@ class Munch(dict):
 # Should you disagree, it is not difficult to duplicate this function with
 # more aggressive coercion to suit your own purposes.
 
-def munchify(x):
+def munchify(x, factory=Munch):
     """ Recursively transforms a dictionary into a Munch via copy.
 
         >>> b = munchify({'urmom': {'sez': {'what': 'what'}}})
@@ -255,11 +364,12 @@ def munchify(x):
         nb. As dicts are not hashable, they cannot be nested in sets/frozensets.
     """
     if isinstance(x, dict):
-        return Munch( (k, munchify(v)) for k,v in iteritems(x) )
+        return factory((k, munchify(v, factory)) for k, v in iteritems(x))
     elif isinstance(x, (list, tuple)):
-        return type(x)( munchify(v) for v in x )
+        return type(x)(munchify(v, factory) for v in x)
     else:
         return x
+
 
 def unmunchify(x):
     """ Recursively converts a Munch into a dictionary.
@@ -279,14 +389,14 @@ def unmunchify(x):
         nb. As dicts are not hashable, they cannot be nested in sets/frozensets.
     """
     if isinstance(x, dict):
-        return dict( (k, unmunchify(v)) for k,v in iteritems(x) )
+        return dict((k, unmunchify(v)) for k, v in iteritems(x))
     elif isinstance(x, (list, tuple)):
-        return type(x)( unmunchify(v) for v in x )
+        return type(x)(unmunchify(v) for v in x)
     else:
         return x
 
 
-### Serialization
+# Serialization
 
 try:
     try:
@@ -307,8 +417,6 @@ try:
 
 except ImportError:
     pass
-
-
 
 
 try:
@@ -339,7 +447,6 @@ try:
         value = loader.construct_mapping(node)
         data.update(value)
 
-
     def to_yaml_safe(dumper, data):
         """ Converts Munch to a normal mapping node, making it appear as a
             dict in the YAML output.
@@ -361,7 +468,6 @@ try:
         """
         return dumper.represent_mapping(u('!munch.Munch'), data)
 
-
     yaml.add_constructor(u('!munch'), from_yaml)
     yaml.add_constructor(u('!munch.Munch'), from_yaml)
 
@@ -370,7 +476,6 @@ try:
 
     Representer.add_representer(Munch, to_yaml)
     Representer.add_multi_representer(Munch, to_yaml)
-
 
     # Instance methods for YAML conversion
     def toYAML(self, **options):
@@ -387,6 +492,7 @@ try:
             '!munch.Munch {foo: [bar, !munch.Munch {lol: true}], hello: 42}\\n'
             >>> b.toYAML(Dumper=yaml.Dumper, default_flow_style=True)
             '!munch.Munch {foo: [bar, !munch.Munch {lol: true}], hello: 42}\\n'
+
         """
         opts = dict(indent=4, default_flow_style=False)
         opts.update(options)
@@ -396,16 +502,10 @@ try:
             return yaml.dump(self, **opts)
 
     def fromYAML(*args, **kwargs):
-        return munchify( yaml.load(*args, **kwargs) )
+        return munchify(yaml.load(*args, **kwargs))
 
     Munch.toYAML = toYAML
     Munch.fromYAML = staticmethod(fromYAML)
 
 except ImportError:
     pass
-
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
-

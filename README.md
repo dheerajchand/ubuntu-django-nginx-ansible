@@ -1,10 +1,10 @@
-#Welcome To The Generic Django Development Environment
+# Welcome To The Generic Django Development Environment
 
 This is a GIS project template written by Dheeraj Chand of [Clarity and Rigour](http://www.clarityandrigour.com) (email: first_initial+last_name AT clarity and rigour DOT COM, strip the spaces and do the subs).
 This template:
 
 1. Is written in [Python](http://www.python.org),
-2. Uses [PostgreSQL](http://www.postgresql.org) as the database, with PostGIS extensions,
+2. Uses [PostgreSQL](http://www.postgresql.org) as the database, with [PostGIS](http://www.postgis.net) extensions,
 3. Uses [GeoDjango](http://www.geodjango.org) as the application framework and
 4. Uses [R](http://www.r-project.org) for computations.
 
