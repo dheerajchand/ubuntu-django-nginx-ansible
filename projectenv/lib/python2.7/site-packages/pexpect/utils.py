@@ -11,6 +11,11 @@ except NameError:
     # Alias Python2 exception to Python3
     InterruptedError = select.error
 
+if sys.version_info[0] >= 3:
+    string_types = (str,)
+else:
+    string_types = (unicode, str)
+
 
 def is_executable_file(path):
     """Checks that path is an executable regular file, or a symlink towards one.
@@ -145,6 +150,37 @@ def select_ignore_interrupts(iwtd, owtd, ewtd, timeout=None):
                     timeout = end_time - time.time()
                     if timeout < 0:
                         return([], [], [])
+            else:
+                # something else caused the select.error, so
+                # this actually is an exception.
+                raise
+
+
+def poll_ignore_interrupts(fds, timeout=None):
+    '''Simple wrapper around poll to register file descriptors and
+    ignore signals.'''
+
+    if timeout is not None:
+        end_time = time.time() + timeout
+
+    poller = select.poll()
+    for fd in fds:
+        poller.register(fd, select.POLLIN | select.POLLPRI | select.POLLHUP | select.POLLERR)
+
+    while True:
+        try:
+            timeout_ms = None if timeout is None else timeout * 1000
+            results = poller.poll(timeout_ms)
+            return [afd for afd, _ in results]
+        except InterruptedError:
+            err = sys.exc_info()[1]
+            if err.args[0] == errno.EINTR:
+                # if we loop back we have to subtract the
+                # amount of time we already waited.
+                if timeout is not None:
+                    timeout = end_time - time.time()
+                    if timeout < 0:
+                        return []
             else:
                 # something else caused the select.error, so
                 # this actually is an exception.

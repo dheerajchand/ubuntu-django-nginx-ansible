@@ -12,8 +12,8 @@
 - name: reload systemctl files
   shell: "sudo systemctl daemon-reload"
 
-- name: start gunicorn in systemctl
-  shell: "sudo systemctl start gunicorn"
+- name: start gunicorn in service
+  shell: "sudo systemctl restart gunicorn"
 
-- name: start nginx is systemctl
-  shell: "sudo systemctl start nginx"
+- name: start nginx in service
+  shell: "sudo systemctl restart nginx"
