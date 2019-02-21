@@ -17,9 +17,20 @@ Vagrant.configure("2") do |config|
     mem = mem / 1024 / 4
     v.customize ["modifyvm", :id, "--memory", mem] 
 
+    # basic networking
     config.vm.network :private_network, ip: "192.168.33.10"
+
+    # Basic web port for Django
     config.vm.network "forwarded_port", guest: 80, host: 8080
+
+    # This is port for GeoServer, which is normally 8080 when installed locally, so I am offsetting by 1
     config.vm.network "forwarded_port", guest: 8080, host:8081
+
+    # Hadoop ports, which I am similarly offsetting by 1
+
+    config.vm.network "forwarded_port", guest: 50070, host: 500701
+
+
     config.ssh.forward_x11 = true
 
     config.vm.hostname = "vagrant-gisvm"
