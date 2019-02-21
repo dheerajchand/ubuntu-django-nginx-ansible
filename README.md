@@ -7,6 +7,7 @@ This template:
 2. Uses [PostgreSQL](http://www.postgresql.org) as the database, with [PostGIS](http://www.postgis.net) extensions,
 3. Uses [GeoDjango](http://www.geodjango.org) as the application framework and
 4. Uses [R](http://www.r-project.org) for computations.
+5. Uses [Hadoop](http://hadoop.apache.org) and [Hive](https://hive.apache.org)
 
 Credits to: 
 
@@ -36,7 +37,7 @@ Nothing happens in a vacuum. I got a lot of help. Here are some of the reference
 1. [Installing JRE 7 in Vagrant](https://gist.github.com/arturaz/5243940)
 2. [Setting the Java Home variable correctly](https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get)
 3. [Installing Tomcat for GeoServer](https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-7-on-ubuntu-14-04-via-apt-get)
-
+4. [Hadoop and Hive](https://www.bogotobogo.com/Hadoop/BigData_hadoop_Install_on_ubuntu_16_04_single_node_cluster.php)
 
 ## Repo Contents
 
