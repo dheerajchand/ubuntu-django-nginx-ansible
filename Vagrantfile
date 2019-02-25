@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
 
     # Hadoop ports, which I am similarly offsetting by 1
 
-    config.vm.network "forwarded_port", guest: 50070, host: 500701
+    config.vm.network "forwarded_port", guest: 50070, host: 50071
 
 
     config.ssh.forward_x11 = true

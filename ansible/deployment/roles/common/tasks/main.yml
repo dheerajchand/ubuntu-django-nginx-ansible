@@ -27,13 +27,14 @@
   become: true
 
 - name: install required system packages.
-  apt: >
-    pkg={{item}}
-    state=present
-    install_recommends=yes
-    update-cache=yes
+  apt:
+    pkg: "{{ packages }}"
+    state: present
+    install_recommends: yes
+    update-cache: yes
   become: true
-  with_items:
+  vars:
+    - packages:
       - apt-file
       - build-essential
       - python-setuptools
