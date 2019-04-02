@@ -5,9 +5,6 @@
     - vars.yml
   roles:
     - common
-    - dbserver
-    - webserver
-    - geoserver
-    - rserver
+    - hadoop_and_hive_server
 
 

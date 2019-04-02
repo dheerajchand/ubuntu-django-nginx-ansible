@@ -1,0 +1,42 @@
+---
+
+# basic system tasks
+
+- name: set locale to {{locale}}
+  action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
+  become: true
+
+- name: get hadoop packages for geoserver
+  apt: name={{item}} state=latest install_recommends=yes update_cache=yes
+  become: true
+  with_items:
+    - build-essential
+    - unzip
+    - git
+    - default-jdk
+
+- name: Make sure we have a 'wheel' group
+  group:
+    name=wheel
+    state=present
+
+- name: Make sure that we have a 'hadoop' group
+  group:
+    name=hadoop
+    state=present
+
+- name: Make sure that vagrant user belongs to correct groups
+  user:
+    name: vagrant
+    groups: wheel,hadoop
+    append: yes
+
+
+# download the geoserver .war file
+
+#- name: get the geoserver .war
+#  get_url: url=http://sourceforge.net/projects/geoserver/files/GeoServer/2.13.1/geoserver-2.13.1-war.zip dest=/vagrant/resources/geoserver.war.zip force=no
+#  become: true
+#  ignore_errors: yes
+#  register: geoserverwarexists
+#  when: geoserverwarexists is not defined
