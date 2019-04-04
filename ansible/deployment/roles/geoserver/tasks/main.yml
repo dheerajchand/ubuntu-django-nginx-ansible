@@ -31,19 +31,34 @@
   service: name=tomcat7 state=restarted
   become: true
 
-# download the geoserver .war file
+- name: create a src directory for downloaded code
+  file:
+    path: /vagrant/resources/src
+    state: directory
+    owner: vagrant
+    mode: 0775
+  become: true
+
+- name: create link to /home/vagrant/src from /vagrant/resources/src
+  file:
+    src: /vagrant/resources/src
+    dest: /home/vagrant/src
+    state: link
+    owner: vagrant
+    group: www-data
+  become: true
 
 - name: get the geoserver .war
-  get_url: url=http://sourceforge.net/projects/geoserver/files/GeoServer/2.13.1/geoserver-2.13.1-war.zip dest=/vagrant/resources/geoserver.war.zip force=no
+  get_url: url=http://sourceforge.net/projects/geoserver/files/GeoServer/2.15.0/geoserver-2.15.0-war.zip dest=/vagrant/resources/src/geoserver.war.zip force=no
   become: true
   ignore_errors: yes
   register: geoserverwarexists
   when: geoserverwarexists is not defined
 
 - name: unzip the geoserver .war file into its destination directory
-  unarchive: src=/vagrant/resources/geoserver.war.zip dest=/var/lib/tomcat7/webapps copy=no
+  unarchive:
+    src: /vagrant/resources/src/geoserver.war.zip
+    dest: /var/lib/tomcat7/webapps
+    remote_src: yes
   become: true
-
-- name: restart tomcat
-  service: name=tomcat7 state=restarted
-  become: true
+  when: geoserverwarexists

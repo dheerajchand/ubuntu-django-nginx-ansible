@@ -1,4 +1,4 @@
-project_name: myproject
+project_name: ballista
 django_dir: "/vagrant/{{ project_name }}"
 venv_path: "/vagrant/projectenv"
 socket_dir: "/var/local/run/{{ project_name }}"
@@ -11,6 +11,8 @@ tomcat_admin_password: tunasteak
 spf13_output_file_name: spf13-script.sh
 create_new_project: true
 create_new_static: true
+geoserver_version: "2.15.0"
+hadoop_version: "3.1.1"
 
 
 

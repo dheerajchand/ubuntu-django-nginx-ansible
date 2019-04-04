@@ -32,11 +32,15 @@
     append: yes
 
 
-# download the geoserver .war file
+# download the Hadoop 3.1.1 directory
 
-#- name: get the geoserver .war
-#  get_url: url=http://sourceforge.net/projects/geoserver/files/GeoServer/2.13.1/geoserver-2.13.1-war.zip dest=/vagrant/resources/geoserver.war.zip force=no
+- name: get the Hadoop 3.1.1 code
+  get_url: url=http://mirror.olnevhost.net/pub/apache/hadoop/common/hadoop-{{hadoop_version}}/hadoop-{{hadoop_version}}.tar.gz dest=/vagrant/resources/hadoop.tar.gz force=no
+  become: true
+  ignore_errors: yes
+  register: hadoopdownloadexists
+  when: hadoopdownloadexists is not defined
+
+#- name: unzip the geoserver .war file into its destination directory
+#  unarchive: src=/vagrant/resources/geoserver.war.zip dest=/var/lib/tomcat7/webapps copy=no
 #  become: true
-#  ignore_errors: yes
-#  register: geoserverwarexists
-#  when: geoserverwarexists is not defined
