@@ -32,8 +32,6 @@ Vagrant.configure("2") do |config|
     config.vm.network "forwarded_port", guest: 50090, host: 50091 # Secondary Node daemon
     config.vm.network "forwarded_port", guest: 8088, host: 8089 # Resource Manager
 
-
-
     config.ssh.forward_x11 = true
 
     config.vm.hostname = "vagrant-gisvm"
