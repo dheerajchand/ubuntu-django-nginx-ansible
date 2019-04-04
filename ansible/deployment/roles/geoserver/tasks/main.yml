@@ -50,7 +50,6 @@
 
 - name: get the geoserver .war
   get_url: url=http://sourceforge.net/projects/geoserver/files/GeoServer/2.15.0/geoserver-2.15.0-war.zip dest=/vagrant/resources/src/geoserver.war.zip force=no
-  become: true
   ignore_errors: yes
   register: geoserverwarexists
   when: geoserverwarexists is not defined
@@ -62,3 +61,14 @@
     remote_src: yes
   become: true
   when: geoserverwarexists
+
+- name: restart tomcat
+  service: name=tomcat7 state=restarted
+  sudo: yes
+  unarchive: src=/vagrant/resources/geoserver.war.zip dest=/var/lib/tomcat7/webapps copy=no
+  become: true
+
+- name: restart tomcat
+  service: name=tomcat7 state=restarted
+  become: true
+

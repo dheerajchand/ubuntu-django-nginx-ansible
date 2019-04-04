@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 
 # basic system tasks
@@ -41,6 +42,34 @@
   register: hadoopdownloadexists
   when: hadoopdownloadexists is not defined
 
-#- name: unzip the geoserver .war file into its destination directory
-#  unarchive: src=/vagrant/resources/geoserver.war.zip dest=/var/lib/tomcat7/webapps copy=no
-#  become: true
+# basic system tasks
+
+- name: set locale to {{locale}}
+  action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
+  become: true
+
+- name: get hadoop packages for geoserver
+  apt: name={{item}} state=latest install_recommends=yes update_cache=yes
+  become: true
+  with_items:
+    - build-essential
+    - unzip
+    - git
+    - default-jdk
+
+- name: Make sure we have a 'wheel' group
+  group:
+    name=wheel
+    state=present
+
+- name: Make sure that we have a 'hadoop' group
+  group:
+    name=hadoop
+    state=present
+
+- name: Make sure that vagrant user belongs to correct groups
+  user:
+    name: vagrant
+    groups: wheel,hadoop
+    append: yes
+

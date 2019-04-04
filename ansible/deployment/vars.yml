@@ -3,7 +3,12 @@ django_dir: "/vagrant/{{ project_name }}"
 venv_path: "/vagrant/projectenv"
 socket_dir: "/var/local/run/{{ project_name }}"
 dbuser: "{{ project_name }}"
-dbpassword: d5cda65eaa622604f9af738dad50339f
+source_location: "/vagrant/"
+source_location_auto_remove : false
+django_dir: "/vagrant/{{ project_name }}"
+venv_path: "/vagrant/projectenv"
+socket_dir: "/var/local/run/{{ project_name }}"
+dbuser: "{{ project_name }}"
 dbname: "{{ project_name }}"
 locale: en_US.UTF-8
 tomcat_admin_user: mohanthecat
