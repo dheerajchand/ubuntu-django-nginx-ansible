@@ -7,24 +7,22 @@
   become: true
 
 - name: get tomcat packages for geoserver
-  apt: name={{item}} state=latest install_recommends=yes update_cache=yes
+  apt:
+    name: ['build-essential','unzip', 'tomcat7', 'tomcat7-admin', 'tomcat7-docs', 'tomcat7-admin', 'tomcat7-examples', 'git', 'ant', 'default-jdk']
+    state: latest
+    install_recommends: yes
+    update_cache: yes
   become: true
-  with_items:
-    - build-essential
-    - unzip
-    - tomcat7
-    - tomcat7-admin
-    - tomcat7-docs 
-    - tomcat7-admin 
-    - tomcat7-examples
-    - git
-    - ant
-    - default-jdk
 
 # just tomcat things
 
 - name: create tomcat_users.xml from template
-  template: src=tomcat_users.xml.j2 dest=/etc/tomcat7/tomcat-users.xml owner=root group=root mode=0644
+  template:
+    src: tomcat_users.xml.j2
+    dest: /etc/tomcat7/tomcat-users.xml
+    owner: root
+    group: root
+    mode: 0644
   become: true
 
 - name: restart tomcat
@@ -61,12 +59,6 @@
     remote_src: yes
   become: true
   when: geoserverwarexists
-
-- name: restart tomcat
-  service: name=tomcat7 state=restarted
-  sudo: yes
-  unarchive: src=/vagrant/resources/geoserver.war.zip dest=/var/lib/tomcat7/webapps copy=no
-  become: true
 
 - name: restart tomcat
   service: name=tomcat7 state=restarted

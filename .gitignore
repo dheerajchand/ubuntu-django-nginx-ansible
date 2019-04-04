@@ -776,3 +776,5 @@ DerivedData/
 
 #source code
 resources/src
+resources/*.zip
+resources/*.tar.gz
