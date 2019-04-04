@@ -383,3 +383,7 @@ DerivedData/
 .hgsub
 .hgsubstate
 .hgtags
+
+## Big file exclusions
+
+resources/src/*
