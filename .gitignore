@@ -773,4 +773,6 @@ DerivedData/
 .hgsub
 .hgsubstate
 .hgtags
-\
+
+#source code
+resources/src
