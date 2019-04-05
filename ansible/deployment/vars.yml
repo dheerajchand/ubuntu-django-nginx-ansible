@@ -1,5 +1,4 @@
 project_name: ballista
-django_dir: "/vagrant/{{ project_name }}"
 venv_path: "/vagrant/projectenv"
 socket_dir: "/var/local/run/{{ project_name }}"
 dbuser: "{{ project_name }}"

@@ -61,5 +61,42 @@
   apt: upgrade=yes
   become: true
 
+- name: create a src directory for downloaded code
+  file:
+    path: /vagrant/resources/src
+    state: directory
+    owner: vagrant
+    mode: 0775
+  register: srcdirectoryexists
+  ignore_errors: true
+  when: srcdirectoryexists.changed
+  become: true
 
 
+- name: create link to /home/vagrant/src from /vagrant/resources/src
+  file:
+    src: /vagrant/resources/src
+    dest: /home/vagrant/src
+    state: link
+    owner: vagrant
+    group: www-data
+  ignore_errors: true
+  become: true
+
+- name: create a directory for hadoop expansion
+  file:
+    path: /vagrant/resources/src/hadoop
+    state: directory
+    owner: vagrant
+    mode: 0775
+  ignore_errors: true
+  become: true
+
+- name: create a directory for hive expansion
+  file:
+    path: /vagrant/resources/src/hive
+    state: directory
+    owner: vagrant
+    mode: 0775
+  ignore_errors: true
+  become: true

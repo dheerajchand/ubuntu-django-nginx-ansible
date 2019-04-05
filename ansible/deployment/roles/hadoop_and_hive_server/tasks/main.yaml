@@ -6,14 +6,13 @@
   action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
   become: true
 
-- name: get hadoop packages for geoserver
-  apt: name={{item}} state=latest install_recommends=yes update_cache=yes
+- name: get ubuntu packages for geoserver
+  apt:
+    name: ['build-essential', 'unzip', 'git', 'default-jdk']
+    state: latest
+    install_recommends: yes
+    update_cache: yes
   become: true
-  with_items:
-    - build-essential
-    - unzip
-    - git
-    - default-jdk
 
 - name: Make sure we have a 'wheel' group
   group:
@@ -35,40 +34,21 @@
 # download the Hadoop 3.1.1 directory
 
 - name: get the Hadoop 3.1.1 code
-  get_url: url=http://mirror.olnevhost.net/pub/apache/hadoop/common/hadoop-{{hadoop_version}}/hadoop-{{hadoop_version}}.tar.gz dest=/vagrant/resources/hadoop.tar.gz force=no
+  get_url:
+    url: http://mirror.olnevhost.net/pub/apache/hadoop/common/hadoop-{{hadoop_version}}/hadoop-{{hadoop_version}}.tar.gz
+    dest: /vagrant/resources/hadoop.tar.gz
+    force: no
   become: true
   ignore_errors: yes
   register: hadoopdownloadexists
   when: hadoopdownloadexists is not defined
 
-# basic system tasks
-
-- name: set locale to {{locale}}
-  action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
+- name: unarchive the hadoop code
+  unarchive:
+    src: /vagrant/resources/hadoop.tar.gz
+    dest: /vagrant/resources/src/hadoop
+    remote_src: yes
   become: true
+  when: hadoopdownloadexists
 
-- name: get hadoop packages for geoserver
-  apt: name={{item}} state=latest install_recommends=yes update_cache=yes
-  become: true
-  with_items:
-    - build-essential
-    - unzip
-    - git
-    - default-jdk
-
-- name: Make sure we have a 'wheel' group
-  group:
-    name=wheel
-    state=present
-
-- name: Make sure that we have a 'hadoop' group
-  group:
-    name=hadoop
-    state=present
-
-- name: Make sure that vagrant user belongs to correct groups
-  user:
-    name: vagrant
-    groups: wheel,hadoop
-    append: yes
 
