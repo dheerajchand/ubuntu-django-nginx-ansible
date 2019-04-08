@@ -37,6 +37,7 @@
     - packages:
       - apt-file
       - build-essential
+      - default-jdk
       - python-setuptools
       - python-pip
       - virtualenvwrapper

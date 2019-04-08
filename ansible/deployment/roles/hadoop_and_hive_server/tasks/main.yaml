@@ -6,7 +6,7 @@
   action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
   become: true
 
-- name: get ubuntu packages for geoserver
+- name: get ubuntu packages for hadoop
   apt:
     name: ['build-essential', 'unzip', 'git', 'default-jdk']
     state: latest
@@ -14,14 +14,14 @@
     update_cache: yes
   become: true
 
-- name: Make sure we have a 'wheel' group
-  group:
-    name=wheel
-    state=present
-
 - name: Make sure that we have a 'hadoop' group
   group:
     name=hadoop
+    state=present
+
+- name: Make sure that we have a 'wheel' group
+  group:
+    name=wheel
     state=present
 
 - name: Make sure that vagrant user belongs to correct groups
@@ -29,7 +29,6 @@
     name: vagrant
     groups: wheel,hadoop
     append: yes
-
 
 # download the Hadoop 3.1.1 directory
 
@@ -47,8 +46,40 @@
   unarchive:
     src: /vagrant/resources/hadoop.tar.gz
     dest: /vagrant/resources/src/hadoop
+    group: hadoop
     remote_src: yes
   become: true
   when: hadoopdownloadexists
+
+# Get Java ready for Hadoop
+
+- name: Install add-apt-repostory
+  become: yes
+  apt: name=software-properties-common state=latest
+
+- name: Add Oracle Java Repository
+  become: yes
+  apt_repository: repo='ppa:webupd8team/java'
+
+- name: Accept Java 8 License
+  become: yes
+  debconf: name='oracle-java8-installer' question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
+
+- name: Install Oracle Java 8
+  become: yes
+  apt:
+    name: ['oracle-java8-installer', 'ca-certificates', 'oracle-java8-set-default']
+    state: latest
+
+- name: correct java version selected
+  alternatives:
+    name: java
+    path: /usr/lib/jvm/java-8-oracle/jre/bin/java
+
+- name: set JAVA_HOME variable
+  lineinfile:
+    path: /etc/environment
+    insertafter: EOF
+    line: 'JAVA_HOME=\"/usr/lib/jvm/java-8-oracle\"'
 
 

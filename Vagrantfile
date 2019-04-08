@@ -36,7 +36,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.hostname = "vagrant-gisvm"
     config.vm.synced_folder ".", "/vagrant",
-      owner: "vagrant", group: "www-data"
+      owner: "vagrant"
 
     config.vm.provision "ansible" do |ansible|
       ansible.playbook = "ansible/deployment/site.yml"
