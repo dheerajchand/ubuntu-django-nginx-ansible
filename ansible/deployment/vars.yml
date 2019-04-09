@@ -1,7 +1,6 @@
 project_name: ballista
 venv_path: "/vagrant/projectenv"
 socket_dir: "/var/local/run/{{ project_name }}"
-dbuser: "{{ project_name }}"
 source_location: "/vagrant/"
 source_location_auto_remove : false
 django_dir: "/vagrant/{{ project_name }}"
@@ -19,7 +18,7 @@ create_new_static: true
 geoserver_version: "2.15.0"
 hadoop_version: "3.1.1"
 java_version_for_alternatives: "/usr/lib/jvm/java-8-oracle/jre/bin/java"
-java_home: "/usr/lib/jvm/java-8-oracle/jre/bin/java"
+java_home: "/usr/lib/jvm/java-8-oracle"
 
 
 

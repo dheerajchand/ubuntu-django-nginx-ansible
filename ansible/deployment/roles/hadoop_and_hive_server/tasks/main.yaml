@@ -64,7 +64,7 @@
   lineinfile:
     path: /etc/environment
     insertafter: EOF
-    line: 'JAVA_HOME=\""{{java_home}}"\"'
+    line: 'JAVA_HOME="{{java_home}}"'
 
 
 # download the Hadoop 3.1.1 directory
