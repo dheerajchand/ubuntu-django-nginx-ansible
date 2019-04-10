@@ -12,23 +12,24 @@
   become: true
 
 - name: do upgrades to newly installed packages
-  apt: upgrade=full
+  apt:
+    upgrade: full
   become: true
 
 - name: enable ufw incoming and outgoing
   ufw: >
-    state=disabled
+    state: disabled
   become: true
 
 - name: add vagrant user to www-data group
   user: >
-    name=vagrant
-    groups=sudo,www-data
-    append=yes
+    name: vagrant
+    groups: sudo,www-data
+    append: yes
 
 - name: create ~/.bash_profile to make life easier
   template: >
-    src=bash_profile.j2
-    dest=/home/vagrant/.bash_profile
-    owner=vagrant
-    group=vagrant
+    src: bash_profile.j2
+    dest: /home/vagrant/.bash_profile
+    owner: vagrant
+    group: vagrant

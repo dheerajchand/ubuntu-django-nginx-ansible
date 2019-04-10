@@ -4,11 +4,11 @@
   vars_files:
     - vars.yml
   roles:
-#   - common
+    - common
 #   - dbserver
 #   - geoserver
 #   - webserver
-   - hadoopserver
+    - hadoopserver
 
 
 
