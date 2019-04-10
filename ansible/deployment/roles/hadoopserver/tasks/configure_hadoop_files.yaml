@@ -1,0 +1,16 @@
+---
+# add values to hadoop configuration files
+
+- name: add parameters to core-site.xml
+  blockinfile:
+    path: /usr/local/hadoop/hadoop-3.1.1/etc/hadoop/core-site.xml
+    insertafter: "^<configuration>"
+    block: |2
+      <property>
+      <name>fs.default.name</name>
+      <value>hdfs://localhost:9000</value>
+      </property>
+    marker: "<!-- {mark} ANSIBLE MANAGED BLOCK -->"
+
+  become: true
+
