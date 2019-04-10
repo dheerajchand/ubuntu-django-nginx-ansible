@@ -1,0 +1,8 @@
+---
+# sequential links to installation instructions
+
+- include: ./roles/hadoopserver/tasks/basic_server_config.yaml
+
+- include: ./roles/hadoopserver/tasks/install_java.yaml
+
+- include: ./roles/hadoopserver/tasks/download_and_extract_hadoop.yaml

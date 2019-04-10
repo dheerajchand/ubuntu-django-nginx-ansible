@@ -73,17 +73,6 @@
   when: srcdirectoryexists.changed
   become: true
 
-
-- name: create link to /home/vagrant/src from /vagrant/resources/src
-  file:
-    src: /vagrant/resources/src
-    dest: /home/vagrant/src
-    state: link
-    owner: vagrant
-    group: www-data
-  ignore_errors: true
-  become: true
-
 - name: create a directory for hadoop expansion
   file:
     path: /vagrant/resources/src/hadoop

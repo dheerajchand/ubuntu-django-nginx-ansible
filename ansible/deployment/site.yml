@@ -8,6 +8,7 @@
 #   - dbserver
 #   - geoserver
 #   - webserver
-   - hadoop_and_hive_server
+   - hadoopserver
+
 
 

@@ -1,0 +1,31 @@
+---
+# download the Hadoop 3.1.1 directory
+
+- name: get the Hadoop 3.1.1 code
+  get_url:
+    url: http://mirror.olnevhost.net/pub/apache/hadoop/common/hadoop-{{hadoop_version}}/hadoop-{{hadoop_version}}.tar.gz
+    dest: /vagrant/resources/hadoop.tar.gz
+    force: no
+  become: true
+  ignore_errors: yes
+  register: hadoopdownloadexists
+  when: hadoopdownloadexists is not defined
+
+- name: unarchive the hadoop code
+  unarchive:
+    src: /vagrant/resources/hadoop.tar.gz
+    dest: /vagrant/resources/src/hadoop
+    group: hadoop
+    remote_src: yes
+  become: true
+  when: hadoopdownloadexists
+
+- name: create link to /usr/local/hadoop from /resources/src/hadoop
+  file:
+    src: /vagrant/resources/src/hadoop
+    dest: /usr/local/hadoop
+    state: link
+    owner: vagrant
+    group: hadoop
+  ignore_errors: true
+  become: true

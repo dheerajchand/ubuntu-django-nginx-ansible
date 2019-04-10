@@ -28,6 +28,8 @@ Vagrant.configure("2") do |config|
 
     # Hadoop ports, which I am similarly offsetting by 1
 
+
+    config.vm.network "forwarded_port", guest: 9870, host: 9871 # hadoop port
     config.vm.network "forwarded_port", guest: 50070, host: 50071 # NameNode daemon
     config.vm.network "forwarded_port", guest: 50090, host: 50091 # Secondary Node daemon
     config.vm.network "forwarded_port", guest: 8088, host: 8089 # Resource Manager
