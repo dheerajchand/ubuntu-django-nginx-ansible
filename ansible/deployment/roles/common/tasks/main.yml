@@ -62,6 +62,12 @@
   apt: upgrade=yes
   become: true
 
+- name: remove a src directory if it exists
+  file:
+    path: /vagrant/resources/src
+    state: absent
+  become: true
+
 - name: create a src directory for downloaded code
   file:
     path: /vagrant/resources/src

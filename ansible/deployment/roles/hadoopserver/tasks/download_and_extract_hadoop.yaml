@@ -22,7 +22,7 @@
 
 - name: create link to /usr/local/hadoop from /resources/src/hadoop
   file:
-    src: /vagrant/resources/src/hadoop
+    src: /vagrant/resources/src/hadoop/hadoop-3.1.1
     dest: /usr/local/hadoop
     state: link
     owner: vagrant
