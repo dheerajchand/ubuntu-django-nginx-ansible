@@ -1,0 +1,8 @@
+---
+# basic system tasks
+
+- name: start hadoop
+  raw: start-dfs.sh && start-yarn.sh
+  args:
+    executable: /bin/bash
+  become: true

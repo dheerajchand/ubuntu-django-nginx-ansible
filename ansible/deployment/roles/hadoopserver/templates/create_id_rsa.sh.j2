@@ -1,0 +1,7 @@
+
+# https://stackoverflow.com/questions/3659602/automating-enter-keypresses-for-bash-script-generating-ssh-keys
+# https://www.unix.com/shell-programming-and-scripting/191559-bash-script-create-rsa-key-pair.html
+
+yes y | ssh-keygen -f /home/vagrant/.ssh/id_rsa -t rsa -N '' -q
+cat /home/vagrant/.ssh/id_rsa.pub >> /home/vagrant/.ssh/authorized_keys
+chown -R vagrant:vagrant /home/vagrant/.ssh

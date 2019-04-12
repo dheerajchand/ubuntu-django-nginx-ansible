@@ -8,3 +8,5 @@
 - include: ./roles/hadoopserver/tasks/download_and_extract_hadoop.yaml
 
 - include: ./roles/hadoopserver/tasks/configure_hadoop_files.yaml
+
+- include: ./roles/hadoopserver/tasks/start_hadoop.yaml

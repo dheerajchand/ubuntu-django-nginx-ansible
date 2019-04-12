@@ -7,7 +7,7 @@
 
 - name: get ubuntu packages for hadoop
   apt:
-    name: ['build-essential', 'unzip', 'git', 'default-jdk']
+    name: ['build-essential', 'unzip', 'git', 'default-jdk', 'ssh', 'pdsh']
     state: latest
     install_recommends: yes
     update_cache: yes
@@ -28,3 +28,13 @@
     name: vagrant
     groups: wheel,hadoop
     append: yes
+
+- name: create an id_rsa script from a template
+  template:
+    src: create_id_rsa.sh.j2
+    dest: /home/vagrant/create_id_rsa.sh
+    mode: "u+rwx"
+
+- name: execute the create rsa script
+  command: sh /home/vagrant/create_id_rsa.sh
+  become: true
