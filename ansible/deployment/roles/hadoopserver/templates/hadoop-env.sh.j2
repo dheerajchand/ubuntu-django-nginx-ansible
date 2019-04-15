@@ -420,3 +420,12 @@ esac
 #
 # For example, to limit who can execute the namenode command,
 # export HDFS_NAMENODE_USER=hdfs
+
+# https://stackoverflow.com/questions/48129029/hdfs-namenode-user-hdfs-datanode-user-hdfs-secondarynamenode-user-not-defined
+
+export HDFS_NAMENODE_USER="vagrant"
+export HDFS_DATANODE_USER="vagrant"
+export HDFS_SECONDARYNAMENODE_USER="vagrant"
+export YARN_RESOURCEMANAGER_USER="vagrant"
+export YARN_NODEMANAGER_USER="vagrant"
+export HADOOP_OPTS="$HADOOP_OPTS -Djava.library.path=$HADOOP_HOME/lib/native"

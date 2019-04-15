@@ -12,7 +12,13 @@
         export HADOOP_COMMON_HOME=$HADOOP_HOME
         export HADOOP_HDFS_HOME=$HADOOP_HOME
         export YARN_HOME=$HADOOP_HOME
-        export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native export
+        export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+        export HDFS_NAMENODE_USER="vagrant"
+        export HDFS_DATANODE_USER="vagrant"
+        export HDFS_SECONDARYNAMENODE_USER="vagrant"
+        export YARN_RESOURCEMANAGER_USER="vagrant"
+        export YARN_NODEMANAGER_USER="vagrant"
+        export PDSH_RCMD_TYPE=ssh
         PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
   become: true
 

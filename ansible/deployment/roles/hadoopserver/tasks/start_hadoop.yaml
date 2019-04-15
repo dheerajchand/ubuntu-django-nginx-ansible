@@ -1,8 +1,16 @@
 ---
-# basic system tasks
+# initialise and start up hadoop
 
-- name: start hadoop
-  raw: start-dfs.sh && start-yarn.sh
+- name: create a script to start initialise the hard drive and start hadoop
+  template:
+    src: format_hadoop_and_start_for_the_first_time.sh.j2
+    dest: /home/vagrant/format_hadoop_and_start_for_the_first_time.sh
+    mode: "u+rwx"
+
+- name: execute the start hadoop script
+  shell: source /home/vagrant/format_hadoop_and_start_for_the_first_time.sh
   args:
     executable: /bin/bash
   become: true
+
+
