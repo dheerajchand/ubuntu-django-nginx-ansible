@@ -1,0 +1,31 @@
+---
+# basic system tasks
+
+- name: set locale to {{locale}}
+  action: command /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
+  become: true
+
+- name: get ubuntu packages for hadoop
+  apt:
+    name: ['build-essential', 'unzip', 'git', 'default-jdk', 'ssh', 'pdsh']
+    state: latest
+    install_recommends: yes
+    update_cache: yes
+  become: true
+
+- name: Make sure that we have a 'hadoop' group
+  group:
+    name=hadoop
+    state=present
+
+- name: Make sure that we have a 'wheel' group
+  group:
+    name=wheel
+    state=present
+
+- name: Make sure that vagrant user belongs to correct groups
+  user:
+    name: vagrant
+    groups: wheel,hadoop
+    append: yes
+

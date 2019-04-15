@@ -1,0 +1,31 @@
+---
+# download the hive 3.1.1 directory
+
+- name: get the hive 3.1.1 code
+  get_url:
+    url: http://mirrors.advancedhosters.com/apache/hive/hive-{{hive_version}}/apache-hive-{{hive_version}}-bin.tar.gz
+    dest: /vagrant/resources/hive.tar.gz
+    force: no
+  become: true
+  ignore_errors: yes
+  register: hivedownloadexists
+  when: hivedownloadexists is not defined
+
+- name: unarchive the hive code
+  unarchive:
+    src: /vagrant/resources/hive.tar.gz
+    dest: /vagrant/resources/src/hive
+    group: vagrant
+    remote_src: yes
+  become: true
+  when: hivedownloadexists
+
+- name: create link to /usr/local/hive from /resources/src/hive
+  file:
+    src:  /vagrant/resources/src/hive/apache-hive-{{hive_version}}-bin
+    dest: /usr/local/hive
+    state: link
+    owner: vagrant
+    group: hive
+  ignore_errors: true
+  become: true

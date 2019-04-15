@@ -1,0 +1,8 @@
+---
+# sequential links to installation instructions
+
+- include: ./roles/hiveserver/tasks/basic_server_config.yaml
+
+- include: ./roles/hiveserver/tasks/install_java.yaml
+
+- include: ./roles/hiveserver/tasks/download_and_extract_hive.yaml
