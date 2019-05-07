@@ -7,26 +7,31 @@
 - name: Add Oracle Java Repository
   become: yes
   apt_repository:
-    repo: 'ppa:webupd8team/java'
+    repo: 'ppa:linuxuprising/java'
 
-- name: Accept Java 8 License
+- name: Accept Java 11 License
   become: yes
   debconf:
-    name: 'oracle-java8-installer'
+    name: 'oracle-java11-installer'
     question: 'shared/accepted-oracle-license-v1-1'
     value: 'true'
     vtype: 'select'
 
-- name: Install Oracle Java 8
-  become: yes
+- name: Install Oracle Java 11
+  become: true
   apt:
-    name: ['oracle-java8-installer', 'ca-certificates', 'oracle-java8-set-default']
+    name: ['oracle-java11-installer', 'ca-certificates']
     state: latest
 
 - name: correct java version selected
   alternatives:
     name: java
     path: "{{java_version_for_alternatives}}"
+
+- name: correct java compiler version selected
+  alternatives:
+    name: javac
+    path: "{{javac_version_for_alternatives}}"
 
 - name: set JAVA_HOME variable
   lineinfile:

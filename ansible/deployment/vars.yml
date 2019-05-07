@@ -16,8 +16,9 @@ create_new_static: true
 geoserver_version: "2.15.0"
 hadoop_version: "3.1.1"
 hive_version: "3.1.1"
-java_version_for_alternatives: "/usr/lib/jvm/java-8-oracle/jre/bin/java"
-java_home: "/usr/lib/jvm/java-8-oracle"
+java_version_for_alternatives: "/usr/lib/jvm/java-11-oracle/bin/java"
+javac_version_for_alternatives: "/usr/lib/jvm/java-11-oracle/bin/javac"
+java_home: "/usr/lib/jvm/java-11-oracle/bin/java"
 
 
 

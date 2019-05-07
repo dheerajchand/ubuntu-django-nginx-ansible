@@ -6,3 +6,5 @@
 - include: ./roles/hiveserver/tasks/install_java.yaml
 
 - include: ./roles/hiveserver/tasks/download_and_extract_hive.yaml
+
+- include: ./roles/hiveserver/tasks/configure_hive_files.yaml

@@ -1,8 +1,4 @@
 ---
-- name: install python 2
-  raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
-  become: true
-
 - name: set locale to {{locale}}
   command: /usr/sbin/update-locale LANG={{locale}} LC_ALL={{locale}}
   become: true

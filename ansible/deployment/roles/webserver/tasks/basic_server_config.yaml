@@ -17,18 +17,18 @@
   become: true
 
 - name: enable ufw incoming and outgoing
-  ufw: >
+  ufw:
     state: disabled
   become: true
 
 - name: add vagrant user to www-data group
-  user: >
+  user:
     name: vagrant
     groups: sudo,www-data
     append: yes
 
 - name: create ~/.bash_profile to make life easier
-  template: >
+  template:
     src: bash_profile.j2
     dest: /home/vagrant/.bash_profile
     owner: vagrant

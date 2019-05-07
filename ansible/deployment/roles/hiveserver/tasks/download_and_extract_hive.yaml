@@ -15,7 +15,8 @@
   unarchive:
     src: /vagrant/resources/hive.tar.gz
     dest: /vagrant/resources/src/hive
-    group: vagrant
+    owner: vagrant
+    group: hive
     remote_src: yes
   become: true
   when: hivedownloadexists
