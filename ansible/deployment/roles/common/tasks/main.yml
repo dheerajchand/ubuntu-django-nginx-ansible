@@ -4,11 +4,11 @@
   become: true
 
 - name: ensure aptitude is present
-  apt: >
-    pkg=aptitude
-    state=present
-    install_recommends=yes
-    update-cache=yes
+  apt:
+    pkg: aptitude
+    state: present
+    install_recommends: yes
+    update-cache: yes
   become: true
 
 - name: update pre-installed packages after installing aptitude
@@ -16,10 +16,10 @@
   apt: upgrade=full update_cache=yes
 
 - name: install apt-file
-  apt: >
-    pkg=apt-file
-    state=present
-    install_recommends=yes
+  apt:
+    pkg: apt-file
+    state: present
+    install_recommends: yes
   become: true
 
 - name: install required system packages.
@@ -34,19 +34,16 @@
       - apt-file
       - build-essential
       - default-jdk
-      - python-setuptools
-      - python-pip
-      - virtualenvwrapper
-      - supervisor
-      - python-apt
-      - python-pycurl
-      - python-software-properties
-      - python-virtualenv
-      - python-dev
+      - python3-setuptools
+      - python3-pip
+      - python3-apt
+      - python3-pycurl
+      - python3-software-properties
+      - python3-virtualenv
+      - python3-dev
       - vim
       - libpq-dev
-      - supervisor
-      - python-psycopg2
+      - python3-psycopg2
       - git
       - gdal-bin
       - postgresql

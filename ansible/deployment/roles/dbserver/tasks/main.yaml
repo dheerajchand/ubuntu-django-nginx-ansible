@@ -1,17 +1,11 @@
 ---
 - name: ensure postgres is installed
-  apt: >
-    pkg={{item}}
-    state=present
-    install_recommends=yes
-    update-cache=yes
+  apt:
+    name: ['postgresql', 'postgresql-contrib', 'postgis', 'postgis-doc', 'python3-psycopg2']
+    state: present
+    install_recommends: yes
+    update-cache: yes
   become: true
-  with_items:
-      - postgresql
-      - postgresql-contrib
-      - postgis
-      - postgis-doc
-      - python-psycopg2
 
 - name: do upgrades to newly installed postgresql and postgis packages
   apt: upgrade=dist
