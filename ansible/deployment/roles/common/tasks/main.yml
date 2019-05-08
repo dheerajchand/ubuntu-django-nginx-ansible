@@ -55,6 +55,13 @@
   apt: upgrade=yes
   become: true
 
+- name: fix /etc/environment file
+  lineinfile:
+    path: /etc/environment
+    regexp: '^PATH'
+    line: 'PATH="$HOME/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"'
+  become: true
+
 - name: remove a src directory if it exists
   file:
     path: /vagrant/resources/src

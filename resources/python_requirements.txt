@@ -5,4 +5,5 @@ django-extensions
 ipython
 django-model-utils
 geopandas
+virtualenv
 virtualenvwrapper

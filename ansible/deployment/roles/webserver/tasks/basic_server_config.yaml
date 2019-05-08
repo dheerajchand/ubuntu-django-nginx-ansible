@@ -5,7 +5,7 @@
 
 - name: install required system packages.
   apt:
-    name: ['build-essential', 'cython', 'gdal-bin', 'gfortran', 'libgdal-dev', 'libgeos-dev', 'libpq-dev', 'nginx', 'nodejs-legacy', 'npm', 'postgresql', 'postgresql-contrib', 'python-apt', 'python-dev', 'python-pip', 'python-pycurl', 'python-setuptools','python-software-properties', 'python-virtualenv', 'supervisor', 'vim']
+    name: ['build-essential', 'cython', 'gdal-bin', 'gfortran', 'libgdal-dev', 'libgeos-dev', 'libpq-dev', 'nginx',  'nodejs', 'nodejs-dev', 'npm', 'postgresql', 'postgresql-contrib', 'python3-apt', 'python3-dev', 'python3-pip', 'python3-pycurl', 'python3-setuptools','python3-software-properties',]
     state: present
     update-cache: yes
     install_recommends: yes
@@ -26,6 +26,8 @@
     name: vagrant
     groups: sudo,www-data
     append: yes
+
+
 
 - name: create ~/.bash_profile to make life easier
   template:

@@ -7,7 +7,7 @@
     - common
     - dbserver
 #    - geoserver
-#    - webserver
+    - webserver
 #    #- hadoopserver
 #    #- hiveserver
 #    - rserver
