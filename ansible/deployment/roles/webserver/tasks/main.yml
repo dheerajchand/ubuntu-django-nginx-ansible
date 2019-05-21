@@ -3,8 +3,8 @@
 - include: ./roles/webserver/tasks/basic_server_config.yaml
 
 - include: ./roles/webserver/tasks/create_venv.yaml
-#
-#- include: ./roles/webserver/tasks/create_django_project.yaml
+
+- include: ./roles/webserver/tasks/create_django_project.yaml
 #
 #- include: ./roles/webserver/tasks/migrate_new_django_project.yaml
 #
