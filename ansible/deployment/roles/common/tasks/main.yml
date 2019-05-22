@@ -72,7 +72,7 @@
   file:
     path: /vagrant/resources/src
     state: directory
-    owner: vagrant
+    owner: "{{ remote_web_user }}"
     mode: 0775
   register: srcdirectoryexists
   ignore_errors: true
@@ -83,7 +83,7 @@
   file:
     path: /vagrant/resources/src/hadoop
     state: directory
-    owner: vagrant
+    owner: "{{ remote_web_user }}"
     mode: 0775
   ignore_errors: true
   become: true
@@ -92,7 +92,7 @@
   file:
     path: /vagrant/resources/src/hive
     state: directory
-    owner: vagrant
+    owner: "{{ remote_web_user }}"
     mode: 0775
   ignore_errors: true
   become: true
