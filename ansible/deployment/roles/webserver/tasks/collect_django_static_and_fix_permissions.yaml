@@ -1,16 +1,13 @@
 ---
 - name: Run Django collectstatic
-  django_manage: >
-    command=collectstatic
-    app_path=/vagrant/{{ project_name }}
-    virtualenv={{ venv_path }}
+  shell: "cd {{django_dir}}; python3 manage.py collectstatic"
   when: create_new_project == True
 
 - name: fix Django directory permissions
-  file: >
-    state=directory
-    owner=vagrant
-    group=www-data
-    recurse=yes
-    path={{ django_dir }}
+  file:
+    state: directory
+    owner: "{{ remote_web_user }}"
+    group: "{{ remote_web_group }}"
+    recurse: yes
+    path: "{{ django_dir }}"
   become: true

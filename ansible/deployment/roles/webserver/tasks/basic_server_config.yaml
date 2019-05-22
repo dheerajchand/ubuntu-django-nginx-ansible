@@ -5,7 +5,7 @@
 
 - name: install required system packages.
   apt:
-    name: ['build-essential', 'cython', 'gdal-bin', 'gfortran', 'libgdal-dev', 'libgeos-dev', 'libpq-dev', 'nginx',  'nodejs', 'nodejs-dev', 'npm', 'postgresql', 'postgresql-contrib', 'python3-apt', 'python3-dev', 'python3-pip', 'python3-pycurl', 'python3-setuptools','python3-software-properties',]
+    name: ['build-essential', 'cython', 'gdal-bin', 'gfortran', 'libgdal-dev', 'libgeos-dev', 'libpq-dev', 'nginx',  'nodejs', 'nodejs-dev', 'npm', 'virtualenv', 'postgresql', 'postgresql-contrib', 'python3-apt', 'python3-dev', 'python3-pip', 'python3-pycurl', 'python3-setuptools','python3-software-properties',]
     state: present
     update-cache: yes
     install_recommends: yes
@@ -23,15 +23,13 @@
 
 - name: add vagrant user to www-data group
   user:
-    name: vagrant
-    groups: sudo,www-data
+    name: "{{ remote_web_user }}"
+    groups: "sudo, {{ remote_web_group }}"
     append: yes
-
-
 
 - name: create ~/.bash_profile to make life easier
   template:
     src: bash_profile.j2
-    dest: /home/vagrant/.bash_profile
+    dest: "/home/{{ remote_web_user }}/.bash_profile"
     owner: vagrant
     group: vagrant

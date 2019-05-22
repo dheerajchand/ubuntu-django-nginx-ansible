@@ -1,12 +1,14 @@
 ---
 
 - name: delete a virtualenv if it exists
-  shell: rm -rf {{ venv_path }}
+  shell: "rm -rf {{ venv_path }}"
   ignore_errors: yes
   become: true
 
 - name: install python requirements
   pip:
-    requirements=/vagrant/resources/python_requirements.txt
-    state=latest
+    requirements: /vagrant/resources/python_requirements.txt
+    virtualenv: "{{ venv_path }}"
+    virtualenv_python: /usr/bin/python3
+    state: latest
   become: true

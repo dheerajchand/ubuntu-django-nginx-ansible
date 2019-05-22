@@ -1,8 +1,15 @@
 server {
     listen 80;
+    list [::]:80;
+
     server_name localhost;
 
-    location = /favicon.ico { access_log off; log_not_found off; }
+    location = /favicon.ico {
+        access_log off;
+        log_not_found off;
+
+        }
+
     location /static/ {
         root {{ django_dir }};
     }

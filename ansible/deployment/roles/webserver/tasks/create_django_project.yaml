@@ -1,7 +1,7 @@
 ---
 - name: if there is a django project in /vagrant, delete it
   file:
-    path: /vagrant/{{project_name}}
+    path: {{ django_dir }}
     state: absent
   become: true
   ignore_errors: yes
