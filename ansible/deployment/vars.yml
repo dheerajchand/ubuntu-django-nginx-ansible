@@ -1,4 +1,6 @@
 project_name: ballista
+remote_web_user: vagrant
+remote_web_group: www-data
 venv_path: "/vagrant/projectenv"
 socket_dir: "/var/local/run/{{ project_name }}"
 source_location: "/vagrant/"
