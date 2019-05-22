@@ -9,21 +9,15 @@ This template:
 4. Uses [R](http://www.r-project.org) for computations.
 5. Uses [Hadoop](http://hadoop.apache.org) and [Hive](https://hive.apache.org)
 
-Credits to: 
-
-1. [George Nassar](https://github.com/gnassar) for his help in understanding nginx's configuration files.
-2. [Jonathan Arehart](https://twitter.com/jonathanarehart) for his general help in understanding server configuration.
-3. [WildIntellect](https://github.com/wildintellect/) for his support in developing R-GIS tasks.
-
 ## The purpose of this project.
 
 This project allows you to have a new Django project from scratch via Ansible + Vagrant. The main components are:
 
-- [Ubuntu 16.04](http://www.ubuntu.com)
-- [Python 2.7](http://www.python.org)
-- [PostgreSQL 9.6](http://www.postgresql.org)
+- [Ubuntu 18.04](http://www.ubuntu.com)
+- [Python 3.6.7](http://www.python.org)
+- [PostgreSQL 10.8](http://www.postgresql.org)
 - [PostGIS 2](http://www.postgis.net)
-- [GeoServer 2.9](http:///www.geoserver.org)
+- [GeoServer](http:///www.geoserver.org)
 - [nginx](http://www.nginx.org)
 - [gunicorn](http://gunicorn-docs.readthedocs.org/en/19.3/)
 - [R](http://www.r-project.org)
@@ -38,12 +32,13 @@ Nothing happens in a vacuum. I got a lot of help. Here are some of the reference
 2. [Setting the Java Home variable correctly](https://www.digitalocean.com/community/tutorials/how-to-install-java-on-ubuntu-with-apt-get)
 3. [Installing Tomcat for GeoServer](https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-7-on-ubuntu-14-04-via-apt-get)
 4. [Hadoop](https://www.tutorialspoint.com/hadoop/hadoop_enviornment_setup.htm)
-5. [Hive] (https://www.tutorialspoint.com/hive/hive_installation.htm)
+5. [Hive](https://www.tutorialspoint.com/hive/hive_installation.htm)
+6. [Getting Django to Work In Ubuntu 18](https://www.cloudbooklet.com/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-18-04-in-google-cloud/)
 
 ## Repo Contents
 
 1. Vagrantfile + Ansible Playbook for virtual machine config. Ansible inspiration from [this project], and configuration instructions modified from 
-2. Code for a generic Django 1.10 project at the top level of the repo, which you can configure to your liking.
+2. Code for a generic Django 2.10 project at the top level of the repo, which you can configure to your liking.
 
 ## Host Environment
 
