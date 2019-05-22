@@ -2,7 +2,11 @@
 ### Example user template template
 ### Example user template
 
-<<<<<<< HEAD
+
+# Virtualenv files
+
+projectenv/*
+
 # IntelliJ project files
 .idea
 *.iml

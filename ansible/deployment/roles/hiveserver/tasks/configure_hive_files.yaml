@@ -1,0 +1,21 @@
+---
+# add values to hadoop configuration files
+
+- name: add parameters to /etc/environment
+  blockinfile:
+    path: /home/vagrant/.bashrc
+    insertafter: EOF
+    block: |2
+        export HIVE_HOME=/usr/local/hive
+        export PATH=$PATH:$HIVE_HOME/bin
+        export CLASSPATH=$CLASSPATH:/usr/local/hadoop/lib/*:.
+        export CLASSPATH=$CLASSPATH:/usr/local/hive/lib/*:.
+  become: true
+
+- name: add parameters to hive-env.sh via template
+  template:
+    src: hadoop-env.sh.j2
+    dest: /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+    owner: vagrant
+    group: hadoop
+  become: true

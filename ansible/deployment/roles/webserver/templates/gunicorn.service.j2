@@ -1,9 +1,17 @@
 [Unit]
 Description=gunicorn daemon
+Requires=gunicorn.socket
 After=network.target
 
 [Service]
-User=vagrant
-Group=www-data
+User={{ remote_web_user }}
+Group={{ remote_web_group }}
 WorkingDirectory={{ django_dir }}
-ExecStart={{ venv_path }}/bin/gunicorn --workers 3 --bind unix:{{ socket_dir }}/{{ project_name }}.sock {{ project_name }}.wsgi:application
+ExecStart={{ venv_path }}/bin/gunicorn \
+     --access-logfile - \
+     --workers 3 \
+     --bind unix:/run/gunicorn.sock \
+     {{ project_name }}.wsgi:application
+
+[Install]
+WantedBy=multi-user.target

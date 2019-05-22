@@ -2,20 +2,20 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  
-  config.vm.box = "bento/ubuntu-16.04"
+
+  config.vm.box = "ubuntu/bionic64"
   config.vm.provider :virtualbox do |v|
-	host = RbConfig::CONFIG['host_os']
-	if host =~ /darwin/
-		mem = `sysctl -n hw.memsize`.to_i / 1024
-	elsif host =~ /linux/
-		mem = `grep 'MemTotal' /proc/meminfo | sed -e 's/MemTotal://' -e 's kB//'` .to_i
-	elsif host =~ /mswin|mingw|cygwin/
-		mem = `wmic computersystem Get TotalPhysicalMemory`.split[1].to_i / 1024
-	end
+    host = RbConfig::CONFIG['host_os']
+    if host =~ /darwin/
+      mem = `sysctl -n hw.memsize`.to_i / 1024
+    elsif host =~ /linux/
+      mem = `grep 'MemTotal' /proc/meminfo | sed -e 's/MemTotal://' -e 's kB//'`.to_i
+    elsif host =~ /mswin|mingw|cygwin/
+      mem = `wmic computersystem Get TotalPhysicalMemory`.split[1].to_i / 1024
+    end
 
     mem = mem / 1024 / 4
-    v.customize ["modifyvm", :id, "--memory", mem] 
+    v.customize ["modifyvm", :id, "--memory", mem]
 
     # basic networking
     config.vm.network :private_network, ip: "192.168.33.10"
@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
     config.vm.network "forwarded_port", guest: 80, host: 8080
 
     # This is port for GeoServer, which is normally 8080 when installed locally, so I am offsetting by 1
-    config.vm.network "forwarded_port", guest: 8080, host:8081
+    config.vm.network "forwarded_port", guest: 8080, host: 8081
 
     # Hadoop ports, which I am similarly offsetting by 1
 
@@ -36,11 +36,15 @@ Vagrant.configure("2") do |config|
 
     config.vm.hostname = "vagrant-gisvm"
     config.vm.synced_folder ".", "/vagrant",
-      owner: "vagrant"
+                            owner: "vagrant"
 
     config.vm.provision "ansible" do |ansible|
       ansible.playbook = "ansible/deployment/site.yml"
       ansible.verbose = "vv"
+      ansible.extra_vars = {
+          ansible_python_interpreter: "/usr/bin/python3",
+      }
+
     end
   end
 end
