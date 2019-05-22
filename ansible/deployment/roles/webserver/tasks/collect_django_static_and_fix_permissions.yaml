@@ -1,6 +1,6 @@
 ---
 - name: Run Django collectstatic
-  shell: "cd {{django_dir}}; python3 manage.py collectstatic"
+  shell: "cd {{django_dir}}; {{ venv_python }} manage.py collectstatic"
   when: create_new_project == True
 
 - name: fix Django directory permissions

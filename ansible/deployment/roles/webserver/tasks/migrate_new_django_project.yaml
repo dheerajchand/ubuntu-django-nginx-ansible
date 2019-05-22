@@ -1,10 +1,10 @@
 ---
 
 - name: Run Django database makemigrations
-  shell: "cd {{django_dir}}; python3 manage.py makemigrations"
+  shell: "cd {{django_dir}}; {{ venv_python }} manage.py makemigrations"
   when: create_new_project == True
 
-- name: Run Django database makemigrations
-  shell: "cd {{django_dir}}; python3 manage.py migrate"
+- name: Run Django database migrate
+  shell: "cd {{django_dir}}; {{ venv_python }} manage.py migrate"
   when: create_new_project == True
 

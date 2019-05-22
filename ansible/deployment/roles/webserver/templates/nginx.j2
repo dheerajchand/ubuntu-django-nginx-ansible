@@ -1,14 +1,13 @@
 server {
     listen 80;
-    list [::]:80;
+    listen [::]:80;
 
-    server_name localhost;
+    server_name localhost 127.0.0.1 0.0.0.0;
 
     location = /favicon.ico {
         access_log off;
         log_not_found off;
-
-        }
+    }
 
     location /static/ {
         root {{ django_dir }};
@@ -16,6 +15,6 @@ server {
 
     location / {
         include proxy_params;
-        proxy_pass http://unix:{{ socket_dir}}/{{ project_name }}.sock;
+        proxy_pass http://unix:/run/gunicorn.sock;
     }
 }

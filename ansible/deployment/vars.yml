@@ -2,8 +2,9 @@ project_name: ballista
 remote_web_user: vagrant
 remote_web_group: www-data
 venv_path: "/vagrant/projectenv"
+venv_python: "{{ venv_path }}/bin/python"
 gunicorn_path: "{{ venv_path }}/bin/gunicorn"
-socket_path: "/etc/systemd/system/{{ project_name }}_gunicorn.socket"
+socket_path: "/etc/systemd/system/gunicorn.socket"
 source_location: "/vagrant/"
 source_location_auto_remove : false
 django_dir: "/vagrant/{{ project_name }}"
