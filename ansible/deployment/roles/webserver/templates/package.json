@@ -7,7 +7,7 @@
     "openlayers": "~3.13.0",
     "d3": "~3.5.0",
     "jquery": "~2.2.0",
-    "lodash": "~4.2.0",
+    "lodash": "~4.17.19",
     "bootstrap": "~3.3.6",
     "topojson": "~1.6"
   },
